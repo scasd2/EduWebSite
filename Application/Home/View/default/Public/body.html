@@ -1,24 +1,539 @@
-<block name="header"></block>
-<div id="main-container" class="container">
-    <div class="row">
-        <block name="side">
-        <!-- 左侧 nav
-        ================================================== -->
-            <div class="span3 bs-docs-sidebar">
-                <block name="publish"></block>
-                <ul class="nav nav-list bs-docs-sidenav">
-                    {:W('Category/lists', array($category['id'], ACTION_NAME == 'index'))}
+<div class="page">
+    <div class="main">
+
+
+
+        <!--导航菜单开始-->
+        <div class="thirmenu">
+            <ul class="nav_list" id="menu">
+                <li class="current"><a href="/">首页</a></li>
+                <li class=""><a href="/xiaoxue.html">小学辅导</a></li>
+                <li class=""><a href="/chuzhong.html">初中辅导</a></li>
+                <li class=""><a href="/gaozhong.html">高中辅导</a></li>
+                <li class=""><a href="/campus/0-1.html">校区查询</a></li>
+                <li class=""><a href="/teacher/0-0-1.html">老师查询</a></li>
+                <li class=""><a href="/school/0-0-0-1.html">名校库</a></li>
+            </ul>
+        </div>
+        <!--导航菜单结束-->
+
+        <!--左侧导航-->
+        <div class="left_menu">
+            <h3>课程导航</h3>
+            <ul>
+                <li><a href="/xiaoxue.html" target="_blank">小学辅导</a></li>
+                <li><a href="/chuzhong.html" target="_blank">初中辅导</a></li>
+                <li><a href="/gaozhong.html" target="_blank">高中辅导</a></li>
+            </ul>
+        </div>
+
+
+
+        <!--轮播广告图-->
+        <div class="nav_banner">
+            <div id="fsD1" class="focus">
+                <div id="D1pic1" class="fPic">
+                    <div class="fcon" style="display: none;">
+                        <a href="http://fz.xinghuo100.com/201609/4308.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/936/940/image/20160922/20160922152302_0040.jpg" alt="" style="opacity: 1;"></a>
+                    </div>
+                    <div class="fcon" style="display: block;">
+                        <a href="http://www.xinghuo100.com/zhuanti/qiuji2016/fuzhou/qiuji2016.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/936/940/image/20160906/20160906110921_8643.jpg" alt="" style="opacity: 1;"></a>
+                    </div>
+                    <div class="fcon" style="display: none;">
+                        <a href="http://vip.xinghuo100.com/" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/936/940/image/20160804/20160804093552_6356.jpg" alt="" style="opacity: 1;"></a>
+                    </div>
+                </div>
+                <div class="fbg">
+                    <div class="D1fBt" id="D1fBt">
+                        <a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i></i></a>
+                        <a href="javascript:void(0)" hidefocus="true" target="_self" class="current"><i></i></a>
+                        <a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i></i></a>
+                    </div>
+                </div>
+                <span class="prev"></span>
+                <span class="next"></span>
+            </div>
+            <script type="text/javascript">
+                $(function () {
+                    Qfast.add('widgets', { path: "/Scripts/Thirdparty/terminator2.2.min.js", type: "js", requires: ['fx'] });
+                    Qfast(false, 'widgets', function () {
+                        K.tabs({
+                            id: 'fsD1',   //焦点图包裹id
+                            conId: "D1pic1",  //** 大图域包裹id
+                            tabId: "D1fBt",
+                            tabTn: "a",
+                            conCn: '.fcon', //** 大图域配置class
+                            auto: 1,   //自动播放 1或0
+                            effect: 'fade',   //效果配置
+                            eType: 'click', //** 鼠标事件
+                            pageBt: true,//是否有按钮切换页码
+                            bns: ['.prev', '.next'],//** 前后按钮配置class
+                            interval: 3000  //** 停顿时间
+                        })
+                    })
+                });
+            </script>
+        </div>
+
+
+        <div class="nav_right">
+
+
+
+            <!--图标块-->
+            <div class="iconR">
+                <div class="icons">
+                    <table class="table1" align="center" cellpadding="0" cellspacing="0">
+                        <tbody>
+                        <tr>
+                            <th class="th1">
+                                <a href="/campus/0-1.html" target="_blank">校区查询</a>
+                            </th>
+                            <th class="th2">
+                                <a href="/teacher/0-0-1.html" target="_blank">老师查询</a>
+                            </th>
+                            <th class="th4">
+                                <a href="/school/0-0-0-1.html" target="_blank">名校库</a>
+                            </th>
+                        </tr>
+                        <tr>
+
+                            <th class="th3">
+                                <a href="http://chat16.live800.com/live800/chatClient/chatbox.jsp?companyID=509441&amp;configID=63570&amp;jid=4167274036" target="_blank">在线咨询</a>
+                            </th>
+                            <th class="th5" id="quickClass">
+                                免费热线
+                                <div class="kjbb">
+                                    <div class="kjbb_t">
+                                        全国统一提分热线:
+                                        <p>
+                                            <strong>400-877-0068</strong>
+                                        </p>
+                                    </div>
+                                    <span class="guanbi"></span>
+                                </div>
+                            </th>
+                            <th class="th6" id="quickClass01">
+                                官方微信
+                                <div class="kjbbg">
+                                    <div class="kjbb_t">
+                                        <img src="http://file.xinghuo100.com/upload/25/924/935/image/20160620/20160620181805_3643.jpg">
+
+                                    </div>
+                                    <span class="guanbi"></span>
+                                </div>
+                            </th>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <!--星火快讯-->
+            <div class="nav_bulletin">
+                <h3>星火快讯<a class="smore" href="/xhkx/0-1.html" target="_blank">更多</a></h3>
+                <ul class="inforR_text">
+                    <li><a href="/201609/4521.html" target="_blank">《星火教育狂揽“2016新浪全国五星金牌教师”活动五项大奖》</a></li>
+                    <li><a href="/201609/4308.html" target="_blank">2016腾讯中国好老师荣誉盛典北京召开 星火教育霸气狂揽多项大奖</a></li>
+                    <li><a href="/201608/3944.html" target="_blank">【2016年高考回顾】看学霸传奇故事 重新定义高分概念</a></li>
+
                 </ul>
             </div>
-        </block>
-        <block name="body"></block>
+        </div>
+        <div class="clear"></div>
+
+        <!--通栏广告-->
+        <div class="main" style="margin-top:20px;"><a href="http://fz.xinghuo100.com/201609/4521.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/936/940/image/20160922/20160922152035_9543.jpg" alt=""></a></div>
+
+        <!--学习方式-->
+        <div class="main" style="margin-bottom:20px;">
+            <h3 class="study_title">在星火，选择最适合您孩子的学习方式：</h3>
+            <div class="study_info" onmouseover="JavaScript:this.style.background='url(/Content/Images/study_bg.jpg) repeat-x bottom #fff';" onmouseout="JavaScript:this.style.background='url(/Content/Images/study_bgn.jpg) repeat-x bottom #fff';" style="background: url(&quot;/Content/Images/study_bgn.jpg&quot;) center bottom repeat-x rgb(255, 255, 255);">
+                <ul>
+                    <li class="img"><img src="/Content/Images/img_study01.jpg"></li>
+                    <li class="contents">
+                        <a href="http://vip.xinghuo100.com/" target="_blank">
+                            <h3>一对一</h3>
+                            <h2>内驱式+引导式教学法</h2>
+                            以孩子为中心，定制最适合孩子的教育，不仅注重学习技巧，更注重素质 教育，全方面成长。
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="study_info" onmouseover="JavaScript:this.style.background='url(/Content/Images/study_bg.jpg) repeat-x bottom #fff';" onmouseout="JavaScript:this.style.background='url(/Content/Images/study_bgn.jpg) repeat-x bottom #fff';">
+                <ul>
+                    <li class="img"><img src="/Content/Images/img_study02.jpg"></li>
+                    <li class="contents">
+                        <a href="http://fudao.xinghuo100.com/" target="_blank">
+                            <h3>辅导班</h3>
+                            <h2>精品化班型设计+分层教学+小组讨论</h2>
+                            3-15人成班，精品化班型设计，课堂气氛活跃，既满足了学生共同学习、课堂竞争的需求，又能让每一个学生得到充分关注。
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="study_infor" onmouseover="JavaScript:this.style.background='url(/Content/Images/study_bg.jpg) repeat-x bottom #fff';" onmouseout="JavaScript:this.style.background='url(/Content/Images/study_bgn.jpg) repeat-x bottom #fff';">
+                <ul>
+                    <li class="img"><img src="/Content/Images/img_study03.jpg"></li>
+                    <li class="contents">
+                        <a href="http://jingying.xinghuo100.com/" target="_blank">
+                            <h3>精英班</h3>
+                            <h2>大品牌、值信赖、精准制胜名校</h2>
+                            针对各地中高考班精英学生开展的最高教学标准课程，以目标学校为导向，入学测试后，签订合同，助孩子走入梦想名校。
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+
+        <div class="main">
+            <!--星咨询-->
+            <div class="nav_bleft">
+                <!--Start of the Tabmenu 1 -->
+                <div class="inforRmenu">
+                    <ul>
+                        <li class="title">星资讯</li>
+                        <li><a href="#" onmouseover="easytabs('1', '1');" onfocus="easytabs('1', '1');" onclick="return false;" title="" id="tablink1" class="tab1 tabactive">小学</a></li>
+                        <li><a href="#" onmouseover="easytabs('1', '2');" onfocus="easytabs('1', '2');" onclick="return false;" title="" id="tablink2" class="tab2">初中</a></li>
+                        <li><a href="#" onmouseover="easytabs('1', '3');" onfocus="easytabs('1', '3');" onclick="return false;" title="" id="tablink3" class="tab3">高中</a></li>
+                        <div class="clear"></div>
+                    </ul>
+                </div>
+                <!--End of the Tabmenu 1 -->
+                <!--Start Tabcontent 1 -->
+                <div id="tabcontent1" style="display: block;">
+                    <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';" style="background: rgb(255, 255, 255);">
+                        <ul>
+                            <li class="img">
+                                <a href="/201609/4670.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/934/953/image/20160927/20160927230447_6457.jpeg"></a>
+                            </li>
+                            <li class="contents">
+                                <h3><a href="/201609/4670.html" target="_blank">五大方法养成好的学习习惯，助力小学学习</a></h3>
+                                小学阶段的学习，对于孩子学习习惯的养成是十分重要的，小学阶段是学生形成良好学习习惯的关键时刻和最佳时机。因此，星火教育老师在这里要教给广大小学生和家长们五个有利于提...
+                                <a class="smore" href="/201609/4670.html" target="_blank">[详细]</a>
+                            </li>
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                    <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';" style="background: rgb(255, 255, 255);">
+                        <ul>
+                            <li class="img">
+                                <a href="/201609/4612.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/934/953/image/20160926/20160926215238_4119.jpg"></a>
+                            </li>
+                            <li class="contents">
+                                <h3><a href="/201609/4612.html" target="_blank">纵容孩子这三件事？小心毁了孩子</a></h3>
+                                现如今的家庭大多是一家三口的小家庭模式，很多家庭里只有一个孩子，父母普遍认为自己就只有一个孩子，所以竭尽所能地想把最好的给孩子，在生活上也尽可能地迁就孩子。这种迁就...
+                                <a class="smore" href="/201609/4612.html" target="_blank">[详细]</a>
+                            </li>
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                    <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';" style="background: rgb(255, 255, 255);">
+                        <ul>
+                            <li class="img">
+                                <a href="/201609/4578.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/934/953/image/20160925/20160925145528_1684.jpeg"></a>
+                            </li>
+                            <li class="contents">
+                                <h3><a href="/201609/4578.html" target="_blank">经常给孩子检查作业，反倒害了孩子</a></h3>
+                                星火教育老师发现，有很多父母会经常性地给孩子检查作业。他们都认为帮孩子检查作业是对孩子的关心和帮助，殊不知其实经常给孩子检查作业，反而是害了孩子。 自己的事情自己做...
+                                <a class="smore" href="/201609/4578.html" target="_blank">[详细]</a>
+                            </li>
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                    <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';" style="background: rgb(255, 255, 255);">
+                        <ul>
+                            <li class="img">
+                                <a href="/201608/3718.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/934/953/image/20160817/20160817130343_5744.png"></a>
+                            </li>
+                            <li class="contents">
+                                <h3><a href="/201608/3718.html" target="_blank">带着孩子去旅行，实践方能出真知！</a></h3>
+                                很多家长和孩子出去旅游，可能都只是因为把孩子留在家没人照顾顺带一起去而已。但是，有没有想过，旅行其实是孩子开拓视野最好的方式。 当然，这里说的旅行并不是说父母做好...
+                                <a class="smore" href="/201608/3718.html" target="_blank">[详细]</a>
+                            </li>
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                    <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';">
+                        <ul>
+                            <li class="img">
+                                <a href="/201608/3719.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/934/953/image/20160817/20160817130632_4214.png"></a>
+                            </li>
+                            <li class="contents">
+                                <h3><a href="/201608/3719.html" target="_blank">如何教育小孩？这些电影也许能帮助你！</a></h3>
+                                在漫长的学生生涯里，也许更操心的不是学生本人，而是学生的家长。每当面临孩子成长过程中遇到的各种瓶颈，家长都想尽办法想要帮助孩子，但有时候尽管绞尽脑汁也找不到答案。...
+                                <a class="smore" href="/201608/3719.html" target="_blank">[详细]</a>
+                            </li>
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                    <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';">
+                        <ul>
+                            <li class="img">
+                                <a href="/201608/3720.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/934/953/image/20160817/20160817130907_1118.png"></a>
+                            </li>
+                            <li class="contents">
+                                <h3><a href="/201608/3720.html" target="_blank">情感篇：父母对孩子的信任到底有多重要？</a></h3>
+                                父母如果想要和孩子真诚沟通，信任是必须的。“我听到爸妈不信任我，对我百般质问的语气，我当时的心就像蹦得很高，然后又失去重心一般从高空跌下来一样难受。爸妈对我的不信任...
+                                <a class="smore" href="/201608/3720.html" target="_blank">[详细]</a>
+                            </li>
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                </div>
+                <!--End Tabcontent 1-->
+                <!--Start Tabcontent 2-->
+                <div id="tabcontent2" style="display: none;">
+                    <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';">
+                        <ul>
+                            <li class="img">
+                                <a href="/201610/4775.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/930/959/image/20161007/20161007170818_4883.png"></a>
+                            </li>
+                            <li class="contents">
+                                <h3><a href="/201610/4775.html" target="_blank">偏科么？看看如何培养弱科兴趣吧！</a></h3>
+                                有一种弱科叫做没有学习兴趣，有一种弱科叫做没有学习方法，有一种弱科叫做知道弱但不想方法。如何攻克弱科？ 如何提升学习兴趣 1、了解学习目的，间接建立兴趣。 当学习该...
+                                <a class="smore" href="/201610/4775.html" target="_blank">[详细]</a>
+                            </li>
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                    <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';">
+                        <ul>
+                            <li class="img">
+                                <a href="/201609/4671.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/930/959/image/20160927/20160927231133_2960.jpeg"></a>
+                            </li>
+                            <li class="contents">
+                                <h3><a href="/201609/4671.html" target="_blank">家长课堂：家长要多多倾听孩子内心的声音</a></h3>
+                                星火教育老师经常听到家长们抱怨道：“孩子越大跟我越来越疏远，什么话都不肯跟我说了。”其实，倾诉是人的本能，但是孩子长大之后往往很多事情只愿意跟朋友分享，原因是在于亲...
+                                <a class="smore" href="/201609/4671.html" target="_blank">[详细]</a>
+                            </li>
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                    <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';">
+                        <ul>
+                            <li class="img">
+                                <a href="/201609/4579.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/930/959/image/20160925/20160925150509_0389.jpg"></a>
+                            </li>
+                            <li class="contents">
+                                <h3><a href="/201609/4579.html" target="_blank">要想中考考得好，时间管理很重要</a></h3>
+                                星火教育老师经常听到一些学生抱怨道：我的智商比不过别人，我不聪明，所以才总是考的不好。这都是天生的，没办法。 其实这种说法是不对的，学习不够好并不是因为智商不够用，...
+                                <a class="smore" href="/201609/4579.html" target="_blank">[详细]</a>
+                            </li>
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                    <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';">
+                        <ul>
+                            <li class="img">
+                                <a href="/201609/4537.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/930/961/image/20160922/20160922161019_6091.jpg"></a>
+                            </li>
+                            <li class="contents">
+                                <h3><a href="/201609/4537.html" target="_blank">初三必读：2017年中考时间轴出炉</a></h3>
+                                转眼间，初三的号角吹起，同学们褪去了初一初二的稚气，踏上了崭新的路途，高强度的学习在此时已经成为日常，如果没有整体的规划，很容易被老师牵着走，成绩也会在...
+                                <a class="smore" href="/201609/4537.html" target="_blank">[详细]</a>
+                            </li>
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                    <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';">
+                        <ul>
+                            <li class="img">
+                                <a href="/201608/4019.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/930/959/image/20160824/20160824151039_4260.jpg"></a>
+                            </li>
+                            <li class="contents">
+                                <h3><a href="/201608/4019.html" target="_blank">新初二们，你的初二年级学习计划要趁早准备好！</a></h3>
+                                初一年级,是方法教育的关键一年。孩子学习如盖一栋楼,这栋楼第一层没盖好,仍然可以在后面的建设中不断加固。初一的学习已经结束，无论初一的考试成果是好是坏都已...
+                                <a class="smore" href="/201608/4019.html" target="_blank">[详细]</a>
+                            </li>
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                    <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';">
+                        <ul>
+                            <li class="img">
+                                <a href="/201608/4000.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/930/959/image/20160823/20160823161016_5958.jpg"></a>
+                            </li>
+                            <li class="contents">
+                                <h3><a href="/201608/4000.html" target="_blank">读一所优秀的高中，到底多重要？</a></h3>
+                                去年北师大做了一项特别有意思的调查：清华北大的大学生，小学和中学是否来自名校？这个调查持续了半年，我也非常关注，结果出来了以后，和我的预期也非常吻合：很多清...
+                                <a class="smore" href="/201608/4000.html" target="_blank">[详细]</a>
+                            </li>
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                </div>
+                <!--End Tabcontent 2 -->
+                <!--Start Tabcontent 3-->
+                <div id="tabcontent3" style="display: none;">
+                    <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';">
+                        <ul>
+                            <li class="img">
+                                <a href="/201610/4774.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/933/958/image/20161007/20161007165009_1062.png"></a>
+                            </li>
+                            <li class="contents">
+                                <h3><a href="/201610/4774.html" target="_blank">重磅！怎样增强高考“全国卷”的适应性？福建出台9门学科指导意见</a></h3>
+                                为加强和改进我省普通高中学科教育教学工作，进一步深化普通高中课程改革，增强统一高考“全国卷”的适应性，在广泛听取意见的基础上，省教育厅结合实际组织编写《福建省普通高...
+                                <a class="smore" href="/201610/4774.html" target="_blank">[详细]</a>
+                            </li>
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                    <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';">
+                        <ul>
+                            <li class="img">
+                                <a href="/201609/4672.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/933/956/image/20160927/20160927231614_7389.jpg"></a>
+                            </li>
+                            <li class="contents">
+                                <h3><a href="/201609/4672.html" target="_blank">家长注意了！青少年抑郁症越来越常见！</a></h3>
+                                青少年是备受社会和家庭关注的一个群体，青少年抑郁症会在一定程度上影响他们的身心健康发展。因此，青少年抑郁症的治疗一定要及时、彻底。接下来，星火教育老师就为广大家长盘...
+                                <a class="smore" href="/201609/4672.html" target="_blank">[详细]</a>
+                            </li>
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                    <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';">
+                        <ul>
+                            <li class="img">
+                                <a href="/201609/4580.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/933/956/image/20160925/20160925150947_7631.jpg"></a>
+                            </li>
+                            <li class="contents">
+                                <h3><a href="/201609/4580.html" target="_blank">学生课堂：学会听课，助你新学期成绩飞跃</a></h3>
+                                新学期如期而至，很多同学们都希望在新学期能够取得新发展，因此可能会开始购买额外的学习资料，报补习班。星火教育老师在这里告诉各位同学和家长，新学期成绩飞跃的关键，要回...
+                                <a class="smore" href="/201609/4580.html" target="_blank">[详细]</a>
+                            </li>
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                    <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';">
+                        <ul>
+                            <li class="img">
+                                <a href="/201609/4541.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/933/958/image/20160922/20160922162522_4097.png"></a>
+                            </li>
+                            <li class="contents">
+                                <h3><a href="/201609/4541.html" target="_blank">快讯丨2017年福建省高中会考大纲公布啦！</a></h3>
+                                日前，10个科目《2017年福建省普通高中学生学业基础会考考试大纲（试行）》出台。10个科目分别是：语文、数学、英语、历史、地理、生物、思想政治、化学、物理、信息技...
+                                <a class="smore" href="/201609/4541.html" target="_blank">[详细]</a>
+                            </li>
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                    <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';">
+                        <ul>
+                            <li class="img">
+                                <a href="/201609/4254.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/933/958/image/20160906/20160906104502_3154.png"></a>
+                            </li>
+                            <li class="contents">
+                                <h3><a href="/201609/4254.html" target="_blank">【新政策】今后福建高考四月就开考，成绩计入高考！</a></h3>
+                                9月3日，福建省教育厅对外公布两个重要文件，《福建省普通高中学业水平考试实施办法（试行）》和《福建省普通高中学生综合素质评价实施办法（试行）》。  一、政策...
+                                <a class="smore" href="/201609/4254.html" target="_blank">[详细]</a>
+                            </li>
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                    <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';">
+                        <ul>
+                            <li class="img">
+                                <a href="/201608/4021.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/933/956/image/20160824/20160824151754_7949.jpg"></a>
+                            </li>
+                            <li class="contents">
+                                <h3><a href="/201608/4021.html" target="_blank">高三必备：2017高考全年大事备忘录，精确到每个月</a></h3>
+                                2016年高考结束两月有余，高二同学已荣升为高三党。作为高三党，想要在一年后的高考中取得优势，就要学会从现在开始努力，从现在开始踏上高考之路。    为此，...
+                                <a class="smore" href="/201608/4021.html" target="_blank">[详细]</a>
+                            </li>
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                </div>
+                <!--End Tabcontent 3-->
+            </div>
+            <div class="nav_bright">
+                <!--品牌专区-->
+                <div class="brand-right">
+                    <h3>品牌专区</h3>
+                    <ul>
+                        <li><a href="http://dg.xinghuo100.com/201601/1787.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/75/76/94/image/20160112/20160112171822_8386.jpg" alt=""></a></li>
+                        <li><a href="http://www.chaoyou100.com/" target="_blank"><img src="http://file.xinghuo100.com/upload/25/75/76/94/image/20160112/20160112171828_7606.jpg" alt=""></a></li>
+                        <li><a href="http://www.aixuexi.com/html/subjects.html#shuxue" target="_blank"><img src="http://file.xinghuo100.com/upload/25/75/76/94/image/20160112/20160112171835_4639.jpg" alt=""></a></li>
+                        <li><a href="http://online.ygwo.cn/" target="_blank"><img src="http://file.xinghuo100.com/upload/25/75/76/94/image/20160112/20160112171841_8859.jpg" alt=""></a></li>
+                    </ul>
+                </div>
+                <!--右侧广告-->
+                <div class="right_ad"><a href="http://ikx.xinghuojiaoyu.net/" target="_blank"><img src="http://file.xinghuo100.com/upload/25/75/76/94/image/20160112/20160112171941_7468.jpg" alt=""></a></div>
+                <div class="right_ad"><a href="http://www.xinghuo100.com/zhuanti/qiuji2016/fuzhou/qiuji2016.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/936/940/image/20160906/20160906111120_6012.jpg" alt=""></a></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+
+
+
+        <!--友情链接-->
+        <div class="main">
+            <div class="wap_link">
+                <strong class="title">友情链接: </strong>
+                <a href="http://www.aesucai.wang" target="_blank">AE素材网</a>
+                <a href="http://open.163.com/" target="_blank">网易公开课</a>
+                <a href="http://edu.ce.cn/" target="_blank">中国经济网教育频道</a>
+                <a href="http://www.51edu.com/" target="_blank">精品学习网</a>
+                <a href="http://edu.qq.com/" target="_blank">腾讯教育网</a>
+                <a href="http://www.hao123.com/xuexi" target="_blank">hao123在线学习</a>
+                <a href="http://edu.21cn.com/" target="_blank">21CN教育</a>
+                <a href="http://edu.people.com.cn/" target="_blank">人民教育网</a>
+                <a href="http://www.moe.edu.cn/" target="_blank">国家教育网</a>
+                <a href="http://open.163.com/" target="_blank">搜狐教育</a>
+                <a href="http://edu.sina.com.cn/" target="_blank">新浪教育</a>
+                <a href="http://www.zaobao.com/lifestyle/education" target="_blank">联合早播</a>
+            </div>
+        </div>
+
+
+
+        <!--底部导航-->
+        <div class="main">
+            <div class="wap_bmenu">
+                <div class="list">
+                    <h3><a href="/xiaoxue.html" style="color:#666666;" target="_blank">小学辅导</a></h3>
+                    <ul>
+                        <li><a href="/xiaoxue/xxdt/0-1.html" target="_blank">小学动态</a></li>
+                        <li><a href="/xiaoxue/xsc/0-1.html" target="_blank">小升初资讯</a></li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <h3><a href="/chuzhong.html" style="color:#666666;" target="_blank">初中辅导</a></h3>
+                    <ul>
+                        <li><a href="/chuzhong/czdt/0-1.html" target="_blank">初中动态</a></li>
+                        <li><a href="/chuzhong/zk/0-1.html" target="_blank">中考资讯</a></li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <h3><a href="/gaozhong.html" style="color:#666666;" target="_blank">高中辅导</a></h3>
+                    <ul>
+                        <li><a href="/gaozhong/gzdt/0-1.html" target="_blank">高中动态</a></li>
+                        <li><a href="/gaozhong/gk/0-1.html" target="_blank">高考资讯</a></li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <h3><a href="/campus/0-1.html" style="color:#666666;" target="_blank">校区查询</a></h3>
+                </div>
+                <div class="list">
+                    <h3><a href="/teacher/0-0-1.html" style="color:#666666;" target="_blank">老师查询</a></h3>
+                    <ul>
+                        <li><a href="/teacher/10-0-1.html" target="_blank">小学</a></li>
+                        <li><a href="/teacher/20-0-1.html" target="_blank">初中</a></li>
+                        <li><a href="/teacher/30-0-1.html" target="_blank">高中</a></li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <h3><a href="/school/0-0-0-1.html" style="color:#666666;" target="_blank">名校库</a></h3>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+
     </div>
 </div>
-
-<script type="text/javascript">
-    $(function(){
-        $(window).resize(function(){
-            $("#main-container").css("min-height", $(window).height() - 343);
-        }).resize();
-    })
-</script>

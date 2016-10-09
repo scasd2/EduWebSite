@@ -1,47 +1,12 @@
-<!-- 导航条
-================================================== -->
-<div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="navbar-inner">
-        <div class="container">
-            <a class="brand" href="{:U('index/index')}">OneThink</a>
-            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <div class="nav-collapse collapse">
-                <ul class="nav">
-                    <think:nav name="nav">
-                    	<eq name="nav.pid" value="0">
-                        <li>
-                            <a href="{$nav.url|get_nav_url}" target="<eq name='nav.target' value='1'>_blank<else/>_self</eq>">{$nav.title}</a>
-                        </li>
-                        </eq>
-                    </think:nav>
-                </ul>
-            </div>
-            <div class="nav-collapse collapse pull-right">
-                <if condition="is_login()">
-                    <ul class="nav" style="margin-right:0">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding-left:0;padding-right:0">{:get_username()} <b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="{:U('User/profile')}">修改密码</a></li>
-                                <li><a href="{:U('User/logout')}">退出</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                <else/>
-                    <ul class="nav" style="margin-right:0">
-                        <li>
-                            <a href="{:U('User/login')}">登录</a>
-                        </li>
-                        <li>
-                            <a href="{:U('User/register')}" style="padding-left:0;padding-right:0">注册</a>
-                        </li>
-                    </ul>
-                </if>
-            </div>
+<div class="page_top">
+    <div class="main">
+        <div class="m-logo"><a href="#"></a></div>
+
+        <div class="top_right">
+            <div class="hotline">全国统一提分热线： <strong>400-877-0068</strong></div>
+            <div id="moquu_wxin" class="moquu_wxin"><a href="javascript:void(0)"><img src="__PUBLIC__/Home/pc/icon_wechat.png"><span class="wechat">星火教育官微</span><div class="moquu_wxinh"><img src="http://file.xinghuo100.com/upload/25/74/103/image/20160311/20160311104058_3312.jpg"></div></a></div>
+
         </div>
     </div>
+    <div class="clear"></div>
 </div>
