@@ -1,0 +1,19 @@
+<!--导航菜单开始-->
+<div class="thirmenu">
+    <ul class="nav_list" id="menu">
+<think:nav name="nav">
+    <eq name="nav.pid" value="0">
+
+        <li class="{$nav['url']==$currentUrl?'current':''}">
+            <a href="{$nav.url|get_nav_url}"
+               target="<eq name='nav.target' value='1'>_blank<else/>_self</eq>">
+               {$nav.title}
+            </a>
+        </li>
+    </eq>
+</think:nav>
+<!--导航菜单结束-->
+    </ul>
+</div>
+
+

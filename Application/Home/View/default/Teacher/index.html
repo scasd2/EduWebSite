@@ -1,0 +1,320 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <include file="Public/head"/>
+</head>
+<body>
+<!-- 头部 -->
+<include file="Public/header"/>
+<!-- /头部 -->
+
+
+
+<div class="page">
+    <div class="main">
+        <!--菜单-->
+        <include file="Public/menu"/>
+        <!--菜单-->
+
+        <!--左侧模块-->
+        <div class="col-left">
+            <div class="search_list">
+                <dt>年级：</dt>
+
+
+
+                <dd>
+                    <if condition="$grade eq -1">
+                        <span class="search_current">
+                            <a class="search_link"      href="{:U('Teacher/Index',array('grade'=>-1,'subject'=>$subject))}">不限</a>
+                        </span>
+                        <else />
+                        <a class="search_link"          href="{:U('Teacher/Index',array('grade'=>-1,'subject'=>$subject))}">不限</a>
+                    </if>
+
+                    <if condition="$grade eq 0">
+                        <span class="search_current">
+                            <a class="search_link"      href="{:U('Teacher/Index',array('grade'=> 0,'subject'=>$subject))}">小学</a>
+                        </span>
+                        <else />
+                        <a class="search_link"          href="{:U('Teacher/Index',array('grade'=> 0,'subject'=>$subject))}">小学</a>
+                    </if>
+
+
+                    <if condition="$grade eq 1">
+                        <span class="search_current">
+                            <a class="search_link"      href="{:U('Teacher/Index',array('grade'=> 1,'subject'=>$subject))}">中学</a>
+                        </span>
+                        <else />
+                        <a class="search_link"          href="{:U('Teacher/Index',array('grade'=> 1,'subject'=>$subject))}">中学</a>
+                    </if>
+
+
+                    <if condition="$grade eq 2">
+                        <span class="search_current">
+                            <a class="search_link"      href="{:U('Teacher/Index',array('grade'=>2,'subject'=>$subject))}">高中</a>
+                        </span>
+                        <else />
+                        <a class="search_link"          href="{:U('Teacher/Index',array('grade'=>2,'subject'=>$subject))}">高中</a>
+                    </if>
+
+
+                </dd>
+            </div>
+            <div class="search_list">
+                <dt>科目：</dt>
+                <dd>
+
+
+
+                  <!--  0:语文
+                    1:数学
+                    2:英语
+                    3:历史
+                    4:地理
+                    5:生物
+                    6:政治
+                    7:化学
+                    8:物理-->
+
+                    <if condition="$subject eq -1">
+
+                    <span class="search_current">
+                        <a class="search_link"                  href="{:U('Teacher/Index',array('grade'=>$grade,'subject'=>-1))}">不限</a>
+                    </span>
+                        <else />
+                        <a class="search_link"                  href="{:U('Teacher/Index',array('grade'=>$grade,'subject'=>-1))}">不限</a>
+
+                    </if>
+
+
+                    <if condition="$subject eq 0">
+
+                    <span class="search_current">
+                        <a class="search_link"                  href="{:U('Teacher/Index',array('grade'=>$grade,'subject'=>0))}">语文</a>
+                    </span>
+                        <else />
+                        <a class="search_link"                  href="{:U('Teacher/Index',array('grade'=>$grade,'subject'=>0))}">语文</a>
+
+                    </if>
+
+
+                    <if condition="$subject eq 1">
+
+                    <span class="search_current">
+                        <a class="search_link"                  href="{:U('Teacher/Index',array('grade'=>$grade,'subject'=>1))}">数学</a>
+                    </span>
+                        <else />
+                        <a class="search_link"                  href="{:U('Teacher/Index',array('grade'=>$grade,'subject'=>1))}">数学</a>
+
+                    </if>
+
+
+                    <if condition="$subject eq 2">
+
+                    <span class="search_current">
+                        <a class="search_link"                  href="{:U('Teacher/Index',array('grade'=>$grade,'subject'=>2))}">英语</a>
+                    </span>
+                        <else />
+                        <a class="search_link"                  href="{:U('Teacher/Index',array('grade'=>$grade,'subject'=>2))}">英语</a>
+
+                    </if>
+
+
+                    <if condition="$subject eq 3">
+
+                    <span class="search_current">
+                        <a class="search_link"                  href="{:U('Teacher/Index',array('grade'=>$grade,'subject'=>3))}">历史</a>
+                    </span>
+                        <else />
+                        <a class="search_link"                  href="{:U('Teacher/Index',array('grade'=>$grade,'subject'=>3))}">历史</a>
+
+                    </if>
+
+
+                    <if condition="$subject eq 4">
+
+                    <span class="search_current">
+                        <a class="search_link"                  href="{:U('Teacher/Index',array('grade'=>$grade,'subject'=>4))}">地理</a>
+                    </span>
+                        <else />
+                        <a class="search_link"                  href="{:U('Teacher/Index',array('grade'=>$grade,'subject'=>4))}">地理</a>
+
+                    </if>
+
+
+                    <if condition="$subject eq 5">
+
+                    <span class="search_current">
+                        <a class="search_link"                  href="{:U('Teacher/Index',array('grade'=>$grade,'subject'=>5))}">生物</a>
+                    </span>
+                        <else />
+                        <a class="search_link"                  href="{:U('Teacher/Index',array('grade'=>$grade,'subject'=>5))}">生物</a>
+
+                    </if>
+
+
+                    <if condition="$subject eq 6">
+
+                    <span class="search_current">
+                        <a class="search_link"                  href="{:U('Teacher/Index',array('grade'=>$grade,'subject'=>6))}">政治</a>
+                    </span>
+                        <else />
+                        <a class="search_link"                  href="{:U('Teacher/Index',array('grade'=>$grade,'subject'=>6))}">政治</a>
+
+                    </if>
+
+
+                    <if condition="$subject eq 7">
+
+                    <span class="search_current">
+                        <a class="search_link"                  href="{:U('Teacher/Index',array('grade'=>$grade,'subject'=>7))}">化学</a>
+                    </span>
+                        <else />
+                        <a class="search_link"                  href="{:U('Teacher/Index',array('grade'=>$grade,'subject'=>7))}">化学</a>
+
+                    </if>
+
+                    <if condition="$subject eq 8">
+
+                    <span class="search_current">
+                        <a class="search_link"                  href="{:U('Teacher/Index',array('grade'=>$grade,'subject'=>8))}">物理</a>
+                    </span>
+                        <else />
+                        <a class="search_link"                  href="{:U('Teacher/Index',array('grade'=>$grade,'subject'=>8))}">物理</a>
+
+                    </if>
+
+
+                </dd>
+            </div>
+            <div class="contents">
+                <!--教师列表-->
+
+
+                <volist name="teachers" id="vo">
+
+
+
+                    <div class="list-tx" onmouseover="JavaScript:this.style.background='#F1F1F1';" onmouseout="JavaScript:this.style.background='#FAFAFA';" style="background: rgb(250, 250, 250);">
+                        <dl>
+                            <dt> <a href="/teacher/510.html" target="_blank"><img src="{$vo.headUrl}"></a> </dt>
+                            <dd>
+                                <div class="list_con">
+                                    <h5> <a href="/teacher/510.html" target="_blank">{$vo.name}</a></h5>
+                                    <p>
+                                        <em>辅导年级：</em>{$gradeMap[$vo['grade']]}
+                                    </p>
+                                    <p>
+                                        <em>辅导科目：</em>{$subjectMap[$vo['subject']]}
+                                    </p>
+                                    <p class="overhide">
+                                        <em>教学风格：</em>{$vo.style}
+                                    </p>
+                                    <p class="overhide">
+                                        <em>教学成果：</em>{$vo.achievement}
+                                    </p>
+                                    <i class="u-star5"></i>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                </volist>
+
+            </div>
+
+<!--            <div class="coli_page">
+                &lt;!&ndash;上一页&ndash;&gt;
+                <a class="on" style="cursor:default">1</a>
+
+                &lt;!&ndash;中间部分&ndash;&gt;
+                <a href="/teacher/20-0-2.html">2</a>
+
+                <a href="/teacher/20-0-3.html">3</a><a class="prelinkno" href="/teacher/20-0-2.html">下一页</a>
+            </div>-->
+
+        </div>
+        <!--右侧模块-->
+        <div class="col-right">
+            <!--最受关注的老师-->
+            <div class="right_teach">
+                <h5>最受关注老师</h5>
+                <div class="contents">
+                    <a class="img floatL" href="/teacher/513.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/931/image/20160414/20160414114510_6739.jpg"></a>
+
+                    <div class="tips floatL">
+                        <h3> <a href="/teacher/513.html" target="_blank">吴春燕</a></h3>
+                        <p>中学</p>
+                        语文
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="contents">
+                    <a class="img floatL" href="/teacher/506.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/931/image/20160414/20160414105716_8933.jpg"></a>
+
+                    <div class="tips floatL">
+                        <h3> <a href="/teacher/506.html" target="_blank">冯圳楷</a></h3>
+                        <p>中学</p>
+                        物理
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="contents">
+                    <a class="img floatL" href="/teacher/622.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/931/image/20160618/20160618162940_9380.png"></a>
+
+                    <div class="tips floatL">
+                        <h3> <a href="/teacher/622.html" target="_blank">于冰茜 </a></h3>
+                        <p>中学</p>
+                        英语
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="contents">
+                    <a class="img floatL" href="/teacher/625.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/931/image/20160618/20160618165844_0846.png"></a>
+
+                    <div class="tips floatL">
+                        <h3> <a href="/teacher/625.html" target="_blank">潘秋婷 </a></h3>
+                        <p>中学</p>
+                        英语
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="contents">
+                    <a class="img floatL" href="/teacher/621.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/931/image/20160618/20160618162405_0253.png"></a>
+
+                    <div class="tips floatL">
+                        <h3> <a href="/teacher/621.html" target="_blank">蒋世依</a></h3>
+                        <p>中学</p>
+                        英语
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="contents">
+                    <a class="img floatL" href="/teacher/510.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/931/image/20160414/20160414111750_5607.jpg"></a>
+
+                    <div class="tips floatL">
+                        <h3> <a href="/teacher/510.html" target="_blank">刘冬</a></h3>
+                        <p>中学</p>
+                        英语
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <!--右侧广告-->
+            <div class="right_ad"><a href="http://ikx.xinghuojiaoyu.net/" target="_blank"><img src="http://file.xinghuo100.com/upload/25/75/76/100/image/20160118/20160118101846_2257.jpg" alt=""></a></div>
+        </div>
+        <div class="clear"></div>
+
+
+    </div>
+</div>
+
+
+
+<!-- 底部 -->
+<include file="Public/footer"/>
+<!-- /底部 -->
+</body>
+</html>
+
+
