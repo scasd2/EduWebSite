@@ -8,10 +8,9 @@ use OT\DataDictionary;
  * 前台首页控制器
  * 主要获取首页聚合数据
  */
-class TeacherController extends HomeController {
-
-    //系统首页
+class CurrController extends HomeController {
     public function index(){
+
 
         /*        $category = D('Category')->getTree();
                 $lists    = D('Document')->lists(null);
@@ -27,26 +26,27 @@ class TeacherController extends HomeController {
         $this->subject=$subject;
 
 
-        $teachers=M('teachers')->select();
+        $teachers=M('curriculum')->select();
+
 
         foreach($teachers as $key=>$val){
 
 
             if($grade!=-1){
-                if($grade!=$val['grade']){
+                if($grade!=$val['CurriculumLevel']){
                     unset($teachers[$key]);
                     continue;
                 }
             }
             if($subject!=-1){
-                if($subject!=$val['subject']){
+                if($subject!=$val['CourseType']){
                     unset($teachers[$key]);
                     continue;
                 }
             }
 
             $pic=M('picture')->where([
-                'id'=>$val['head']
+                'id'=>$val['picture']
             ])->select();
             if(count($pic)>0){
                 $teachers[$key]['headUrl']=$pic[0]['path'];
@@ -86,8 +86,7 @@ class TeacherController extends HomeController {
 
 
 
-        $this->currentUrl="Teacher/index";
+        $this->currentUrl="Curr/index"."?grade=".$grade;
         $this->display();
     }
-
 }

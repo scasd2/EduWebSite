@@ -14,18 +14,17 @@
     <div class="main">
 
 
-        <!--菜单-->
         <include file="Public/menu"/>
-        <!--菜单-->
+
 
 
         <!--左侧导航-->
         <div class="left_menu">
             <h3>课程导航</h3>
             <ul>
-                <li><a href="/xiaoxue.html" target="_blank">小学辅导</a></li>
-                <li><a href="/chuzhong.html" target="_blank">初中辅导</a></li>
-                <li><a href="/gaozhong.html" target="_blank">高中辅导</a></li>
+                <li><a href="{:U('Curr/index',array('grade'=>0))}" target="_blank">小学辅导</a></li>
+                <li><a href="{:U('Curr/index',array('grade'=>1))}" target="_blank">初中辅导</a></li>
+                <li><a href="{:U('Curr/index',array('grade'=>2))}" target="_blank">高中辅导</a></li>
             </ul>
         </div>
 
@@ -151,9 +150,9 @@
         <!--学习方式-->
         <div class="main" style="margin-bottom:20px;">
             <h3 class="study_title">在星火，选择最适合您孩子的学习方式：</h3>
-            <div class="study_info" onmouseover="JavaScript:this.style.background='url(/Content/Images/study_bg.jpg) repeat-x bottom #fff';" onmouseout="JavaScript:this.style.background='url(/Content/Images/study_bgn.jpg) repeat-x bottom #fff';" style="background: url(&quot;/Content/Images/study_bgn.jpg&quot;) center bottom repeat-x rgb(255, 255, 255);">
+            <div class="study_info" onmouseover="JavaScript:this.style.background='url(__PUBLIC__/Home/pc/Content/Images/study_bg.jpg) repeat-x bottom #fff';" onmouseout="JavaScript:this.style.background='url(__PUBLIC__/Home/pc/Content/Images/study_bgn.jpg) repeat-x bottom #fff';" style="background: url(&quot;/Content/Images/study_bgn.jpg&quot;) center bottom repeat-x rgb(255, 255, 255);">
                 <ul>
-                    <li class="img"><img src="/Content/Images/img_study01.jpg"></li>
+                    <li class="img"><img src="__PUBLIC__/Home/pc/Content/Images/img_study01.jpg"></li>
                     <li class="contents">
                         <a href="http://vip.xinghuo100.com/" target="_blank">
                             <h3>一对一</h3>
@@ -163,9 +162,9 @@
                     </li>
                 </ul>
             </div>
-            <div class="study_info" onmouseover="JavaScript:this.style.background='url(/Content/Images/study_bg.jpg) repeat-x bottom #fff';" onmouseout="JavaScript:this.style.background='url(/Content/Images/study_bgn.jpg) repeat-x bottom #fff';">
+            <div class="study_info" onmouseover="JavaScript:this.style.background='url(__PUBLIC__/Home/pc/Content/Images/study_bg.jpg) repeat-x bottom #fff';" onmouseout="JavaScript:this.style.background='url(__PUBLIC__/Home/pc/Content/Images/study_bgn.jpg) repeat-x bottom #fff';">
                 <ul>
-                    <li class="img"><img src="/Content/Images/img_study02.jpg"></li>
+                    <li class="img"><img src="__PUBLIC__/Home/pc/Content/Images/img_study02.jpg"></li>
                     <li class="contents">
                         <a href="http://fudao.xinghuo100.com/" target="_blank">
                             <h3>辅导班</h3>
@@ -175,9 +174,9 @@
                     </li>
                 </ul>
             </div>
-            <div class="study_infor" onmouseover="JavaScript:this.style.background='url(/Content/Images/study_bg.jpg) repeat-x bottom #fff';" onmouseout="JavaScript:this.style.background='url(/Content/Images/study_bgn.jpg) repeat-x bottom #fff';">
+            <div class="study_infor" onmouseover="JavaScript:this.style.background='url(__PUBLIC__/Home/pc/Content/Images/study_bg.jpg) repeat-x bottom #fff';" onmouseout="JavaScript:this.style.background='url(__PUBLIC__/Home/pc/Content/Images/study_bgn.jpg) repeat-x bottom #fff';">
                 <ul>
-                    <li class="img"><img src="/Content/Images/img_study03.jpg"></li>
+                    <li class="img"><img src="__PUBLIC__/Home/pc/Content/Images/img_study03.jpg"></li>
                     <li class="contents">
                         <a href="http://jingying.xinghuo100.com/" target="_blank">
                             <h3>精英班</h3>
@@ -498,21 +497,21 @@
         <div class="main">
             <div class="wap_bmenu">
                 <div class="list">
-                    <h3><a href="/xiaoxue.html" style="color:#666666;" target="_blank">小学辅导</a></h3>
+                    <h3><a href="{:U('Curr/index',array('grade'=>0))}" style="color:#666666;" target="_blank">小学辅导</a></h3>
                     <ul>
                         <li><a href="/xiaoxue/xxdt/0-1.html" target="_blank">小学动态</a></li>
                         <li><a href="/xiaoxue/xsc/0-1.html" target="_blank">小升初资讯</a></li>
                     </ul>
                 </div>
                 <div class="list">
-                    <h3><a href="/chuzhong.html" style="color:#666666;" target="_blank">初中辅导</a></h3>
+                    <h3><a href="{:U('Curr/index',array('grade'=>1))}" style="color:#666666;" target="_blank">初中辅导</a></h3>
                     <ul>
                         <li><a href="/chuzhong/czdt/0-1.html" target="_blank">初中动态</a></li>
                         <li><a href="/chuzhong/zk/0-1.html" target="_blank">中考资讯</a></li>
                     </ul>
                 </div>
                 <div class="list">
-                    <h3><a href="/gaozhong.html" style="color:#666666;" target="_blank">高中辅导</a></h3>
+                    <h3><a href="{:U('Curr/index',array('grade'=>2))}" style="color:#666666;" target="_blank">高中辅导</a></h3>
                     <ul>
                         <li><a href="/gaozhong/gzdt/0-1.html" target="_blank">高中动态</a></li>
                         <li><a href="/gaozhong/gk/0-1.html" target="_blank">高考资讯</a></li>
