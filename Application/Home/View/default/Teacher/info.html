@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <include file="Public/head"/>
+</head>
+<body>
+<!-- 头部 -->
+<include file="Public/header"/>
+<!-- /头部 -->
+
+
+
+<div class="page">
+    <div class="main">
+
+
+        <include file="Public/menu"/>
+
+
+
+
+        <php>
+            var_dump($teacher);
+            var_dump($gradeMap);
+
+
+        </php>
+
+        <!--导航菜单开始-->
+
+        <!--导航菜单结束-->
+
+        <!--左侧模块-->
+        <div class="teach_detail">
+            <div class="page_btn">您现在的位置：<a href="/">首页</a> &gt; <a href="/teacher/0-0-1.html">名师展示</a> &gt; 正文  </div>
+            <div class="teach_contents">
+                <div class="contents">
+                    <dl>
+                        <dt><a href="/teacher/510.html"><img src="{$teacher['headPic']}"></a></dt>
+                        <dd class="list-tx">
+                            <h5>{$teacher['name']} <span>{$gradeMap[$teacher['grade']]} {$subjectMap[$teacher['subject']]}</span></h5>
+                            {$teacher['desc']}
+                            <i class="u-star5"></i>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="list floatL">
+                    <p><em class="grade">辅导年级：</em>{$gradeMap[$teacher['grade']]}</p>
+                    <p>
+                        <em class="subject">辅导科目：</em>{$subjectMap[$teacher['subject']]}
+                    </p>
+
+                </div>
+                <div class="listr floatR">
+                    <p>
+                        <em class="style">教学风格：</em>{$teacher['style']}
+                    </p>
+                    <p>
+                        <em class="achievement">教学成果：</em>{$teacher['achievement']}
+                    </p>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <!--最受关注的老师-->
+        <div class="atten_teach">
+            <h5>最受关注的老师</h5>
+            <ul>
+                <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';" onmouseout="JavaScript:this.style.background='#fff';" style="background: rgb(255, 255, 255);">
+                    <a href="/teacher/513.html"><img src="http://file.xinghuo100.com/upload/25/924/931/image/20160414/20160414114510_6739.jpg"></a>
+                    <div class="left-teach-detail">
+
+                        <p class="title"> <a href="/teacher/513.html">吴春燕</a></p>
+                        <p><em>辅导年级：</em>中学</p>
+                        <p><em>辅导科目：</em>语文</p>
+
+                    </div>
+
+                </li>
+                <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';" onmouseout="JavaScript:this.style.background='#fff';" style="background: rgb(255, 255, 255);">
+                    <a href="/teacher/506.html"><img src="http://file.xinghuo100.com/upload/25/924/931/image/20160414/20160414105716_8933.jpg"></a>
+                    <div class="left-teach-detail">
+
+                        <p class="title"> <a href="/teacher/506.html">冯圳楷</a></p>
+                        <p><em>辅导年级：</em>中学</p>
+                        <p><em>辅导科目：</em>物理</p>
+
+                    </div>
+
+                </li>
+                <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';" onmouseout="JavaScript:this.style.background='#fff';" style="background: rgb(255, 255, 255);">
+                    <a href="/teacher/622.html"><img src="http://file.xinghuo100.com/upload/25/924/931/image/20160618/20160618162940_9380.png"></a>
+                    <div class="left-teach-detail">
+
+                        <p class="title"> <a href="/teacher/622.html">于冰茜 </a></p>
+                        <p><em>辅导年级：</em>中学</p>
+                        <p><em>辅导科目：</em>英语</p>
+
+                    </div>
+
+                </li>
+                <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';" onmouseout="JavaScript:this.style.background='#fff';">
+                    <a href="/teacher/625.html"><img src="http://file.xinghuo100.com/upload/25/924/931/image/20160618/20160618165844_0846.png"></a>
+                    <div class="left-teach-detail">
+
+                        <p class="title"> <a href="/teacher/625.html">潘秋婷 </a></p>
+                        <p><em>辅导年级：</em>中学</p>
+                        <p><em>辅导科目：</em>英语</p>
+
+                    </div>
+
+                </li>
+                <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';" onmouseout="JavaScript:this.style.background='#fff';" style="background: rgb(255, 255, 255);">
+                    <a href="/teacher/621.html"><img src="http://file.xinghuo100.com/upload/25/924/931/image/20160618/20160618162405_0253.png"></a>
+                    <div class="left-teach-detail">
+
+                        <p class="title"> <a href="/teacher/621.html">蒋世依</a></p>
+                        <p><em>辅导年级：</em>中学</p>
+                        <p><em>辅导科目：</em>英语</p>
+
+                    </div>
+
+                </li>
+                <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';" onmouseout="JavaScript:this.style.background='#fff';">
+                    <a href="/teacher/510.html"><img src="http://file.xinghuo100.com/upload/25/924/931/image/20160414/20160414111750_5607.jpg"></a>
+                    <div class="left-teach-detail">
+
+                        <p class="title"> <a href="/teacher/510.html">刘冬</a></p>
+                        <p><em>辅导年级：</em>中学</p>
+                        <p><em>辅导科目：</em>英语</p>
+
+                    </div>
+
+                </li>
+                <div class="clear"></div>
+            </ul>
+        </div>
+
+
+        <div class="clear"></div>
+
+    </div>
+</div>
+
+
+
+
+
+
+<!-- 底部 -->
+<include file="Public/footer"/>
+<!-- /底部 -->
+</body>
+</html>
+
+
+
+

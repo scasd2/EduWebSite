@@ -198,10 +198,10 @@
 
                     <div class="list-tx" onmouseover="JavaScript:this.style.background='#F1F1F1';" onmouseout="JavaScript:this.style.background='#FAFAFA';" style="background: rgb(250, 250, 250);">
                         <dl>
-                            <dt> <a href="/teacher/510.html" target="_blank"><img src="{$vo.headUrl}"></a> </dt>
+                            <dt> <a href="{:U('info',array('id'=>$vo['id']))}" target="_blank"><img src="{$vo.headUrl}"></a> </dt>
                             <dd>
                                 <div class="list_con">
-                                    <h5> <a href="/teacher/510.html" target="_blank">{$vo.name}</a></h5>
+                                    <h5> <a href="{:U('info',array('id'=>$vo['id']))}" target="_blank">{$vo.name}</a></h5>
                                     <p>
                                         <em>辅导年级：</em>{$gradeMap[$vo['grade']]}
                                     </p>
