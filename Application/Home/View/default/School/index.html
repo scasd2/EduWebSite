@@ -165,16 +165,14 @@
                 </dd>
             </div>
 
-
-
             <div class="contents">
                 <ul>
 
                     <volist name="school" id="vo">
                         <li class="library-link">
-                            <a href="/school/149.html" target="_blank"><img src="{$vo.headUrl}"></a>
+                            <a href="{:U('info',array('id'=>$id))}" target="_blank"><img src="{$vo.headUrl}"></a>
                             <div class="left-library-detail">
-                                <p class="title"><a href="/school/149.html" target="_blank">{$vo.SchoolName}</a></p>
+                                <p class="title"><a href="{:U('info',array('id'=>1))}" target="_blank">{$vo.SchoolName}</a></p>
                                 <p><em>区域：</em>福州市</p>
                                 <p><em>级别：</em>{$levelMap[$vo['level']]}</p>
                                 <p><em>性质：</em>{$SchoolNatureMap[$vo['SchoolNature']]}</p>

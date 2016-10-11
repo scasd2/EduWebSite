@@ -27,8 +27,8 @@ class SchoolController extends HomeController {
         ];
         $this->SchoolTypeMap=[
             0=>"仅高中",
-            0=>"仅初中",
-            0=>"高中+初中",
+            1=>"仅初中",
+            2=>"高中+初中",
 
         ];
 
@@ -93,6 +93,39 @@ class SchoolController extends HomeController {
 
 
         $this->currentUrl="School/index";
+        $this->display();
+    }
+
+    public function info(){
+
+
+        $this->levelMap=[
+            0=>"省一级",
+            1=>"市一级",
+            2=>"普通级别",
+        ];
+        $this->SchoolNatureMap=[
+            0=>"民办",
+            1=>"公办"
+        ];
+        $this->SchoolTypeMap=[
+            0=>"仅高中",
+            1=>"仅初中",
+            2=>"高中+初中",
+
+        ];
+
+        $id=I('id');
+
+        $school=M('school')->where([
+            'id'=>$id
+        ])->select();
+
+        $pic=M('picture')->where([
+            'id'=>$school[0]['picture']
+        ])->select();
+        $school[0]['headPic']=$pic[0]['path'];
+        $this->school=$school[0];
         $this->display();
     }
 }
