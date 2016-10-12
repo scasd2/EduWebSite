@@ -1,33 +1,193 @@
-<extend name="Base/common"/>
+<!DOCTYPE HTML>
+<html>
+<head>
+    <include file="Public/head"/>
+</head>
+<body>
+<!-- 头部 -->
+<include file="Public/header"/>
+<!-- /头部 -->
 
-<block name="header">
-    <header class="jumbotron subhead" id="overview">
-		<div class="container">
-			<h2>{$info.title}</h2>
-			<p>
-				<span  class="pull-left">
-					<span class="author">{$info.uid|get_username}</span>
-					<span> 发表于 {$info.create_time|date='Y-m-d H:i',###}</span>
-				</span>
-				<span class="pull-right">
-					<article:prev name="prev" info="info">
-                        <a href="{:U('?id='.$prev['id'])}">上一篇</a>
-                    </article:prev>
-                    <article:next name="next" info="info">
-                        <a href="{:U('?id='.$next['id'])}">下一篇</a>
-                    </article:next>
-				</span>
-			</p>
-		</div>
-	</header>
-</block>
 
-<block name="body">
-    <div class="span9 main-content">
-        <!-- Contents
-        ================================================== -->
-        <section id="contents">{$info.content}</section>
-        <hr/>
-        {:hook('documentDetailAfter',$info)}
+
+<div class="page">
+    <div class="main">
+        <include file="Public/menu"/>
+
+
+
+
+ <!--       <php>
+            var_dump($info);
+        </php>-->
+
+
+        <!--导航菜单开始-->
+
+        <!--导航菜单结束-->
+
+        <!--左侧模块-->
+        <div class="col-layleft">
+            <div class="col-pleft">
+                <div class="page_btn">您现在的位置：<a href="/">首页</a> &gt; <a href="/xiaoxue/xxdt/0-1.html">小学动态</a> &gt; 正文</div>
+                <div class="news-content">
+                    <div class="news-title">
+                        <h5>{$info.title}</h5>
+                        <div class="date floatL">
+                            <span>{:date('Y-m-d H:i:s',$info['update_time'])}</span>
+                            <span>来源：</span>福州星火教育
+                            <span>编缉：</span>
+                            <span>阅读数：</span>{$info.view}
+                        </div>
+      <!--                  <div id="bdshare" style="float:right;">
+                            <div id="bdshare" class="bdshare_b" style="line-height: 12px;">
+                                <img src="http://bdimg.share.baidu.com/static/images/type-button-5.jpg?cdnversion=20120831">
+                            </div>
+
+                        </div>-->
+                        <div class="clear"></div>
+                    </div>
+                    <!--文章正文-->
+                    <div class="news-stdn">
+                        {$info.content}
+                    </div>
+                    <!--标签-->
+       <!--             <div class="tips_label">
+                        <div class="tips floatL">
+                            标签：
+                            <a class="label" href="/xiaoxue/xxdt/43-1.html">心理辅导</a><a class="label" href="/xiaoxue/xxdt/18-1.html">家长资讯</a><a class="label" href="/xiaoxue/xxdt/14-1.html">小学</a>                            </div>
+                        <div id="bdshare" style="float:right;">
+                            <div id="bdshare" class="bdshare_b" style="line-height: 12px;">
+                                <img src="http://bdimg.share.baidu.com/static/images/type-button-5.jpg?cdnversion=20120831">
+                            </div>
+
+                        </div>
+                        <div class="clear"></div>
+                    </div>-->
+                    <!--上下翻页-->
+        <!--            <div class="news-page">
+                        <p class="npage floatL">
+                            上一篇：
+                            <a href="/201609/4578.html" target="_blank">经常给孩子检查作业，反倒害了孩子</a>                            </p>
+                        <p class="npage floatR">
+                            下一篇：
+                            <a href="/201609/4670.html" target="_blank">五大方法养成好的学习习惯，助力小学学习</a>                            </p>
+                    </div>-->
+
+                </div>
+            </div>
+            <!--也许您感兴趣的-->
+<!--            <div class="news-inter">
+                <h3>也许您感兴趣的：</h3>
+                <ul class="lnews_list floatL">
+                    <li><a href="/201609/4308.html" target="_blank">2016腾讯中国好老师荣誉盛典北京召开 星火教育霸气狂揽多项大奖</a></li>
+                    <li><a href="/201608/3763.html" target="_blank">星火教育推荐：高中生缓解压力看这里！ </a></li>
+                    <li><a href="/201609/4672.html" target="_blank">家长注意了！青少年抑郁症越来越常见！</a></li>
+                    <li><a href="/201601/1503.html" target="_blank">2015年高校开放日、咨询会时间汇总</a></li>
+                    <li><a href="/201608/3765.html" target="_blank">致高中生：高中生活除了学习，还能怎么过？ </a></li>
+                </ul>
+                <ul class="rnews_list floatL">
+                    <li><a href="/201604/2159.html" target="_blank">学习从来就不是一件轻松的事，全世界都一样</a></li>
+                    <li><a href="/201601/1509.html" target="_blank">熬夜学习难避免？不如把试试这些方法！</a></li>
+                    <li><a href="/201601/1506.html" target="_blank">高三学生复习期间出现心理问题如何调节？</a></li>
+                    <li><a href="/201603/1958.html" target="_blank">初三学生的性格类型，家长该怎么应对呢？</a></li>
+                    <li><a href="/201603/1945.html" target="_blank">都为你准备好了，生物地理备考计划</a></li>
+                </ul>
+            </div>-->
+        </div>
+        <!--右侧模块-->
+        <div class="col-right">
+            <!--广告-->
+            <div class="right_ad"><a href="http://ikx.xinghuojiaoyu.net/" target="_blank"><img src="http://file.xinghuo100.com/upload/25/75/76/97/image/20160111/20160111153128_8301.jpg" alt=""></a></div>
+            <!--最新资讯-->
+            <div class="nav_library">
+                <h3>最新资讯</h3>
+                <ul class="inforR_text">
+                    <li><a href="/201609/4670.html" target="_blank">五大方法养成好的学习习惯，助力小学学习</a></li>
+                    <li><a href="/201609/4612.html" target="_blank">纵容孩子这三件事？小心毁了孩子</a></li>
+                    <li><a href="/201609/4578.html" target="_blank">经常给孩子检查作业，反倒害了孩子</a></li>
+                    <li><a href="/201609/4391.html" target="_blank">科学的学习方法才是关键 你真的懂吗？</a></li>
+                    <li><a href="/201609/4390.html" target="_blank">良好的学习习惯是学习的基础 星火君来教你</a></li>
+                    <li><a href="/201608/3924.html" target="_blank">小学生的成功秘密：如何对待错题最有用</a></li>
+                    <li><a href="/201608/3921.html" target="_blank">课后复习的四种学习技巧  星火君通通告诉你</a></li>
+                    <li><a href="/201608/3920.html" target="_blank">小学生的学习技巧 星火君让你快速学会</a></li>
+                </ul>
+            </div>
+            <!--广告-->
+            <div class="right_ad"><a href="http://www.xinghuo100.com/zhuanti/qiuji2016/fuzhou/xx.html###" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/936/950/image/20160913/20160913123123_7365.jpg" alt=""></a></div>
+            <!--热门资讯-->
+            <div class="nav_library">
+                <h3>热门资讯</h3>
+                <ul class="inforR_text">
+                    <li><a href="/201603/1959.html" target="_blank">如何选择私立校？星火君为你解答</a></li>
+                    <li><a href="/201603/1471.html" target="_blank">影响小学生学习成绩的六个习惯</a></li>
+                    <li><a href="/201604/2053.html" target="_blank">记忆生字不困难  星火教育帮你忙</a></li>
+                    <li><a href="/201601/1478.html" target="_blank">小升初面试环节全面解析及必备能力</a></li>
+                    <li><a href="/201603/1957.html" target="_blank">妈妈掌握这些辅导作业的技巧，孩子一定成绩好！</a></li>
+                    <li><a href="/201601/1470.html" target="_blank">3岁、7岁、10岁，孩子的重要转折点，非常实在</a></li>
+                    <li><a href="/201601/1472.html" target="_blank">星火君支招 | 小升初，孩子要做哪些准备</a></li>
+                    <li><a href="/201601/1480.html" target="_blank">小升初家长四大疑问：怎么帮孩子缓解压力？</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="clear"></div>
+
+
+
+        <!--底部导航-->
+        <div class="main">
+            <div class="wap_bmenu">
+                <div class="list">
+                    <h3><a href="/xiaoxue.html" style="color:#666666;" target="_blank">小学辅导</a></h3>
+                    <ul>
+                        <li><a href="/xiaoxue/xxdt/0-1.html" target="_blank">小学动态</a></li>
+                        <li><a href="/xiaoxue/xsc/0-1.html" target="_blank">小升初资讯</a></li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <h3><a href="/chuzhong.html" style="color:#666666;" target="_blank">初中辅导</a></h3>
+                    <ul>
+                        <li><a href="/chuzhong/czdt/0-1.html" target="_blank">初中动态</a></li>
+                        <li><a href="/chuzhong/zk/0-1.html" target="_blank">中考资讯</a></li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <h3><a href="/gaozhong.html" style="color:#666666;" target="_blank">高中辅导</a></h3>
+                    <ul>
+                        <li><a href="/gaozhong/gzdt/0-1.html" target="_blank">高中动态</a></li>
+                        <li><a href="/gaozhong/gk/0-1.html" target="_blank">高考资讯</a></li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <h3><a href="/campus/0-1.html" style="color:#666666;" target="_blank">校区查询</a></h3>
+                </div>
+                <div class="list">
+                    <h3><a href="/teacher/0-0-1.html" style="color:#666666;" target="_blank">老师查询</a></h3>
+                    <ul>
+                        <li><a href="/teacher/10-0-1.html" target="_blank">小学</a></li>
+                        <li><a href="/teacher/20-0-1.html" target="_blank">初中</a></li>
+                        <li><a href="/teacher/30-0-1.html" target="_blank">高中</a></li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <h3><a href="/school/0-0-0-1.html" style="color:#666666;" target="_blank">名校库</a></h3>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+
+
+
+        <div class="clear"></div>
     </div>
-</block>
+</div>
+
+
+
+<!-- 底部 -->
+<include file="Public/footer"/>
+<!-- /底部 -->
+</body>
+</html>
+
