@@ -218,20 +218,16 @@
                 <div id="tabcontent1" style="display: block;">
 
                     <volist name="news1" id="vo">
-
-                        <php>
-                            var_dump($vo);
-                        </php>
-
                         <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';" style="background: rgb(255, 255, 255);">
                             <ul>
                                 <li class="img">
-                                    <a href="/201609/4670.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/934/953/image/20160927/20160927230447_6457.jpeg"></a>
+                                    <a href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">
+                                        <img src="{$vo['headUrl']}"></a>
                                 </li>
                                 <li class="contents">
-                                    <h3><a href="/201609/4670.html" target="_blank">{$vo['title']}</a></h3>
-                                    小学阶段的学习，对于孩子学习习惯的养成是十分重要的，小学阶段是学生形成良好学习习惯的关键时刻和最佳时机。因此，星火教育老师在这里要教给广大小学生和家长们五个有利于提...
-                                    <a class="smore" href="/201609/4670.html" target="_blank">[详细]</a>
+                                    <h3><a href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">{$vo['title']}</a></h3>
+                                    {$vo['description']}
+                                    <a class="smore" href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">[详细]</a>
                                 </li>
                                 <div class="clear"></div>
                             </ul>
@@ -246,12 +242,13 @@
                         <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';" style="background: rgb(255, 255, 255);">
                             <ul>
                                 <li class="img">
-                                    <a href="/201609/4670.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/934/953/image/20160927/20160927230447_6457.jpeg"></a>
+                                    <a href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">
+                                        <img src="{$vo['headUrl']}"></a>
                                 </li>
                                 <li class="contents">
-                                    <h3><a href="/201609/4670.html" target="_blank">五大方法养成好的学习习惯，助力小学学习</a></h3>
-                                    小学阶段的学习，对于孩子学习习惯的养成是十分重要的，小学阶段是学生形成良好学习习惯的关键时刻和最佳时机。因此，星火教育老师在这里要教给广大小学生和家长们五个有利于提...
-                                    <a class="smore" href="/201609/4670.html" target="_blank">[详细]</a>
+                                    <h3><a href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">{$vo['title']}</a></h3>
+                                    {$vo['description']}
+                                    <a class="smore" href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">[详细]</a>
                                 </li>
                                 <div class="clear"></div>
                             </ul>
@@ -266,12 +263,13 @@
                         <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';" style="background: rgb(255, 255, 255);">
                             <ul>
                                 <li class="img">
-                                    <a href="/201609/4670.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/934/953/image/20160927/20160927230447_6457.jpeg"></a>
+                                    <a href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">
+                                        <img src="{$vo['headUrl']}"></a>
                                 </li>
                                 <li class="contents">
-                                    <h3><a href="/201609/4670.html" target="_blank">五大方法养成好的学习习惯，助力小学学习</a></h3>
-                                    小学阶段的学习，对于孩子学习习惯的养成是十分重要的，小学阶段是学生形成良好学习习惯的关键时刻和最佳时机。因此，星火教育老师在这里要教给广大小学生和家长们五个有利于提...
-                                    <a class="smore" href="/201609/4670.html" target="_blank">[详细]</a>
+                                    <h3><a href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">{$vo['title']}</a></h3>
+                                    {$vo['description']}
+                                    <a class="smore" href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">[详细]</a>
                                 </li>
                                 <div class="clear"></div>
                             </ul>

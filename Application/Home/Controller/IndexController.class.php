@@ -16,6 +16,22 @@ use OT\DataDictionary;
  */
 class IndexController extends HomeController {
 
+
+    private  function  getPic(&$arr){
+        foreach($arr as $key => $val){
+            $pic=M('picture')->where([
+                'id'=>$val['cover_id']
+            ])->select();
+            if(count($pic)>0){
+                $arr[$key]['headUrl']=$pic[0]['path'];
+
+            }else{
+                $arr[$key]['headUrl']='';
+            }
+
+        }
+    }
+
 	//系统首页
     public function index(){
 
@@ -43,6 +59,14 @@ class IndexController extends HomeController {
         $category3 = $this->category("news-3");
         /* 获取当前分类列表 */
         $news3= $Document->page(1,$category3['list_row'])->limit(6)->lists($category3['id']); /*高中资讯*/
+
+
+
+
+        $this->getPic($news1);
+        $this->getPic($news2);
+        $this->getPic($news3);
+
 
         $this->news1=$news1;
         $this->news2=$news2;
