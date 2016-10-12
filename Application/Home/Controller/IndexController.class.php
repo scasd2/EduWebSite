@@ -26,11 +26,56 @@ class IndexController extends HomeController {
         $this->assign('lists',$lists);//列表
         $this->assign('page',D('Document')->page);//分页*/
 
+        $Document = D('Document');
+
+        /* 分类信息 */
+        $category1 = $this->category("news1");
+        /* 获取当前分类列表 */
+        $news1= $Document->page(1,$category1['list_row'])->limit(6)->lists($category1['id']); /*小学资讯*/
+
+        /* 分类信息 */
+        $category2 = $this->category("news-2");
+        /* 获取当前分类列表 */
+        $news2= $Document->page(1,$category2['list_row'])->limit(6)->lists($category2['id']); /*初中资讯*/
+
+
+        /* 分类信息 */
+        $category3 = $this->category("news-3");
+        /* 获取当前分类列表 */
+        $news3= $Document->page(1,$category3['list_row'])->limit(6)->lists($category3['id']); /*高中资讯*/
+
+        $this->news1=$news1;
+        $this->news2=$news2;
+        $this->news3=$news3;
+
 
         $this->currentUrl="Index/index";
-
-
         $this->display();
+    }
+
+
+    /* 文档分类检测 */
+    private function category($id = 0){
+        /* 标识正确性检测 */
+        $id = $id ? $id : I('get.category', 0);
+        if(empty($id)){
+            $this->error('没有指定文档分类！');
+        }
+
+        /* 获取分类信息 */
+        $category = D('Category')->info($id);
+        if($category && 1 == $category['status']){
+            switch ($category['display']) {
+                case 0:
+                    $this->error('该分类禁止显示！');
+                    break;
+                //TODO: 更多分类显示状态判断
+                default:
+                    return $category;
+            }
+        } else {
+            $this->error('分类不存在或被禁用！');
+        }
     }
 
 }
