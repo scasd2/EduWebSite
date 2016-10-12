@@ -114,17 +114,31 @@ class SchoolController extends HomeController {
             2=>"高中+初中",
 
         ];
-
         $id=I('id');
 
         $school=M('school')->where([
             'id'=>$id
         ])->select();
 
+        $recommend=M('school')->where([
+            'recommend'=>1
+        ])->select();
+
+        $length=count($recommend);
+        for ($i=0;$i<$length;$i++) {
+            $pics = M('picture')->where([
+                'id' => $recommend[$i]['picture']
+            ])->select();
+            $recommend[$i]['headPic'] = $pics[0]['path'];
+        }
+
         $pic=M('picture')->where([
             'id'=>$school[0]['picture']
         ])->select();
         $school[0]['headPic']=$pic[0]['path'];
+
+
+        $this->recommend=$recommend;
         $this->school=$school[0];
         $this->display();
     }
