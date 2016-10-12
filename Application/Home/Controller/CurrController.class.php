@@ -78,8 +78,22 @@ class CurrController extends HomeController {
             8=>'物理',
         ];
         $this->subjectMap=$subjectMap;
+        //推荐课程块
+        $recommend=M('curriculum')->where([
+            'hot'=>1
+        ])->select();
+        $length=count($recommend);
+        for ($i=0;$i<$length;$i++) {
+            $pics = M('picture')->where([
+                'id' => $recommend[$i]['picture']
+            ])->select();
+            $recommend[$i]['headPic'] = $pics[0]['path'];
+        }
 
+        $book[0]['headPic']=$pic[0]['path'];
 
+        $this->recommend=$recommend;
+        $this->book=$book[0];
 
 
 
@@ -87,6 +101,34 @@ class CurrController extends HomeController {
 
 
         $this->currentUrl="Curr/index"."?grade=".$grade;
+        $this->display();
+    }
+
+    public function info(){
+        $id=I('id');
+        $book=M('curriculum')->where([
+            'id'=>$id
+        ])->select();
+        $pic=M('picture')->where([
+            'id'=>$book[0]['picture']
+        ])->select();
+        //推荐课程块
+        $recommend=M('curriculum')->where([
+            'hot'=>1
+        ])->select();
+
+        $length=count($recommend);
+        for ($i=0;$i<$length;$i++) {
+            $pics = M('picture')->where([
+                'id' => $recommend[$i]['picture']
+            ])->select();
+            $recommend[$i]['headPic'] = $pics[0]['path'];
+        }
+
+        $book[0]['headPic']=$pic[0]['path'];
+
+        $this->recommend=$recommend;
+        $this->book=$book[0];
         $this->display();
     }
 }

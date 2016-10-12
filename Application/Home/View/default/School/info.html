@@ -9,7 +9,6 @@
 <!-- /头部 -->
 
 
-
 <div class="page">
     <div class="main">
 
@@ -30,15 +29,15 @@
                     <p><em>学校网址：</em><a href="{$school['website']}" target="_blank">{$school['website']}</a></p>
                     <p><em>联系方式：</em>　</p>
                     <p><em>校区地址：</em>{$school['address']}</p>
- <!--                   <p>
-                        <em>分享到：</em>
-                            <span>
-                                    </span></p><div id="bdshare" class="bdshare_b" style="line-height: 12px;">
-                    <img src="http://bdimg.share.baidu.com/static/images/type-button-5.jpg?cdnversion=20120831">
-                </div>
+                    <!--                   <p>
+                                           <em>分享到：</em>
+                                               <span>
+                                                       </span></p><div id="bdshare" class="bdshare_b" style="line-height: 12px;">
+                                       <img src="http://bdimg.share.baidu.com/static/images/type-button-5.jpg?cdnversion=20120831">
+                                   </div>
 
 
-                    <p></p>-->
+                                       <p></p>-->
                 </dd>
             </div>
             <div class="library_main">
@@ -54,7 +53,9 @@
         <!--右侧模块-->
         <div class="col-right">
             <!--广告-->
-            <div class="right_ad"><a href="http://ikx.xinghuojiaoyu.net/" target="_blank"><img src="http://file.xinghuo100.com/upload/25/75/76/101/image/20160112/20160112173034_2305.jpg" alt=""></a></div>
+            <div class="right_ad"><a href="http://ikx.xinghuojiaoyu.net/" target="_blank"><img
+                    src="http://file.xinghuo100.com/upload/25/75/76/101/image/20160112/20160112173034_2305.jpg" alt=""></a>
+            </div>
             <!--热门资讯-->
             <div class="nav_library">
                 <h3>热门资讯</h3>
@@ -70,7 +71,10 @@
                 </ul>
             </div>
             <!--广告-->
-            <div class="right_ad"><a href="http://www.xinghuo100.com/zhuanti/qiuji2016/fuzhou/qiuji2016.html#" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/936/951/image/20160913/20160913095405_0753.jpg" alt=""></a></div>
+            <div class="right_ad"><a href="http://www.xinghuo100.com/zhuanti/qiuji2016/fuzhou/qiuji2016.html#"
+                                     target="_blank"><img
+                    src="http://file.xinghuo100.com/upload/25/924/936/951/image/20160913/20160913095405_0753.jpg"
+                    alt=""></a></div>
             <!--名校推荐-->
 
             <div class="nav_library">
@@ -80,9 +84,12 @@
                         <div class="bellows__header">
 
                             <div class="bellows__content">
-                                <img src="{$recommend[0]['headPic']}">
+                                <a href="{:U('info',array('id'=>$recommend[0]['id']))}"><img
+                                        src="{$recommend[0]['headPic']}"></a>
                                 <p>
-                                    <span>{$recommend[0]['SchoolName']}</span>
+                                    <a href="{:U('info',array('id'=>$recommend[0]['id']))}">
+                                        <span>{$recommend[0]['SchoolName']}</span>
+                                    </a>
                                     类型：{$SchoolTypeMap[$recommend[0]['SchoolType']]}<br>
                                     区域：{$recommend[0]['UrbanDistrict']}<br>
                                     级别：{$levelMap[$recommend[0]['SchoolNature']]}
@@ -92,9 +99,13 @@
                         <div class="bellows__header">
 
                             <div class="bellows__content">
-                                <img src="{$recommend[1]['headPic']}">
+                                <a href="{:U('info',array('id'=>$recommend[1]['id']))}">
+                                    <img src="{$recommend[1]['headPic']}">
+                                </a>
                                 <p>
-                                    <span>{$recommend[1]['SchoolName']}</span>
+                                    <a href="{:U('info',array('id'=>$recommend[1]['id']))}">
+                                        <span>{$recommend[1]['SchoolName']}</span>
+                                    </a>
                                     类型：{$SchoolTypeMap[$recommend[1]['SchoolType']]}<br>
                                     区域：{$recommend[1]['UrbanDistrict']}<br>
                                     级别：{$levelMap[$recommend[1]['SchoolNature']]}
@@ -104,9 +115,13 @@
                         <div class="bellows__header">
 
                             <div class="bellows__content">
-                                <img src="{$recommend[2]['headPic']}">
+                                <a href="{:U('info',array('id'=>$recommend[2]['id']))}">
+                                    <img src="{$recommend[2]['headPic']}">
+                                </a>
                                 <p>
-                                    <span>{$recommend[2]['SchoolName']}</span>
+                                    <a href="{:U('info',array('id'=>$recommend[2]['id']))}">
+                                        <span>{$recommend[2]['SchoolName']}</span>
+                                    </a>
                                     类型：{$SchoolTypeMap[$recommend[2]['SchoolType']]}<br>
                                     区域：{$recommend[2]['UrbanDistrict']}<br>
                                     级别：{$levelMap[$recommend[2]['SchoolNature']]}
@@ -116,9 +131,13 @@
                         <div class="bellows__header">
 
                             <div class="bellows__content">
-                                <img src="{$recommend[3]['headPic']}">
+                                <a href="{:U('info',array('id'=>$recommend[3]['id']))}">
+                                    <img src="{$recommend[3]['headPic']}">
+                                </a>
                                 <p>
-                                    <span>{$recommend[3]['SchoolName']}</span>
+                                    <a href="{:U('info',array('id'=>$recommend[3]['id']))}">
+                                        <span>{$recommend[3]['SchoolName']}</span>
+                                    </a>
                                     类型：{$SchoolTypeMap[$recommend[3]['SchoolType']]}<br>
                                     区域：{$recommend[3]['UrbanDistrict']}<br>
                                     级别：{$levelMap[$recommend[3]['SchoolNature']]}
@@ -128,9 +147,13 @@
                         <div class="bellows__header">
 
                             <div class="bellows__content">
-                                <img src="{$recommend[4]['headPic']}">
+                                <a href="{:U('info',array('id'=>$recommend[4]['id']))}">
+                                    <img src="{$recommend[4]['headPic']}">
+                                </a>
                                 <p>
-                                    <span>{$recommend[4]['SchoolName']}</span>
+                                    <a href="{:U('info',array('id'=>$recommend[4]['id']))}">
+                                        <span>{$recommend[4]['SchoolName']}</span>
+                                    </a>
                                     类型：{$SchoolTypeMap[$recommend[4]['SchoolType']]}<br>
                                     区域：{$recommend[4]['UrbanDistrict']}<br>
                                     级别：{$levelMap[$recommend[4]['SchoolNature']]}
@@ -140,9 +163,13 @@
                         <div class="bellows__header">
 
                             <div class="bellows__content">
-                                <img src="{$recommend[5]['headPic']}">
+                                <a href="{:U('info',array('id'=>$recommend[5]['id']))}">
+                                    <img src="{$recommend[5]['headPic']}">
+                                </a>
                                 <p>
-                                    <span>{$recommend[5]['SchoolName']}</span>
+                                    <a href="{:U('info',array('id'=>$recommend[5]['id']))}">
+                                        <span>{$recommend[5]['SchoolName']}</span>
+                                    </a>
                                     类型：{$SchoolTypeMap[$recommend[5]['SchoolType']]}<br>
                                     区域：{$recommend[5]['UrbanDistrict']}<br>
                                     级别：{$levelMap[$recommend[5]['SchoolNature']]}
@@ -152,9 +179,13 @@
                         <div class="bellows__header">
 
                             <div class="bellows__content">
-                                <img src="{$recommend[6]['headPic']}">
+                                <a href="{:U('info',array('id'=>$recommend[6]['id']))}">
+                                    <img src="{$recommend[6]['headPic']}">
+                                </a>
                                 <p>
-                                    <span>{$recommend[6]['SchoolName']}</span>
+                                    <a href="{:U('info',array('id'=>$recommend[6]['id']))}">
+                                        <span>{$recommend[6]['SchoolName']}</span>
+                                    </a>
                                     类型：{$SchoolTypeMap[$recommend[6]['SchoolType']]}<br>
                                     区域：{$recommend[6]['UrbanDistrict']}<br>
                                     级别：{$levelMap[$recommend[6]['SchoolNature']]}
@@ -164,9 +195,13 @@
                         <div class="bellows__header">
 
                             <div class="bellows__content">
-                                <img src="{$recommend[7]['headPic']}">
+                                <a href="{:U('info',array('id'=>$recommend[7]['id']))}">
+                                    <img src="{$recommend[7]['headPic']}">
+                                </a>
                                 <p>
-                                    <span>{$recommend[7]['SchoolName']}</span>
+                                    <a href="{:U('info',array('id'=>$recommend[7]['id']))}">
+                                        <span>{$recommend[7]['SchoolName']}</span>
+                                    </a>
                                     类型：{$SchoolTypeMap[$recommend[7]['SchoolType']]}<br>
                                     区域：{$recommend[7]['UrbanDistrict']}<br>
                                     级别：{$levelMap[$recommend[7]['SchoolNature']]}
@@ -180,14 +215,10 @@
         <div class="clear"></div>
 
 
-
-
         <div class="clear"></div>
 
     </div>
 </div>
-
-
 
 
 <!-- 底部 -->

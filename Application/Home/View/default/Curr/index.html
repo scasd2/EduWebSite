@@ -187,7 +187,7 @@
 
 
             <div class="contents">
-                <!--教师列表-->
+                <!--课程列表-->
 
 
                 <volist name="teachers" id="vo">
@@ -196,10 +196,10 @@
 
                     <div class="list-tx" onmouseover="JavaScript:this.style.background='#F1F1F1';" onmouseout="JavaScript:this.style.background='#FAFAFA';" style="background: rgb(250, 250, 250);">
                         <dl>
-                            <dt> <a href="/teacher/510.html" target="_blank"><img src="{$vo.headUrl}"></a> </dt>
+                            <dt> <a href="{:U('info',array('id'=>$vo['id']))}" target="_blank"><img src="{$vo.headUrl}"></a> </dt>
                             <dd>
                                 <div class="list_con">
-                                    <h5> <a href="/teacher/510.html" target="_blank">{$vo.curriculumName}</a></h5>
+                                    <h5> <a href="{:U('info',array('id'=>$vo['id']))}" target="_blank">{$vo.curriculumName}</a></h5>
 
                                     <p class="overhide">
                                         <em>适用学员：</em>{$vo.ApplicablePeople}
@@ -228,67 +228,68 @@
 
         </div>
         <!--右侧模块-->
+
         <div class="col-right">
             <!--最受关注的老师-->
             <div class="right_teach">
                 <h5>最受关注老师</h5>
                 <div class="contents">
-                    <a class="img floatL" href="/teacher/513.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/931/image/20160414/20160414114510_6739.jpg"></a>
+                    <a class="img floatL" href="{:U('info',array('id'=>$recommend[0]['id']))}" target="_blank"><img src="{$recommend[0]['headPic']}"></a>
 
                     <div class="tips floatL">
-                        <h3> <a href="/teacher/513.html" target="_blank">吴春燕</a></h3>
-                        <p>中学</p>
-                        语文
+                        <h1> <a href="{:U('info',array('id'=>$recommend[0]['id']))}" target="_blank">{$recommend[0]['curriculumName']}</a></h1>
+
+
                     </div>
                     <div class="clear"></div>
                 </div>
                 <div class="contents">
-                    <a class="img floatL" href="/teacher/506.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/931/image/20160414/20160414105716_8933.jpg"></a>
+                    <a class="img floatL" href="{:U('info',array('id'=>$recommend[1]['id']))}" target="_blank"><img src="{$recommend[1]['headPic']}"></a>
 
                     <div class="tips floatL">
-                        <h3> <a href="/teacher/506.html" target="_blank">冯圳楷</a></h3>
-                        <p>中学</p>
-                        物理
+                        <h1> <a href="{:U('info',array('id'=>$recommend[1]['id']))}" target="_blank">{$recommend[1]['curriculumName']}</a></h1>
+
+
                     </div>
                     <div class="clear"></div>
                 </div>
                 <div class="contents">
-                    <a class="img floatL" href="/teacher/622.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/931/image/20160618/20160618162940_9380.png"></a>
+                    <a class="img floatL" href="{:U('info',array('id'=>$recommend[2]['id']))}" target="_blank"><img src="{$recommend[2]['headPic']}"></a>
 
                     <div class="tips floatL">
-                        <h3> <a href="/teacher/622.html" target="_blank">于冰茜 </a></h3>
-                        <p>中学</p>
-                        英语
+                        <h1> <a href="{:U('info',array('id'=>$recommend[2]['id']))}" target="_blank">{$recommend[2]['curriculumName']}</a></h1>
+
+
                     </div>
                     <div class="clear"></div>
                 </div>
                 <div class="contents">
-                    <a class="img floatL" href="/teacher/625.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/931/image/20160618/20160618165844_0846.png"></a>
+                    <a class="img floatL" href="{:U('info',array('id'=>$recommend[3]['id']))}" target="_blank"><img src="{$recommend[3]['headPic']}"></a>
 
                     <div class="tips floatL">
-                        <h3> <a href="/teacher/625.html" target="_blank">潘秋婷 </a></h3>
-                        <p>中学</p>
-                        英语
+                        <h1> <a href="{:U('info',array('id'=>$recommend[3]['id']))}" target="_blank">{$recommend[3]['curriculumName']}</a></h1>
+
+
                     </div>
                     <div class="clear"></div>
                 </div>
                 <div class="contents">
-                    <a class="img floatL" href="/teacher/621.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/931/image/20160618/20160618162405_0253.png"></a>
+                    <a class="img floatL" href="{:U('info',array('id'=>$recommend[4]['id']))}" target="_blank"><img src="{$recommend[4]['headPic']}"></a>
 
                     <div class="tips floatL">
-                        <h3> <a href="/teacher/621.html" target="_blank">蒋世依</a></h3>
-                        <p>中学</p>
-                        英语
+                        <h1> <a href="{:U('info',array('id'=>$recommend[4]['id']))}" target="_blank">{$recommend[4]['curriculumName']}</a></h1>
+
+
                     </div>
                     <div class="clear"></div>
                 </div>
                 <div class="contents">
-                    <a class="img floatL" href="/teacher/510.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/931/image/20160414/20160414111750_5607.jpg"></a>
+                    <a class="img floatL" href="{:U('info',array('id'=>$recommend[5]['id']))}" target="_blank"><img src="{$recommend[5]['headPic']}"></a>
 
                     <div class="tips floatL">
-                        <h3> <a href="/teacher/510.html" target="_blank">刘冬</a></h3>
-                        <p>中学</p>
-                        英语
+                        <h1> <a href="{:U('info',array('id'=>$recommend[5]['id']))}" target="_blank">{$recommend[5]['curriculumName']}</a></h1>
+
+
                     </div>
                     <div class="clear"></div>
                 </div>
