@@ -56,7 +56,7 @@
         </div>
         <!--推荐课程-->
         <div class="atten_teach">
-            <h5>推荐的课程</h5>
+            <h5>推荐课程</h5>
             <ul>
                 <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';" onmouseout="JavaScript:this.style.background='#fff';" style="background: rgb(255, 255, 255);">
                     <a href="{:U('info',array('id'=>$recommend[0]['id']))}"><img src="{$recommend[0]['headPic']}"></a>
@@ -74,7 +74,7 @@
 
                 </li>
                 <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';" onmouseout="JavaScript:this.style.background='#fff';" style="background: rgb(255, 255, 255);">
-                    <a href="/"><img src="{$recommend[1]['headPic']}"></a>
+                    <a href="{:U('info',array('id'=>$recommend[1]['id']))}"><img src="{$recommend[1]['headPic']}"></a>
                     <div class="left-teach-detail">
 
                         <a href="{:U('info',array('id'=>$recommend[1]['id']))}">
@@ -130,7 +130,7 @@
 
                 </li>
                 <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';" onmouseout="JavaScript:this.style.background='#fff';">
-                    <a href="/"><img src="{$recommend[5]['headPic']}"></a>
+                    <a href="{:U('info',array('id'=>$recommend[5]['id']))}"><img src="{$recommend[5]['headPic']}"></a>
                     <div class="left-teach-detail">
 
                         <a href="{:U('info',array('id'=>$recommend[5]['id']))}">
