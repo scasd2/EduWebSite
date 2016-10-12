@@ -79,7 +79,18 @@ class TeacherController extends HomeController {
         ];
         $this->subjectMap=$subjectMap;
 
+        $recommend=M('teachers')->where([
+            'recommend'=>1
+        ])->select();
 
+        $length=count($recommend);
+        for ($i=0;$i<$length;$i++) {
+            $pics = M('picture')->where([
+                'id' => $recommend[$i]['head']
+            ])->select();
+            $recommend[$i]['headPic'] = $pics[0]['path'];
+        }
+        $this->recommend=$recommend;
         $this->currentUrl="Teacher/index";
         $this->display();
     }
