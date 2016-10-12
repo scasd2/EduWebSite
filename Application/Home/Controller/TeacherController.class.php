@@ -113,8 +113,12 @@ class TeacherController extends HomeController {
 
         $id=I('id');
 
-        $teacher=$teachers=M('teachers')->where([
+        $teacher=M('teachers')->where([
             'id'=>$id
+        ])->select();
+
+        $recommend=M('teachers')->where([
+                'recommend'=>1
         ])->select();
 
 
@@ -123,7 +127,16 @@ class TeacherController extends HomeController {
         ])->select();
 
         $teacher[0]['headPic']=$pic[0]['path'];
+
+        $length=count($recommend);
+        for ($i=0;$i<$length;$i++) {
+            $pics = M('picture')->where([
+                'id' => $recommend[$i]['head']
+            ])->select();
+            $recommend[$i]['headPic'] = $pics[0]['path'];
+        }
         $this->teacher=$teacher[0];
+        $this->recommend=$recommend;
 
         $this->display();
     }

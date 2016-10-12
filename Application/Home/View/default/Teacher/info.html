@@ -17,15 +17,6 @@
         <include file="Public/menu"/>
 
 
-
-
-        <php>
-            var_dump($teacher);
-            var_dump($gradeMap);
-
-
-        </php>
-
         <!--导航菜单开始-->
 
         <!--导航菜单结束-->
@@ -62,72 +53,73 @@
                 <div class="clear"></div>
             </div>
         </div>
+
         <!--最受关注的老师-->
         <div class="atten_teach">
             <h5>最受关注的老师</h5>
             <ul>
                 <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';" onmouseout="JavaScript:this.style.background='#fff';" style="background: rgb(255, 255, 255);">
-                    <a href="/teacher/513.html"><img src="http://file.xinghuo100.com/upload/25/924/931/image/20160414/20160414114510_6739.jpg"></a>
+                    <a href="{:U('info',array('id'=>$recommend[0]['id']))}"><img src="{$recommend[0]['headPic']}"></a>
                     <div class="left-teach-detail">
 
-                        <p class="title"> <a href="/teacher/513.html">吴春燕</a></p>
-                        <p><em>辅导年级：</em>中学</p>
-                        <p><em>辅导科目：</em>语文</p>
+                        <p class="title"> <a href="{:U('info',array('id'=>$recommend[0]['id']))}">{$recommend[0]['name']}</a></p>
+                        <p><em>辅导年级：</em>{$gradeMap[$recommend[0]['grade']]}</p>
+                        <p><em>辅导科目：</em>{$subjectMap[$recommend[0]['subject']]}</p>
 
                     </div>
 
                 </li>
                 <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';" onmouseout="JavaScript:this.style.background='#fff';" style="background: rgb(255, 255, 255);">
-                    <a href="/teacher/506.html"><img src="http://file.xinghuo100.com/upload/25/924/931/image/20160414/20160414105716_8933.jpg"></a>
+                    <a href="{:U('info',array('id'=>$recommend[1]['id']))}"><img src="{$recommend[1]['headPic']}"></a>
                     <div class="left-teach-detail">
 
-                        <p class="title"> <a href="/teacher/506.html">冯圳楷</a></p>
-                        <p><em>辅导年级：</em>中学</p>
-                        <p><em>辅导科目：</em>物理</p>
+                        <p class="title"> <a href="{:U('info',array('id'=>$recommend[1]['id']))}">{$recommend[1]['name']}</a></p>
+                        <p><em>辅导年级：</em>{$gradeMap[$recommend[1]['grade']]}</p>
+                        <p><em>辅导科目：</em>{$subjectMap[$recommend[1]['subject']]}</p>
 
                     </div>
 
                 </li>
                 <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';" onmouseout="JavaScript:this.style.background='#fff';" style="background: rgb(255, 255, 255);">
-                    <a href="/teacher/622.html"><img src="http://file.xinghuo100.com/upload/25/924/931/image/20160618/20160618162940_9380.png"></a>
+                    <a href="{:U('info',array('id'=>$recommend[2]['id']))}"><img src="{$recommend[2]['headPic']}"></a>
                     <div class="left-teach-detail">
 
-                        <p class="title"> <a href="/teacher/622.html">于冰茜 </a></p>
-                        <p><em>辅导年级：</em>中学</p>
-                        <p><em>辅导科目：</em>英语</p>
+                        <p class="title"> <a href="{:U('info',array('id'=>$recommend[2]['id']))}">{$recommend[2]['name']}</a></p>
+                        <p><em>辅导年级：</em>{$gradeMap[$recommend[2]['grade']]}</p>
+                        <p><em>辅导科目：</em>{$subjectMap[$recommend[2]['subject']]}</p>
 
                     </div>
 
                 </li>
                 <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';" onmouseout="JavaScript:this.style.background='#fff';">
-                    <a href="/teacher/625.html"><img src="http://file.xinghuo100.com/upload/25/924/931/image/20160618/20160618165844_0846.png"></a>
+                    <a href="{:U('info',array('id'=>$recommend[3]['id']))}"><img src="{$recommend[3]['headPic']}"></a>
                     <div class="left-teach-detail">
 
-                        <p class="title"> <a href="/teacher/625.html">潘秋婷 </a></p>
-                        <p><em>辅导年级：</em>中学</p>
-                        <p><em>辅导科目：</em>英语</p>
+                        <p class="title"> <a href="{:U('info',array('id'=>$recommend[3]['id']))}">{$recommend[3]['name']}</a></p>
+                        <p><em>辅导年级：</em>{$gradeMap[$recommend[3]['grade']]}</p>
+                        <p><em>辅导科目：</em>{$subjectMap[$recommend[3]['subject']]}</p>
 
                     </div>
 
                 </li>
                 <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';" onmouseout="JavaScript:this.style.background='#fff';" style="background: rgb(255, 255, 255);">
-                    <a href="/teacher/621.html"><img src="http://file.xinghuo100.com/upload/25/924/931/image/20160618/20160618162405_0253.png"></a>
+                    <a href="{:U('info',array('id'=>$recommend[4]['id']))}"><img src="{$recommend[4]['headPic']}"></a>
                     <div class="left-teach-detail">
 
-                        <p class="title"> <a href="/teacher/621.html">蒋世依</a></p>
-                        <p><em>辅导年级：</em>中学</p>
-                        <p><em>辅导科目：</em>英语</p>
+                        <p class="title"> <a href="{:U('info',array('id'=>$recommend[4]['id']))}">{$recommend[4]['name']}</a></p>
+                        <p><em>辅导年级：</em>{$gradeMap[$recommend[4]['grade']]}</p>
+                        <p><em>辅导科目：</em>{$subjectMap[$recommend[4]['subject']]}</p>
 
                     </div>
 
                 </li>
                 <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';" onmouseout="JavaScript:this.style.background='#fff';">
-                    <a href="/teacher/510.html"><img src="http://file.xinghuo100.com/upload/25/924/931/image/20160414/20160414111750_5607.jpg"></a>
+                    <a href="{:U('info',array('id'=>$recommend[5]['id']))}"><img src="{$recommend[5]['headPic']}"></a>
                     <div class="left-teach-detail">
 
-                        <p class="title"> <a href="/teacher/510.html">刘冬</a></p>
-                        <p><em>辅导年级：</em>中学</p>
-                        <p><em>辅导科目：</em>英语</p>
+                        <p class="title"> <a href="{:U('info',array('id'=>$recommend[5]['id']))}">{$recommend[5]['name']}</a></p>
+                        <p><em>辅导年级：</em>{$gradeMap[$recommend[5]['grade']]}</p>
+                        <p><em>辅导科目：</em>{$subjectMap[$recommend[5]['subject']]}</p>
 
                     </div>
 
