@@ -196,6 +196,16 @@
                 <!--Start of the Tabmenu 1 -->
                 <div class="inforRmenu">
                     <ul>
+
+                        <script>
+                            function easytabs(a,b){
+                                $("#tabcontent1,#tabcontent2,#tabcontent3").hide()
+                                $("#tabcontent"+b).show()
+                                $("#tablink1,#tablink2,#tablink3").removeClass('tabactive')
+                                $("#tablink"+b).addClass('tabactive')
+                            }
+                        </script>
+
                         <li class="title">星资讯</li>
                         <li><a href="#" onmouseover="easytabs('1', '1');" onfocus="easytabs('1', '1');" onclick="return false;" title="" id="tablink1" class="tab1 tabactive">小学</a></li>
                         <li><a href="#" onmouseover="easytabs('1', '2');" onfocus="easytabs('1', '2');" onclick="return false;" title="" id="tablink2" class="tab2">初中</a></li>
@@ -206,249 +216,68 @@
                 <!--End of the Tabmenu 1 -->
                 <!--Start Tabcontent 1 -->
                 <div id="tabcontent1" style="display: block;">
-                    <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';" style="background: rgb(255, 255, 255);">
-                        <ul>
-                            <li class="img">
-                                <a href="/201609/4670.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/934/953/image/20160927/20160927230447_6457.jpeg"></a>
-                            </li>
-                            <li class="contents">
-                                <h3><a href="/201609/4670.html" target="_blank">五大方法养成好的学习习惯，助力小学学习</a></h3>
-                                小学阶段的学习，对于孩子学习习惯的养成是十分重要的，小学阶段是学生形成良好学习习惯的关键时刻和最佳时机。因此，星火教育老师在这里要教给广大小学生和家长们五个有利于提...
-                                <a class="smore" href="/201609/4670.html" target="_blank">[详细]</a>
-                            </li>
-                            <div class="clear"></div>
-                        </ul>
-                    </div>
-                    <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';" style="background: rgb(255, 255, 255);">
-                        <ul>
-                            <li class="img">
-                                <a href="/201609/4612.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/934/953/image/20160926/20160926215238_4119.jpg"></a>
-                            </li>
-                            <li class="contents">
-                                <h3><a href="/201609/4612.html" target="_blank">纵容孩子这三件事？小心毁了孩子</a></h3>
-                                现如今的家庭大多是一家三口的小家庭模式，很多家庭里只有一个孩子，父母普遍认为自己就只有一个孩子，所以竭尽所能地想把最好的给孩子，在生活上也尽可能地迁就孩子。这种迁就...
-                                <a class="smore" href="/201609/4612.html" target="_blank">[详细]</a>
-                            </li>
-                            <div class="clear"></div>
-                        </ul>
-                    </div>
-                    <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';" style="background: rgb(255, 255, 255);">
-                        <ul>
-                            <li class="img">
-                                <a href="/201609/4578.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/934/953/image/20160925/20160925145528_1684.jpeg"></a>
-                            </li>
-                            <li class="contents">
-                                <h3><a href="/201609/4578.html" target="_blank">经常给孩子检查作业，反倒害了孩子</a></h3>
-                                星火教育老师发现，有很多父母会经常性地给孩子检查作业。他们都认为帮孩子检查作业是对孩子的关心和帮助，殊不知其实经常给孩子检查作业，反而是害了孩子。 自己的事情自己做...
-                                <a class="smore" href="/201609/4578.html" target="_blank">[详细]</a>
-                            </li>
-                            <div class="clear"></div>
-                        </ul>
-                    </div>
-                    <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';" style="background: rgb(255, 255, 255);">
-                        <ul>
-                            <li class="img">
-                                <a href="/201608/3718.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/934/953/image/20160817/20160817130343_5744.png"></a>
-                            </li>
-                            <li class="contents">
-                                <h3><a href="/201608/3718.html" target="_blank">带着孩子去旅行，实践方能出真知！</a></h3>
-                                很多家长和孩子出去旅游，可能都只是因为把孩子留在家没人照顾顺带一起去而已。但是，有没有想过，旅行其实是孩子开拓视野最好的方式。 当然，这里说的旅行并不是说父母做好...
-                                <a class="smore" href="/201608/3718.html" target="_blank">[详细]</a>
-                            </li>
-                            <div class="clear"></div>
-                        </ul>
-                    </div>
-                    <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';">
-                        <ul>
-                            <li class="img">
-                                <a href="/201608/3719.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/934/953/image/20160817/20160817130632_4214.png"></a>
-                            </li>
-                            <li class="contents">
-                                <h3><a href="/201608/3719.html" target="_blank">如何教育小孩？这些电影也许能帮助你！</a></h3>
-                                在漫长的学生生涯里，也许更操心的不是学生本人，而是学生的家长。每当面临孩子成长过程中遇到的各种瓶颈，家长都想尽办法想要帮助孩子，但有时候尽管绞尽脑汁也找不到答案。...
-                                <a class="smore" href="/201608/3719.html" target="_blank">[详细]</a>
-                            </li>
-                            <div class="clear"></div>
-                        </ul>
-                    </div>
-                    <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';">
-                        <ul>
-                            <li class="img">
-                                <a href="/201608/3720.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/934/953/image/20160817/20160817130907_1118.png"></a>
-                            </li>
-                            <li class="contents">
-                                <h3><a href="/201608/3720.html" target="_blank">情感篇：父母对孩子的信任到底有多重要？</a></h3>
-                                父母如果想要和孩子真诚沟通，信任是必须的。“我听到爸妈不信任我，对我百般质问的语气，我当时的心就像蹦得很高，然后又失去重心一般从高空跌下来一样难受。爸妈对我的不信任...
-                                <a class="smore" href="/201608/3720.html" target="_blank">[详细]</a>
-                            </li>
-                            <div class="clear"></div>
-                        </ul>
-                    </div>
-                </div>
+
+                    <volist name="news1" id="vo">
+
+                        <php>
+                            var_dump($vo);
+                        </php>
+
+                        <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';" style="background: rgb(255, 255, 255);">
+                            <ul>
+                                <li class="img">
+                                    <a href="/201609/4670.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/934/953/image/20160927/20160927230447_6457.jpeg"></a>
+                                </li>
+                                <li class="contents">
+                                    <h3><a href="/201609/4670.html" target="_blank">{$vo['title']}</a></h3>
+                                    小学阶段的学习，对于孩子学习习惯的养成是十分重要的，小学阶段是学生形成良好学习习惯的关键时刻和最佳时机。因此，星火教育老师在这里要教给广大小学生和家长们五个有利于提...
+                                    <a class="smore" href="/201609/4670.html" target="_blank">[详细]</a>
+                                </li>
+                                <div class="clear"></div>
+                            </ul>
+                        </div>
+                    </volist>
+
+              </div>
                 <!--End Tabcontent 1-->
                 <!--Start Tabcontent 2-->
                 <div id="tabcontent2" style="display: none;">
-                    <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';">
-                        <ul>
-                            <li class="img">
-                                <a href="/201610/4775.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/930/959/image/20161007/20161007170818_4883.png"></a>
-                            </li>
-                            <li class="contents">
-                                <h3><a href="/201610/4775.html" target="_blank">偏科么？看看如何培养弱科兴趣吧！</a></h3>
-                                有一种弱科叫做没有学习兴趣，有一种弱科叫做没有学习方法，有一种弱科叫做知道弱但不想方法。如何攻克弱科？ 如何提升学习兴趣 1、了解学习目的，间接建立兴趣。 当学习该...
-                                <a class="smore" href="/201610/4775.html" target="_blank">[详细]</a>
-                            </li>
-                            <div class="clear"></div>
-                        </ul>
-                    </div>
-                    <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';">
-                        <ul>
-                            <li class="img">
-                                <a href="/201609/4671.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/930/959/image/20160927/20160927231133_2960.jpeg"></a>
-                            </li>
-                            <li class="contents">
-                                <h3><a href="/201609/4671.html" target="_blank">家长课堂：家长要多多倾听孩子内心的声音</a></h3>
-                                星火教育老师经常听到家长们抱怨道：“孩子越大跟我越来越疏远，什么话都不肯跟我说了。”其实，倾诉是人的本能，但是孩子长大之后往往很多事情只愿意跟朋友分享，原因是在于亲...
-                                <a class="smore" href="/201609/4671.html" target="_blank">[详细]</a>
-                            </li>
-                            <div class="clear"></div>
-                        </ul>
-                    </div>
-                    <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';">
-                        <ul>
-                            <li class="img">
-                                <a href="/201609/4579.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/930/959/image/20160925/20160925150509_0389.jpg"></a>
-                            </li>
-                            <li class="contents">
-                                <h3><a href="/201609/4579.html" target="_blank">要想中考考得好，时间管理很重要</a></h3>
-                                星火教育老师经常听到一些学生抱怨道：我的智商比不过别人，我不聪明，所以才总是考的不好。这都是天生的，没办法。 其实这种说法是不对的，学习不够好并不是因为智商不够用，...
-                                <a class="smore" href="/201609/4579.html" target="_blank">[详细]</a>
-                            </li>
-                            <div class="clear"></div>
-                        </ul>
-                    </div>
-                    <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';">
-                        <ul>
-                            <li class="img">
-                                <a href="/201609/4537.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/930/961/image/20160922/20160922161019_6091.jpg"></a>
-                            </li>
-                            <li class="contents">
-                                <h3><a href="/201609/4537.html" target="_blank">初三必读：2017年中考时间轴出炉</a></h3>
-                                转眼间，初三的号角吹起，同学们褪去了初一初二的稚气，踏上了崭新的路途，高强度的学习在此时已经成为日常，如果没有整体的规划，很容易被老师牵着走，成绩也会在...
-                                <a class="smore" href="/201609/4537.html" target="_blank">[详细]</a>
-                            </li>
-                            <div class="clear"></div>
-                        </ul>
-                    </div>
-                    <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';">
-                        <ul>
-                            <li class="img">
-                                <a href="/201608/4019.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/930/959/image/20160824/20160824151039_4260.jpg"></a>
-                            </li>
-                            <li class="contents">
-                                <h3><a href="/201608/4019.html" target="_blank">新初二们，你的初二年级学习计划要趁早准备好！</a></h3>
-                                初一年级,是方法教育的关键一年。孩子学习如盖一栋楼,这栋楼第一层没盖好,仍然可以在后面的建设中不断加固。初一的学习已经结束，无论初一的考试成果是好是坏都已...
-                                <a class="smore" href="/201608/4019.html" target="_blank">[详细]</a>
-                            </li>
-                            <div class="clear"></div>
-                        </ul>
-                    </div>
-                    <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';">
-                        <ul>
-                            <li class="img">
-                                <a href="/201608/4000.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/930/959/image/20160823/20160823161016_5958.jpg"></a>
-                            </li>
-                            <li class="contents">
-                                <h3><a href="/201608/4000.html" target="_blank">读一所优秀的高中，到底多重要？</a></h3>
-                                去年北师大做了一项特别有意思的调查：清华北大的大学生，小学和中学是否来自名校？这个调查持续了半年，我也非常关注，结果出来了以后，和我的预期也非常吻合：很多清...
-                                <a class="smore" href="/201608/4000.html" target="_blank">[详细]</a>
-                            </li>
-                            <div class="clear"></div>
-                        </ul>
-                    </div>
+                    <volist name="news2" id="vo">
+                        <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';" style="background: rgb(255, 255, 255);">
+                            <ul>
+                                <li class="img">
+                                    <a href="/201609/4670.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/934/953/image/20160927/20160927230447_6457.jpeg"></a>
+                                </li>
+                                <li class="contents">
+                                    <h3><a href="/201609/4670.html" target="_blank">五大方法养成好的学习习惯，助力小学学习</a></h3>
+                                    小学阶段的学习，对于孩子学习习惯的养成是十分重要的，小学阶段是学生形成良好学习习惯的关键时刻和最佳时机。因此，星火教育老师在这里要教给广大小学生和家长们五个有利于提...
+                                    <a class="smore" href="/201609/4670.html" target="_blank">[详细]</a>
+                                </li>
+                                <div class="clear"></div>
+                            </ul>
+                        </div>
+                    </volist>
+
                 </div>
                 <!--End Tabcontent 2 -->
                 <!--Start Tabcontent 3-->
                 <div id="tabcontent3" style="display: none;">
-                    <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';">
-                        <ul>
-                            <li class="img">
-                                <a href="/201610/4774.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/933/958/image/20161007/20161007165009_1062.png"></a>
-                            </li>
-                            <li class="contents">
-                                <h3><a href="/201610/4774.html" target="_blank">重磅！怎样增强高考“全国卷”的适应性？福建出台9门学科指导意见</a></h3>
-                                为加强和改进我省普通高中学科教育教学工作，进一步深化普通高中课程改革，增强统一高考“全国卷”的适应性，在广泛听取意见的基础上，省教育厅结合实际组织编写《福建省普通高...
-                                <a class="smore" href="/201610/4774.html" target="_blank">[详细]</a>
-                            </li>
-                            <div class="clear"></div>
-                        </ul>
-                    </div>
-                    <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';">
-                        <ul>
-                            <li class="img">
-                                <a href="/201609/4672.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/933/956/image/20160927/20160927231614_7389.jpg"></a>
-                            </li>
-                            <li class="contents">
-                                <h3><a href="/201609/4672.html" target="_blank">家长注意了！青少年抑郁症越来越常见！</a></h3>
-                                青少年是备受社会和家庭关注的一个群体，青少年抑郁症会在一定程度上影响他们的身心健康发展。因此，青少年抑郁症的治疗一定要及时、彻底。接下来，星火教育老师就为广大家长盘...
-                                <a class="smore" href="/201609/4672.html" target="_blank">[详细]</a>
-                            </li>
-                            <div class="clear"></div>
-                        </ul>
-                    </div>
-                    <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';">
-                        <ul>
-                            <li class="img">
-                                <a href="/201609/4580.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/933/956/image/20160925/20160925150947_7631.jpg"></a>
-                            </li>
-                            <li class="contents">
-                                <h3><a href="/201609/4580.html" target="_blank">学生课堂：学会听课，助你新学期成绩飞跃</a></h3>
-                                新学期如期而至，很多同学们都希望在新学期能够取得新发展，因此可能会开始购买额外的学习资料，报补习班。星火教育老师在这里告诉各位同学和家长，新学期成绩飞跃的关键，要回...
-                                <a class="smore" href="/201609/4580.html" target="_blank">[详细]</a>
-                            </li>
-                            <div class="clear"></div>
-                        </ul>
-                    </div>
-                    <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';">
-                        <ul>
-                            <li class="img">
-                                <a href="/201609/4541.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/933/958/image/20160922/20160922162522_4097.png"></a>
-                            </li>
-                            <li class="contents">
-                                <h3><a href="/201609/4541.html" target="_blank">快讯丨2017年福建省高中会考大纲公布啦！</a></h3>
-                                日前，10个科目《2017年福建省普通高中学生学业基础会考考试大纲（试行）》出台。10个科目分别是：语文、数学、英语、历史、地理、生物、思想政治、化学、物理、信息技...
-                                <a class="smore" href="/201609/4541.html" target="_blank">[详细]</a>
-                            </li>
-                            <div class="clear"></div>
-                        </ul>
-                    </div>
-                    <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';">
-                        <ul>
-                            <li class="img">
-                                <a href="/201609/4254.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/933/958/image/20160906/20160906104502_3154.png"></a>
-                            </li>
-                            <li class="contents">
-                                <h3><a href="/201609/4254.html" target="_blank">【新政策】今后福建高考四月就开考，成绩计入高考！</a></h3>
-                                9月3日，福建省教育厅对外公布两个重要文件，《福建省普通高中学业水平考试实施办法（试行）》和《福建省普通高中学生综合素质评价实施办法（试行）》。  一、政策...
-                                <a class="smore" href="/201609/4254.html" target="_blank">[详细]</a>
-                            </li>
-                            <div class="clear"></div>
-                        </ul>
-                    </div>
-                    <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';">
-                        <ul>
-                            <li class="img">
-                                <a href="/201608/4021.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/933/956/image/20160824/20160824151754_7949.jpg"></a>
-                            </li>
-                            <li class="contents">
-                                <h3><a href="/201608/4021.html" target="_blank">高三必备：2017高考全年大事备忘录，精确到每个月</a></h3>
-                                2016年高考结束两月有余，高二同学已荣升为高三党。作为高三党，想要在一年后的高考中取得优势，就要学会从现在开始努力，从现在开始踏上高考之路。    为此，...
-                                <a class="smore" href="/201608/4021.html" target="_blank">[详细]</a>
-                            </li>
-                            <div class="clear"></div>
-                        </ul>
-                    </div>
-                </div>
+                    <volist name="news3" id="vo">
+                        <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';" style="background: rgb(255, 255, 255);">
+                            <ul>
+                                <li class="img">
+                                    <a href="/201609/4670.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/934/953/image/20160927/20160927230447_6457.jpeg"></a>
+                                </li>
+                                <li class="contents">
+                                    <h3><a href="/201609/4670.html" target="_blank">五大方法养成好的学习习惯，助力小学学习</a></h3>
+                                    小学阶段的学习，对于孩子学习习惯的养成是十分重要的，小学阶段是学生形成良好学习习惯的关键时刻和最佳时机。因此，星火教育老师在这里要教给广大小学生和家长们五个有利于提...
+                                    <a class="smore" href="/201609/4670.html" target="_blank">[详细]</a>
+                                </li>
+                                <div class="clear"></div>
+                            </ul>
+                        </div>
+                    </volist>
+               </div>
                 <!--End Tabcontent 3-->
             </div>
             <div class="nav_bright">
