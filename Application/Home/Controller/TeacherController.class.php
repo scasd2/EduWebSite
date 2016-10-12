@@ -78,7 +78,7 @@ class TeacherController extends HomeController {
             8=>'物理',
         ];
         $this->subjectMap=$subjectMap;
-
+        //教师推荐模块
         $recommend=M('teachers')->where([
             'recommend'=>1
         ])->select();
@@ -128,17 +128,15 @@ class TeacherController extends HomeController {
             'id'=>$id
         ])->select();
 
-        $recommend=M('teachers')->where([
-                'recommend'=>1
-        ])->select();
-
-
         $pic=M('picture')->where([
             'id'=>$teacher[0]['head']
         ])->select();
 
         $teacher[0]['headPic']=$pic[0]['path'];
-
+        //教师推荐模块
+        $recommend=M('teachers')->where([
+            'recommend'=>1
+        ])->select();
         $length=count($recommend);
         for ($i=0;$i<$length;$i++) {
             $pics = M('picture')->where([

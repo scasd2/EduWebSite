@@ -112,6 +112,7 @@ class CurrController extends HomeController {
         $pic=M('picture')->where([
             'id'=>$book[0]['picture']
         ])->select();
+        $book[0]['headPic']=$pic[0]['path'];
         //推荐课程块
         $recommend=M('curriculum')->where([
             'hot'=>1
@@ -124,8 +125,6 @@ class CurrController extends HomeController {
             ])->select();
             $recommend[$i]['headPic'] = $pics[0]['path'];
         }
-
-        $book[0]['headPic']=$pic[0]['path'];
 
         $this->recommend=$recommend;
         $this->book=$book[0];

@@ -120,6 +120,11 @@ class SchoolController extends HomeController {
             'id'=>$id
         ])->select();
 
+        $pic=M('picture')->where([
+            'id'=>$school[0]['picture']
+        ])->select();
+        $school[0]['headPic']=$pic[0]['path'];
+        //学院推荐模块
         $recommend=M('school')->where([
             'recommend'=>1
         ])->select();
@@ -131,11 +136,6 @@ class SchoolController extends HomeController {
             ])->select();
             $recommend[$i]['headPic'] = $pics[0]['path'];
         }
-
-        $pic=M('picture')->where([
-            'id'=>$school[0]['picture']
-        ])->select();
-        $school[0]['headPic']=$pic[0]['path'];
 
 
         $this->recommend=$recommend;
