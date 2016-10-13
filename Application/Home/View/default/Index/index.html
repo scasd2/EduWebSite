@@ -11,7 +11,7 @@
 
 
 <div class="page">
-    <div class="main">
+    <!--<div class="main">-->
 
 
         <include file="Public/menu"/>
@@ -19,65 +19,18 @@
 
 
         <!--左侧导航-->
-        <div class="left_menu">
+<!--        <div class="left_menu">
             <h3>课程导航</h3>
             <ul>
                 <li><a href="{:U('Curr/index',array('grade'=>0))}" target="_blank">小学辅导</a></li>
                 <li><a href="{:U('Curr/index',array('grade'=>1))}" target="_blank">初中辅导</a></li>
                 <li><a href="{:U('Curr/index',array('grade'=>2))}" target="_blank">高中辅导</a></li>
             </ul>
-        </div>
-
-<!--
-        <div class="nav_banner">
-            <div id="fsD1" class="focus">
-                <div id="D1pic1" class="fPic">
-                    <div class="fcon" style="display: none;">
-                        <a href="{$carousel[0]['link']}" target="_blank"><img src="{$carousel[0]['headPic']}" alt="" style="opacity: 1;"></a>
-                    </div>
-                    <div class="fcon" style="display: block;">
-                        <a href="{$carousel[1]['link']}" target="_blank"><img src="{$carousel[1]['headPic']}" alt="" style="opacity: 1;"></a>
-                    </div>
-                    <div class="fcon" style="display: none;">
-                        <a href="{$carousel[2]['link']}" target="_blank"><img src="{$carousel[2]['headPic']}" alt="" style="opacity: 1;"></a>
-                    </div>
-                </div>
-                <div class="fbg">
-                    <div class="D1fBt" id="D1fBt">
-                        <a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i></i></a>
-                        <a href="javascript:void(0)" hidefocus="true" target="_self" class="current"><i></i></a>
-                        <a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i></i></a>
-                    </div>
-                </div>
-                <span class="prev"></span>
-                <span class="next"></span>
-            </div>
-            <script type="text/javascript">
-                $(function () {
-                    Qfast.add('widgets', { path: "/Scripts/Thirdparty/terminator2.2.min.js", type: "js", requires: ['fx'] });
-                    Qfast(false, 'widgets', function () {
-                        K.tabs({
-                            id: 'fsD1',   //焦点图包裹id
-                            conId: "D1pic1",  //** 大图域包裹id
-                            tabId: "D1fBt",
-                            tabTn: "a",
-                            conCn: '.fcon', //** 大图域配置class
-                            auto: 1,   //自动播放 1或0
-                            effect: 'fade',   //效果配置
-                            eType: 'click', //** 鼠标事件
-                            pageBt: true,//是否有按钮切换页码
-                            bns: ['.prev', '.next'],//** 前后按钮配置class
-                            interval: 3000  //** 停顿时间
-                        })
-                    })
-                });
-            </script>
-        </div>
--->
-
+        </div>-->
 
         <!--轮播广告图-->
-        <div class="nav_banner">
+        <div class="nav_width" style="height: 450px">
+            <div class="nav_banner">
             <div id="fsD1" class="focus">
                 <div id="D1pic1" class="fPic">
                     <div class="fcon" style="display: none;">
@@ -121,119 +74,186 @@
                 });
             </script>
         </div>
-
-
-        <div class="nav_right">
-
-
-
-            <!--图标块-->
-            <div class="iconR">
-                <div class="icons">
-                    <table class="table1" align="center" cellpadding="0" cellspacing="0">
-                        <tbody>
-                        <tr>
-                            <th class="th1">
-                                <a href="/campus/0-1.html" target="_blank">校区查询</a>
-                            </th>
-                            <th class="th2">
-                                <a href="/teacher/0-0-1.html" target="_blank">老师查询</a>
-                            </th>
-                            <th class="th4">
-                                <a href="/school/0-0-0-1.html" target="_blank">名校库</a>
-                            </th>
-                        </tr>
-                        <tr>
-
-                            <th class="th3">
-                                <a href="http://chat16.live800.com/live800/chatClient/chatbox.jsp?companyID=509441&amp;configID=63570&amp;jid=4167274036" target="_blank">在线咨询</a>
-                            </th>
-                            <th class="th5" id="quickClass">
-                                免费热线
-                                <div class="kjbb">
-                                    <div class="kjbb_t">
-                                        全国统一提分热线:
-                                        <p>
-                                            <strong>400-877-0068</strong>
-                                        </p>
-                                    </div>
-                                    <span class="guanbi"></span>
-                                </div>
-                            </th>
-                            <th class="th6" id="quickClass01">
-                                官方微信
-                                <div class="kjbbg">
-                                    <div class="kjbb_t">
-                                        <img src="http://file.xinghuo100.com/upload/25/924/935/image/20160620/20160620181805_3643.jpg">
-
-                                    </div>
-                                    <span class="guanbi"></span>
-                                </div>
-                            </th>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-
-            <!--星火快讯-->
-            <div class="nav_bulletin">
-                <h3>星火快讯<a class="smore" href="/xhkx/0-1.html" target="_blank">更多</a></h3>
-                <ul class="inforR_text">
-                    <li><a href="/201609/4521.html" target="_blank">《星火教育狂揽“2016新浪全国五星金牌教师”活动五项大奖》</a></li>
-                    <li><a href="/201609/4308.html" target="_blank">2016腾讯中国好老师荣誉盛典北京召开 星火教育霸气狂揽多项大奖</a></li>
-                    <li><a href="/201608/3944.html" target="_blank">【2016年高考回顾】看学霸传奇故事 重新定义高分概念</a></li>
-
-                </ul>
-            </div>
         </div>
+
+
         <div class="clear"></div>
+    <!--推荐的老师-->
+    <div class="nav_grey">
+        <div class="main">
+        <span class="nav_etital">Recommend teacher</span><br>
+        <span  class="nav_tital">推荐的老师</span>
+            <div class="atten_teach" style="text-align: left">
+                <ul>
+                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';" onmouseout="JavaScript:this.style.background='';" >
+                        <a href="{:U('../Home/Teacher/info',array('id'=>$recommend[0]['id']))}"><img src="{$recommend[0]['headPic']}"></a>
+                        <div class="left-teach-detail">
 
-        <!--通栏广告-->
-        <div class="main" style="margin-top:20px;"><a href="http://fz.xinghuo100.com/201609/4521.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/936/940/image/20160922/20160922152035_9543.jpg" alt=""></a></div>
+                            <p class="title"> <a href="{:U('../Home/Teacher/info',array('id'=>$recommend[0]['id']))}">{$recommend[0]['name']}</a></p>
+                            <p><em>辅导年级：</em>{$gradeMap[$recommend[0]['grade']]}</p>
+                            <p><em>辅导科目：</em>{$subjectMap[$recommend[0]['subject']]}</p>
 
-        <!--学习方式-->
-        <div class="main" style="margin-bottom:20px;">
-            <h3 class="study_title">在星火，选择最适合您孩子的学习方式：</h3>
-            <div class="study_info" onmouseover="JavaScript:this.style.background='url(__PUBLIC__/Home/pc/Content/Images/study_bg.jpg) repeat-x bottom #fff';" onmouseout="JavaScript:this.style.background='url(__PUBLIC__/Home/pc/Content/Images/study_bgn.jpg) repeat-x bottom #fff';" style="background: url(&quot;/Content/Images/study_bgn.jpg&quot;) center bottom repeat-x rgb(255, 255, 255);">
-                <ul>
-                    <li class="img"><img src="__PUBLIC__/Home/pc/Content/Images/img_study01.jpg"></li>
-                    <li class="contents">
-                        <a href="http://vip.xinghuo100.com/" target="_blank">
-                            <h3>一对一</h3>
-                            <h2>内驱式+引导式教学法</h2>
-                            以孩子为中心，定制最适合孩子的教育，不仅注重学习技巧，更注重素质 教育，全方面成长。
-                        </a>
+                        </div>
+
                     </li>
+                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';" onmouseout="JavaScript:this.style.background='';" >
+                        <a href="{:U('../Home/Teacher/info',array('id'=>$recommend[1]['id']))}"><img src="{$recommend[1]['headPic']}"></a>
+                        <div class="left-teach-detail">
+
+                            <p class="title"> <a href="{:U('../Home/Teacher/info',array('id'=>$recommend[1]['id']))}">{$recommend[1]['name']}</a></p>
+                            <p><em>辅导年级：</em>{$gradeMap[$recommend[1]['grade']]}</p>
+                            <p><em>辅导科目：</em>{$subjectMap[$recommend[1]['subject']]}</p>
+
+                        </div>
+
+                    </li>
+                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';" onmouseout="JavaScript:this.style.background='';" >
+                        <a href="{:U('../Home/Teacher/info',array('id'=>$recommend[2]['id']))}"><img src="{$recommend[2]['headPic']}"></a>
+                        <div class="left-teach-detail">
+
+                            <p class="title"> <a href="{:U('../Home/Teacher/info',array('id'=>$recommend[2]['id']))}">{$recommend[2]['name']}</a></p>
+                            <p><em>辅导年级：</em>{$gradeMap[$recommend[2]['grade']]}</p>
+                            <p><em>辅导科目：</em>{$subjectMap[$recommend[2]['subject']]}</p>
+
+                        </div>
+
+                    </li>
+                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';" onmouseout="JavaScript:this.style.background='';">
+                        <a href="{:U('../Home/Teacher/info',array('id'=>$recommend[3]['id']))}"><img src="{$recommend[3]['headPic']}"></a>
+                        <div class="left-teach-detail">
+
+                            <p class="title"> <a href="{:U('../Home/Teacher/info',array('id'=>$recommend[3]['id']))}">{$recommend[3]['name']}</a></p>
+                            <p><em>辅导年级：</em>{$gradeMap[$recommend[3]['grade']]}</p>
+                            <p><em>辅导科目：</em>{$subjectMap[$recommend[3]['subject']]}</p>
+
+                        </div>
+
+                    </li>
+                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';" onmouseout="JavaScript:this.style.background='';" >
+                        <a href="{:U('../Home/Teacher/info',array('id'=>$recommend[4]['id']))}"><img src="{$recommend[4]['headPic']}"></a>
+                        <div class="left-teach-detail">
+
+                            <p class="title"> <a href="{:U('../Home/Teacher/info',array('id'=>$recommend[4]['id']))}">{$recommend[4]['name']}</a></p>
+                            <p><em>辅导年级：</em>{$gradeMap[$recommend[4]['grade']]}</p>
+                            <p><em>辅导科目：</em>{$subjectMap[$recommend[4]['subject']]}</p>
+
+                        </div>
+
+                    </li>
+                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';" onmouseout="JavaScript:this.style.background='';">
+                        <a href="{:U('../Home/Teacher/info',array('id'=>$recommend[5]['id']))}"><img src="{$recommend[5]['headPic']}"></a>
+                        <div class="left-teach-detail">
+
+                            <p class="title"> <a href="{:U('../Home/Teacher/info',array('id'=>$recommend[5]['id']))}">{$recommend[5]['name']}</a></p>
+                            <p><em>辅导年级：</em>{$gradeMap[$recommend[5]['grade']]}</p>
+                            <p><em>辅导科目：</em>{$subjectMap[$recommend[5]['subject']]}</p>
+
+                        </div>
+
+                    </li>
+                    <div class="clear"></div>
                 </ul>
             </div>
-            <div class="study_info" onmouseover="JavaScript:this.style.background='url(__PUBLIC__/Home/pc/Content/Images/study_bg.jpg) repeat-x bottom #fff';" onmouseout="JavaScript:this.style.background='url(__PUBLIC__/Home/pc/Content/Images/study_bgn.jpg) repeat-x bottom #fff';">
-                <ul>
-                    <li class="img"><img src="__PUBLIC__/Home/pc/Content/Images/img_study02.jpg"></li>
-                    <li class="contents">
-                        <a href="http://fudao.xinghuo100.com/" target="_blank">
-                            <h3>辅导班</h3>
-                            <h2>精品化班型设计+分层教学+小组讨论</h2>
-                            3-15人成班，精品化班型设计，课堂气氛活跃，既满足了学生共同学习、课堂竞争的需求，又能让每一个学生得到充分关注。
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="study_infor" onmouseover="JavaScript:this.style.background='url(__PUBLIC__/Home/pc/Content/Images/study_bg.jpg) repeat-x bottom #fff';" onmouseout="JavaScript:this.style.background='url(__PUBLIC__/Home/pc/Content/Images/study_bgn.jpg) repeat-x bottom #fff';">
-                <ul>
-                    <li class="img"><img src="__PUBLIC__/Home/pc/Content/Images/img_study03.jpg"></li>
-                    <li class="contents">
-                        <a href="http://jingying.xinghuo100.com/" target="_blank">
-                            <h3>精英班</h3>
-                            <h2>大品牌、值信赖、精准制胜名校</h2>
-                            针对各地中高考班精英学生开展的最高教学标准课程，以目标学校为导向，入学测试后，签订合同，助孩子走入梦想名校。
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="clear"></div>
         </div>
+    </div>
+    <!--最受关注课程-->
+    <div class="nav_width">
+        <div class="main">
+            <span class="nav_etital">Recommended courses</span><br>
+            <span  class="nav_tital">推荐的课程</span>
+            <div class="atten_teach" style="text-align: left">
+                <ul>
+                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';" onmouseout="JavaScript:this.style.background='#fff';" >
+                        <a href="{:U('../Home/Curr/info',array('id'=>$recommends[0]['id']))}"><img src="{$recommends[0]['headPic']}"></a>
+                        <div class="left-teach-detail">
+
+                            <!--<p class="title"> <a href="{:U('info',array('id'=>$recommend[0]['id']))}">{$recommend[0]['curriculumName']}</a></p>-->
+                            <a href="{:U('../Home/Curr/info',array('id'=>$recommends[0]['id']))}">
+                                <p style="color: #3992d0;font-weight: bold">{$recommends[0]['curriculumName']}</p><br>
+                            </a>
+                            <p><em>试用人群：</em><br>
+                                {$recommends[0]['ApplicablePeople']}</p>
+                            <!--<p><em>试用人群：</em></p>-->
+
+                        </div>
+
+                    </li>
+                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';" onmouseout="JavaScript:this.style.background='#fff';" >
+                        <a href="{:U('../Home/Curr/info',array('id'=>$recommends[1]['id']))}"><img src="{$recommends[1]['headPic']}"></a>
+                        <div class="left-teach-detail">
+
+                            <a href="{:U('../Home/Curr/info',array('id'=>$recommends[1]['id']))}">
+                                <p style="color: #3992d0;font-weight: bold">{$recommends[1]['curriculumName']}</p><br>
+                            </a>
+                            <p><em>试用人群：</em><br>
+                                {$recommends[1]['ApplicablePeople']}</p>
+
+
+                        </div>
+
+                    </li>
+                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';" onmouseout="JavaScript:this.style.background='#fff';" >
+                        <a href="{:U('../Home/Curr/info',array('id'=>$recommends[2]['id']))}"><img src="{$recommends[2]['headPic']}"></a>
+                        <div class="left-teach-detail">
+
+                            <a href="{:U('../Home/Curr/info',array('id'=>$recommends[2]['id']))}">
+                                <p style="color: #3992d0;font-weight: bold">{$recommends[2]['curriculumName']}</p><br>
+                            </a>
+                            <p><em>试用人群：</em><br>
+                                {$recommends[2]['ApplicablePeople']}</p>
+
+
+                        </div>
+
+                    </li>
+                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';" onmouseout="JavaScript:this.style.background='#fff';">
+                        <a href="{:U('../Home/Curr/info',array('id'=>$recommends[3]['id']))}"><img src="{$recommends[3]['headPic']}"></a>
+                        <div class="left-teach-detail">
+
+                            <a href="{:U('../Home/Curr/info',array('id'=>$recommends[3]['id']))}">
+                                <p style="color: #3992d0;font-weight: bold">{$recommends[3]['curriculumName']}</p><br>
+                            </a>
+                            <p><em>试用人群：</em><br>
+                                {$recommends[3]['ApplicablePeople']}</p>
+
+
+                        </div>
+
+                    </li>
+                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';" onmouseout="JavaScript:this.style.background='#fff';" >
+                        <a href="{:U('../Home/Curr/info',array('id'=>$recommends[4]['id']))}"><img src="{$recommends[4]['headPic']}"></a>
+                        <div class="left-teach-detail">
+
+                            <a href="{:U('../Home/Curr/info',array('id'=>$recommends[4]['id']))}">
+                                <p style="color: #3992d0;font-weight: bold">{$recommends[4]['curriculumName']}</p><br>
+                            </a>
+                            <p><em>试用人群：</em><br>
+                                {$recommends[4]['ApplicablePeople']}</p>
+
+
+                        </div>
+
+                    </li>
+                    <li class="teach-link"  onmouseover="JavaScript:this.style.background='#F1F1F1';" onmouseout="JavaScript:this.style.background='#fff';">
+                        <a href="{:U('../Home/Curr/info',array('id'=>$recommends[5]['id']))}"><img src="{$recommends[5]['headPic']}"></a>
+                        <div class="left-teach-detail">
+
+                            <a href="{:U('../Home/Curr/info',array('id'=>$recommends[5]['id']))}">
+                                <p style="color: #3992d0;font-weight: bold">{$recommends[5]['curriculumName']}</p><br>
+                            </a>
+                            <p><em >试用人群：</em><br>
+                                {$recommends[5]['ApplicablePeople']}</p>
+
+                        </div>
+
+                    </li>
+                    <div class="clear"></div>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
 
 
         <div class="main">
@@ -325,24 +345,21 @@
                 <!--End Tabcontent 3-->
             </div>
             <div class="nav_bright">
-                <!--品牌专区-->
+                <!--右侧留言板-->
                 <div class="brand-right">
-                    <h3>品牌专区</h3>
-                    <ul>
-                        <li><a href="http://dg.xinghuo100.com/201601/1787.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/75/76/94/image/20160112/20160112171822_8386.jpg" alt=""></a></li>
-                        <li><a href="http://www.chaoyou100.com/" target="_blank"><img src="http://file.xinghuo100.com/upload/25/75/76/94/image/20160112/20160112171828_7606.jpg" alt=""></a></li>
-                        <li><a href="http://www.aixuexi.com/html/subjects.html#shuxue" target="_blank"><img src="http://file.xinghuo100.com/upload/25/75/76/94/image/20160112/20160112171835_4639.jpg" alt=""></a></li>
-                        <li><a href="http://online.ygwo.cn/" target="_blank"><img src="http://file.xinghuo100.com/upload/25/75/76/94/image/20160112/20160112171841_8859.jpg" alt=""></a></li>
-                    </ul>
+                    <h3>留言板</h3>
+
                 </div>
-                <!--右侧广告-->
-                <div class="right_ad"><a href="http://ikx.xinghuojiaoyu.net/" target="_blank"><img src="http://file.xinghuo100.com/upload/25/75/76/94/image/20160112/20160112171941_7468.jpg" alt=""></a></div>
-                <div class="right_ad"><a href="http://www.xinghuo100.com/zhuanti/qiuji2016/fuzhou/qiuji2016.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/936/940/image/20160906/20160906111120_6012.jpg" alt=""></a></div>
+                <!--右侧资讯-->
+                <div class="brand-right">
+                    <h3>咨询</h3>
+
+                </div>
             </div>
             <div class="clear"></div>
         </div>
 
-    </div>
+    <!--</div>-->
 </div>
 
 <include file="Public/friendship"/>

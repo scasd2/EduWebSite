@@ -133,6 +133,7 @@ class TeacherController extends HomeController {
         ])->select();
 
         $teacher[0]['headPic']=$pic[0]['path'];
+        $this->teacher=$teacher[0];
         //教师推荐模块
         $recommend=M('teachers')->where([
             'recommend'=>1
@@ -144,7 +145,7 @@ class TeacherController extends HomeController {
             ])->select();
             $recommend[$i]['headPic'] = $pics[0]['path'];
         }
-        $this->teacher=$teacher[0];
+
         $this->recommend=$recommend;
 
         $this->display();

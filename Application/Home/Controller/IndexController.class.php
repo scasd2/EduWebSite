@@ -83,6 +83,53 @@ class IndexController extends HomeController {
         $this->carousel=$carousel;
 
         $this->currentUrl="Index/index";
+        //教师推荐模块
+        $gradeMap=[
+            0=>"小学",
+            1=>"初中",
+            2=>"高中",
+        ];
+        $this->gradeMap=$gradeMap;
+
+
+        $subjectMap=[
+            0=>'语文',
+            1=>'数学',
+            2=>'英语',
+            3=>'历史',
+            4=>'地理',
+            5=>'生物',
+            6=>'政治',
+            7=>'化学',
+            8=>'物理',
+        ];
+        $this->subjectMap=$subjectMap;
+
+        $recommend=M('teachers')->where([
+            'recommend'=>1
+        ])->select();
+        $length=count($recommend);
+        for ($i=0;$i<$length;$i++) {
+            $pics = M('picture')->where([
+                'id' => $recommend[$i]['head']
+            ])->select();
+            $recommend[$i]['headPic'] = $pics[0]['path'];
+        }
+        $this->recommend=$recommend;
+        //推荐课程块
+        $recommends=M('curriculum')->where([
+            'hot'=>1
+        ])->select();
+
+        $length=count($recommends);
+        for ($i=0;$i<$length;$i++) {
+            $pics = M('picture')->where([
+                'id' => $recommends[$i]['picture']
+            ])->select();
+            $recommends[$i]['headPic'] = $pics[0]['path'];
+        }
+
+        $this->recommends=$recommends;
 
         if(!is_mobile())
             $this->display();
