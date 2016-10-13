@@ -1,4 +1,4 @@
-﻿@charset "utf-8";
+﻿@import "conf";
 /* CSS Document */
 body          {font-family:"Microsoft Yahei",Arial,sans-serif;font-size:12px;color:#999999; text-align:left; background:#FAFAFA; margin:0px auto; padding:0px;}
 blockquote, body, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, li, ol, p, pre, td, textarea, th, ul {
@@ -472,7 +472,7 @@ color: #AAC135;
 
 .recomschool .img {width:220px;height:150px; margin:0px auto; padding:0px;display:block; overflow:hidden;}
 .recomschool img{width:220px;height:150px;}
-.recomschool .title{width:220px;line-height:40px; height:40px;position:absolute; bottom:0;left:0px; z-index:100; background:rgba(0,0,0,0.6);font-size:16px; text-align:center; font-weight:bold;color:#fff;filter:progid:DXImageTransform.Microsoft.gradient( GradientType = 0,startColorstr = '#80000000',endColorstr = '#80000000')\9;  display:block;font-weight:bold; }
+.recomschool .title{width:220px;line-height:40px; height:40px;position:absolute; bottom:0;left:0px; z-index:100; background:rgba(0,0,0,0.6);font-size:16px; text-align:center; font-weight:bold;color:#fff;filter:progid:DXImageTransform.Microsoft.gradient( GradientType = 0,startColorstr = '#80000000',endColorstr = '#80000000');  display:block;font-weight:bold; }
 
 .recomschool .title:hover{background:#AAC135;}
 
@@ -752,7 +752,7 @@ span.bds_more{float:left; font-size:14px;}
 #moquu_wxin{
 	cursor:pointer;
 	_position:absolute;
-	_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)))
+	//_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)))
 }
 .moquu_wxin {
 	position:relative;
