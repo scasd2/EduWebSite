@@ -30,6 +30,13 @@ class HomeController extends Controller {
         if(!C('WEB_SITE_CLOSE')){
             $this->error('站点已经关闭，请稍后访问~');
         }
+        $this->_link();
+    }
+
+    protected function _link(){
+        //友情链接数据获取
+        $friendship=M('friendshiplink')->select();
+        $this->friendship=$friendship;
     }
 
 	/* 用户登录检测 */

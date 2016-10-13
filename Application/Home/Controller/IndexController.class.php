@@ -81,9 +81,7 @@ class IndexController extends HomeController {
             $carousel[$i]['headPic']=$pic[0]['path'];
         }
         $this->carousel=$carousel;
-        //友情链接数据获取
-        $friendship=M('friendshiplink')->select();
-        $this->friendship=$friendship;
+
         $this->currentUrl="Index/index";
         $this->display();
     }

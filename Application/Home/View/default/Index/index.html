@@ -342,74 +342,11 @@
             <div class="clear"></div>
         </div>
 
-        <!--友情链接-->
-        <div class="main">
-            <div class="wap_link">
-                <strong class="title">友情链接: </strong>
-                <a href="{$friendship[0]['link']}" target="_blank">{$friendship[0]['name']}</a>
-                <a href="{$friendship[1]['link']}" target="_blank">{$friendship[1]['name']}</a>
-                <a href="{$friendship[2]['link']}" target="_blank">{$friendship[2]['name']}</a>
-                <a href="{$friendship[3]['link']}" target="_blank">{$friendship[3]['name']}</a>
-                <a href="{$friendship[4]['link']}" target="_blank">{$friendship[4]['name']}</a>
-                <a href="{$friendship[5]['link']}" target="_blank">{$friendship[5]['name']}</a>
-                <a href="{$friendship[6]['link']}" target="_blank">{$friendship[6]['name']}</a>
-                <a href="{$friendship[7]['link']}" target="_blank">{$friendship[7]['name']}</a>
-                <a href="{$friendship[8]['link']}" target="_blank">{$friendship[8]['name']}</a>
-                <a href="{$friendship[9]['link']}" target="_blank">{$friendship[9]['name']}</a>
-                <a href="{$friendship[10]['link']}" target="_blank">{$friendship[10]['name']}</a>
-                <a href="{$friendship[11]['link']}" target="_blank">{$friendship[11]['name']}</a>
-            </div>
-        </div>
-
-
-
-        <!--底部导航-->
-        <div class="main">
-            <div class="wap_bmenu">
-                <div class="list">
-                    <h3><a href="{:U('Curr/index',array('grade'=>0))}" style="color:#666666;" target="_blank">小学辅导</a></h3>
-                    <ul>
-                        <li><a href="/xiaoxue/xxdt/0-1.html" target="_blank">小学动态</a></li>
-                        <li><a href="/xiaoxue/xsc/0-1.html" target="_blank">小升初资讯</a></li>
-                    </ul>
-                </div>
-                <div class="list">
-                    <h3><a href="{:U('Curr/index',array('grade'=>1))}" style="color:#666666;" target="_blank">初中辅导</a></h3>
-                    <ul>
-                        <li><a href="/chuzhong/czdt/0-1.html" target="_blank">初中动态</a></li>
-                        <li><a href="/chuzhong/zk/0-1.html" target="_blank">中考资讯</a></li>
-                    </ul>
-                </div>
-                <div class="list">
-                    <h3><a href="{:U('Curr/index',array('grade'=>2))}" style="color:#666666;" target="_blank">高中辅导</a></h3>
-                    <ul>
-                        <li><a href="/gaozhong/gzdt/0-1.html" target="_blank">高中动态</a></li>
-                        <li><a href="/gaozhong/gk/0-1.html" target="_blank">高考资讯</a></li>
-                    </ul>
-                </div>
-                <div class="list">
-                    <h3><a href="/campus/0-1.html" style="color:#666666;" target="_blank">校区查询</a></h3>
-                </div>
-                <div class="list">
-                    <h3><a href="/teacher/0-0-1.html" style="color:#666666;" target="_blank">老师查询</a></h3>
-                    <ul>
-                        <li><a href="/teacher/10-0-1.html" target="_blank">小学</a></li>
-                        <li><a href="/teacher/20-0-1.html" target="_blank">初中</a></li>
-                        <li><a href="/teacher/30-0-1.html" target="_blank">高中</a></li>
-                    </ul>
-                </div>
-                <div class="list">
-                    <h3><a href="/school/0-0-0-1.html" style="color:#666666;" target="_blank">名校库</a></h3>
-                </div>
-                <div class="clear"></div>
-            </div>
-        </div>
-
-
     </div>
 </div>
 
-
+<include file="Public/friendship"/>
+<include file="Public/navigation"/>
 
 <!-- 底部 -->
 <include file="Public/footer"/>
