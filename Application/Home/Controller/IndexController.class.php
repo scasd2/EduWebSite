@@ -71,8 +71,19 @@ class IndexController extends HomeController {
         $this->news1=$news1;
         $this->news2=$news2;
         $this->news3=$news3;
-
-
+        //轮播数据获取
+        $carousel=M('carousel')->select();
+        $length=count($carousel);
+        for($i=0;$i<$length;$i++){
+            $pic=M('picture')->where([
+                'id'=>$carousel[$i]['picture']
+            ])->select();
+            $carousel[$i]['headPic']=$pic[0]['path'];
+        }
+        $this->carousel=$carousel;
+        //友情链接数据获取
+        $friendship=M('friendshiplink')->select();
+        $this->friendship=$friendship;
         $this->currentUrl="Index/index";
         $this->display();
     }

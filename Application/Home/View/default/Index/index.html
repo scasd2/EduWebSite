@@ -28,6 +28,52 @@
             </ul>
         </div>
 
+<!--
+        <div class="nav_banner">
+            <div id="fsD1" class="focus">
+                <div id="D1pic1" class="fPic">
+                    <div class="fcon" style="display: none;">
+                        <a href="{$carousel[0]['link']}" target="_blank"><img src="{$carousel[0]['headPic']}" alt="" style="opacity: 1;"></a>
+                    </div>
+                    <div class="fcon" style="display: block;">
+                        <a href="{$carousel[1]['link']}" target="_blank"><img src="{$carousel[1]['headPic']}" alt="" style="opacity: 1;"></a>
+                    </div>
+                    <div class="fcon" style="display: none;">
+                        <a href="{$carousel[2]['link']}" target="_blank"><img src="{$carousel[2]['headPic']}" alt="" style="opacity: 1;"></a>
+                    </div>
+                </div>
+                <div class="fbg">
+                    <div class="D1fBt" id="D1fBt">
+                        <a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i></i></a>
+                        <a href="javascript:void(0)" hidefocus="true" target="_self" class="current"><i></i></a>
+                        <a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i></i></a>
+                    </div>
+                </div>
+                <span class="prev"></span>
+                <span class="next"></span>
+            </div>
+            <script type="text/javascript">
+                $(function () {
+                    Qfast.add('widgets', { path: "/Scripts/Thirdparty/terminator2.2.min.js", type: "js", requires: ['fx'] });
+                    Qfast(false, 'widgets', function () {
+                        K.tabs({
+                            id: 'fsD1',   //焦点图包裹id
+                            conId: "D1pic1",  //** 大图域包裹id
+                            tabId: "D1fBt",
+                            tabTn: "a",
+                            conCn: '.fcon', //** 大图域配置class
+                            auto: 1,   //自动播放 1或0
+                            effect: 'fade',   //效果配置
+                            eType: 'click', //** 鼠标事件
+                            pageBt: true,//是否有按钮切换页码
+                            bns: ['.prev', '.next'],//** 前后按钮配置class
+                            interval: 3000  //** 停顿时间
+                        })
+                    })
+                });
+            </script>
+        </div>
+-->
 
 
         <!--轮播广告图-->
@@ -35,13 +81,13 @@
             <div id="fsD1" class="focus">
                 <div id="D1pic1" class="fPic">
                     <div class="fcon" style="display: none;">
-                        <a href="http://fz.xinghuo100.com/201609/4308.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/936/940/image/20160922/20160922152302_0040.jpg" alt="" style="opacity: 1;"></a>
+                        <a href="{$carousel[0]['link']}" target="_blank"><img src="{$carousel[0]['headPic']}" alt="" style="opacity: 1;"></a>
                     </div>
                     <div class="fcon" style="display: block;">
-                        <a href="http://www.xinghuo100.com/zhuanti/qiuji2016/fuzhou/qiuji2016.html" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/936/940/image/20160906/20160906110921_8643.jpg" alt="" style="opacity: 1;"></a>
+                        <a href="{$carousel[1]['link']}" target="_blank"><img src="{$carousel[1]['headPic']}" alt="" style="opacity: 1;"></a>
                     </div>
                     <div class="fcon" style="display: none;">
-                        <a href="http://vip.xinghuo100.com/" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/936/940/image/20160804/20160804093552_6356.jpg" alt="" style="opacity: 1;"></a>
+                        <a href="{$carousel[2]['link']}" target="_blank"><img src="{$carousel[2]['headPic']}" alt="" style="opacity: 1;"></a>
                     </div>
                 </div>
                 <div class="fbg">
@@ -296,25 +342,22 @@
             <div class="clear"></div>
         </div>
 
-
-
-
         <!--友情链接-->
         <div class="main">
             <div class="wap_link">
                 <strong class="title">友情链接: </strong>
-                <a href="http://www.aesucai.wang" target="_blank">AE素材网</a>
-                <a href="http://open.163.com/" target="_blank">网易公开课</a>
-                <a href="http://edu.ce.cn/" target="_blank">中国经济网教育频道</a>
-                <a href="http://www.51edu.com/" target="_blank">精品学习网</a>
-                <a href="http://edu.qq.com/" target="_blank">腾讯教育网</a>
-                <a href="http://www.hao123.com/xuexi" target="_blank">hao123在线学习</a>
-                <a href="http://edu.21cn.com/" target="_blank">21CN教育</a>
-                <a href="http://edu.people.com.cn/" target="_blank">人民教育网</a>
-                <a href="http://www.moe.edu.cn/" target="_blank">国家教育网</a>
-                <a href="http://open.163.com/" target="_blank">搜狐教育</a>
-                <a href="http://edu.sina.com.cn/" target="_blank">新浪教育</a>
-                <a href="http://www.zaobao.com/lifestyle/education" target="_blank">联合早播</a>
+                <a href="{$friendship[0]['link']}" target="_blank">{$friendship[0]['name']}</a>
+                <a href="{$friendship[1]['link']}" target="_blank">{$friendship[1]['name']}</a>
+                <a href="{$friendship[2]['link']}" target="_blank">{$friendship[2]['name']}</a>
+                <a href="{$friendship[3]['link']}" target="_blank">{$friendship[3]['name']}</a>
+                <a href="{$friendship[4]['link']}" target="_blank">{$friendship[4]['name']}</a>
+                <a href="{$friendship[5]['link']}" target="_blank">{$friendship[5]['name']}</a>
+                <a href="{$friendship[6]['link']}" target="_blank">{$friendship[6]['name']}</a>
+                <a href="{$friendship[7]['link']}" target="_blank">{$friendship[7]['name']}</a>
+                <a href="{$friendship[8]['link']}" target="_blank">{$friendship[8]['name']}</a>
+                <a href="{$friendship[9]['link']}" target="_blank">{$friendship[9]['name']}</a>
+                <a href="{$friendship[10]['link']}" target="_blank">{$friendship[10]['name']}</a>
+                <a href="{$friendship[11]['link']}" target="_blank">{$friendship[11]['name']}</a>
             </div>
         </div>
 
