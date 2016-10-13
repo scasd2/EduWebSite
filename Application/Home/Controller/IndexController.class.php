@@ -83,7 +83,12 @@ class IndexController extends HomeController {
         $this->carousel=$carousel;
 
         $this->currentUrl="Index/index";
-        $this->display();
+
+        if(!is_mobile())
+            $this->display();
+        else
+            $this->display("../wap/Index/index");
+
     }
 
 
