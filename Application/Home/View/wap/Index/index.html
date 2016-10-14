@@ -3,8 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <include file="wap/Public/header"/>
+
 </head>
 <body>
-11
+
+
+<section class="layout">
+
+    <header class="header">
+        <div id="top" class="left">
+
+        </div>
+        <h1 class="logo">
+            <a href="#" id="top"> <img src="imgs/logo.png" alt="logo"></a>
+        </h1>
+        <div class="right">
+            <a href="/weixin.html">
+                <span class="wx-icon"></span>
+                官方微信
+            </a>
+        </div>
+    </header>
+
+
+
+    <section class=" home-banner">
+        <!-- Swiper -->
+        <div class="swiper-wrapper">
+
+            <volist name="carousel" id="vo">
+
+                <div class="swiper-slide">
+                    <a href="{$vo.link}" target="_blank">
+                        <img src="{$vo.headPic}" alt="">
+                    </a>
+                </div>
+
+            </volist>
+
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+
+
+    </section>
+
+
+    <section class="home-icons">
+
+
+
+        <ul>
+            <li>
+
+                <a href="{:U('School/index')}">
+                    <i class="menu_1"></i>
+                    <h3>校区查询</h3>
+                </a>
+            </li>
+            <li>
+                <a href="{:U('Teacher/index')}">
+                    <i class="menu_2"></i>
+                    <h3>老师查询</h3>
+                </a>
+            </li>
+            <li>
+                <a href="{:U('School/index')}">
+                    <i class="menu_3"></i>
+                    <h3>名校库</h3>
+                </a>
+            </li>
+            <li>
+                <a href="tel:400-877-0068">
+                    <i class="menu_4"></i>
+                    <h3>电话咨询</h3>
+                </a>
+            </li>
+            <li>
+                <a href="{:U('Curr/index',array('grade'=>0))}">
+                    <i class="menu_5"></i>
+                    <h3>小学辅导</h3>
+                </a>
+            </li>
+            <li>
+                <a href="{:U('Curr/index',array('grade'=>1))}">
+                    <i class="menu_6"></i>
+                    <h3>初中辅导</h3>
+                </a>
+            </li>
+            <li>
+                <a href="{:U('Curr/index',array('grade'=>2))}">
+                    <i class="menu_7"></i>
+                    <h3>高中辅导</h3>
+                </a>
+            </li>
+            <li>
+                <a href="{:U('Message/index')}">
+                    <i class="menu_8"></i>
+                    <h3>在线留言</h3>
+                </a>
+            </li>
+        </ul>
+
+
+
+
+        <div class="news">
+            <dl id="jsText" style="margin-top: 0px;">
+                <dt>尚学快讯</dt>
+                <volist name="information" id="vo">
+                    <dd><a href="{:U('Article/detail',array('id'=>$vo['id']))}">{$vo['title']}</a></dd>
+                </volist>
+            </dl>
+        </div>
+    </section>
+    <hr class="line">
+
+
+
+
+
+    <hr class="line">
+    <section class="information">
+        <div class="head js-tab">
+            <ul>
+                <li class="on">小学资讯</li>
+                <li>初中资讯</li>
+                <li>高中资讯</li>
+            </ul>
+        </div>
+        <div class="body js-con" style="display: block;">
+            <ul>
+
+
+
+                <volist name="news1" id="vo">
+                    <li>
+                        <div class="img">
+                            <a href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">
+                                <img src="{$vo['headUrl']}"></a>
+                        </div>
+                        <div class="text">
+
+                            <a href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">
+                                <h2>{$vo['title']}</h2>
+
+                                <p>{$vo['description']}</p>
+                            </a>
+                        </div>
+                    </li>
+                </volist>
+
+
+
+
+            </ul>
+        </div>
+        <div class="body js-con">
+            <ul>
+                <volist name="news2" id="vo">
+                    <li>
+                        <div class="img">
+                            <a href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">
+                                <img src="{$vo['headUrl']}"></a>
+                        </div>
+                        <div class="text">
+
+                            <a href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">
+                                <h2>{$vo['title']}</h2>
+
+                                <p>{$vo['description']}</p>
+                            </a>
+                        </div>
+                    </li>
+                </volist>
+            </ul>
+        </div>
+        <div class="body js-con">
+            <ul>
+                <volist name="news3" id="vo">
+                    <li>
+                        <div class="img">
+                            <a href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">
+                                <img src="{$vo['headUrl']}"></a>
+                        </div>
+                        <div class="text">
+
+                            <a href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">
+                                <h2>{$vo['title']}</h2>
+
+                                <p>{$vo['description']}</p>
+                            </a>
+                        </div>
+                    </li>
+                </volist>
+            </ul>
+        </div>
+    </section>
+
+    <include file="wap/Public/copyright"/>
+
+
+
+
+
+    <include file="wap/Public/footer"/>
+
+</section>
+
+<script>
+
+
+    $(document).ready(function () {
+        var swiper = new Swiper('.home-banner', {
+            pagination: '.swiper-pagination',
+            spaceBetween: 0,
+            paginationClickable: true,
+            autoplay: 3000,
+            autoplayDisableOnInteraction: false
+        });
+    })
+
+</script>
+
 </body>
 </html>

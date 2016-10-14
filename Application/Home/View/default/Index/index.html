@@ -318,24 +318,24 @@
             <!--Start Tabcontent 1 -->
             <div id="tabcontent1" style="display: block;">
 
-                <volist name="news1" id="vo">
-                    <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';"
-                         onmouseout="JavaScript:this.style.background='#eee';" style="background: #eee;">
-                        <ul>
-                            <li class="img">
-                                <a href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">
-                                    <img src="{$vo['headUrl']}"></a>
-                            </li>
-                            <li class="contents">
-                                <h3><a href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">{$vo['title']}</a>
-                                </h3>
-                                {$vo['description']}
-                                <a class="smore" href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">[详细]</a>
-                            </li>
-                            <div class="clear"></div>
-                        </ul>
-                    </div>
-                </volist>
+                        <volist name="news1" id="vo">
+                            <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';"
+                                 onmouseout="JavaScript:this.style.background='#eee';" style="background: #eee;">
+                                <ul>
+                                    <li class="img">
+                                        <a href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">
+                                            <img src="{$vo['headUrl']}"></a>
+                                    </li>
+                                    <li class="contents">
+                                        <h3><a href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">{$vo['title']}</a>
+                                        </h3>
+                                        {$vo['description']}
+                                        <a class="smore" href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">[详细]</a>
+                                    </li>
+                                    <div class="clear"></div>
+                                </ul>
+                            </div>
+                        </volist>
 
             </div>
             <!--End Tabcontent 1-->
