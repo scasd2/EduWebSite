@@ -11,11 +11,12 @@
 
 <div class="page">
     <!--<div class="main">-->
+    <div class="main">
 
 
     <include file="Public/menu"/>
 
-
+    </div>
     <!--左侧导航-->
     <!--        <div class="left_menu">
                 <h3>课程导航</h3>
@@ -26,63 +27,56 @@
                 </ul>
             </div>-->
 
-    <!--轮播广告图-->
-    <div class="nav_width" style="height: 450px">
-        <div class="main">
-            <div class="nav_banner">
-                <div id="fsD1" class="focus">
-                    <div id="D1pic1" class="fPic">
-                        <div class="fcon" style="display: none;">
-                            <a href="{$carousel[0]['link']}" target="_blank"><img src="{$carousel[0]['headPic']}" alt=""
-                                                                                  style="opacity: 1;"></a>
-                        </div>
-                        <div class="fcon" style="display: block;">
-                            <a href="{$carousel[1]['link']}" target="_blank"><img src="{$carousel[1]['headPic']}" alt=""
-                                                                                  style="opacity: 1;"></a>
-                        </div>
-                        <div class="fcon" style="display: none;">
-                            <a href="{$carousel[2]['link']}" target="_blank"><img src="{$carousel[2]['headPic']}" alt=""
-                                                                                  style="opacity: 1;"></a>
-                        </div>
-                    </div>
-                    <div class="fbg">
-                        <div class="D1fBt" id="D1fBt">
-                            <a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i></i></a>
-                            <a href="javascript:void(0)" hidefocus="true" target="_self" class="current"><i></i></a>
-                            <a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i></i></a>
-                        </div>
-                    </div>
-                    <span class="prev"></span>
-                    <span class="next"></span>
-                </div>
-                <script type="text/javascript">
-                    $(function () {
-                        Qfast.add('widgets', {
-                            path: "/Scripts/Thirdparty/terminator2.2.min.js",
-                            type: "js",
-                            requires: ['fx']
-                        });
-                        Qfast(false, 'widgets', function () {
-                            K.tabs({
-                                id: 'fsD1',   //焦点图包裹id
-                                conId: "D1pic1",  //** 大图域包裹id
-                                tabId: "D1fBt",
-                                tabTn: "a",
-                                conCn: '.fcon', //** 大图域配置class
-                                auto: 1,   //自动播放 1或0
-                                effect: 'fade',   //效果配置
-                                eType: 'click', //** 鼠标事件
-                                pageBt: true,//是否有按钮切换页码
-                                bns: ['.prev', '.next'],//** 前后按钮配置class
-                                interval: 3000  //** 停顿时间
-                            })
-                        })
-                    });
-                </script>
-            </div>
+    <style>
+        .banner { position: relative; overflow: auto; text-align: center;}
+        .banner li { list-style: none; }
+        .banner ul li { float: left; }
+
+
+        #b02 { width: 1210px;}
+        #b02 .dots { position: absolute; left: 0; right: 0; bottom: 20px;}
+        #b02 .dots li
+        {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 0 4px;
+            text-indent: -999em;
+            border: 2px solid #3992d0;
+            border-radius: 6px;
+            cursor: pointer;
+            opacity: .4;
+            -webkit-transition: background .5s, opacity .5s;
+            -moz-transition: background .5s, opacity .5s;
+            transition: background .5s, opacity .5s;
+        }
+        #b02 .dots li.active
+        {
+            background: #fff;
+            opacity: 1;
+        }
+    </style>
+
+
+    <div style="height: 500px;">
+        <div class="banner" id="b02" style="margin: 0 auto;height: 320px;">
+            <ul>
+                <volist name="carousel" id="vo">
+                    <li><A HREF="{$vo.link}"><img src="{$vo.headPic}" alt="" ></A></li>
+                </volist>
+            </ul>
         </div>
     </div>
 
+
+    <script>
+        $(document).ready(function(e) {
+            $('#b02').unslider({
+                dots: true
+
+            });
+        });
+    </script>
 
     <div class="clear"></div>
     <!--推荐的老师-->
