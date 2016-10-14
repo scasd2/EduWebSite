@@ -56,8 +56,8 @@
             opacity: 1;
         }
     </style>
-
-
+<!--轮播-->
+<div class="nav_width">
     <div style="height: 500px;">
         <div class="banner" id="b02" style="margin: 0 auto;height: 320px;">
             <ul>
@@ -67,7 +67,7 @@
             </ul>
         </div>
     </div>
-
+</div>
 
     <script>
         $(document).ready(function(e) {
@@ -83,10 +83,10 @@
     <div class="nav_grey">
         <div class="main">
             <span class="nav_etital">Recommend teacher</span><br>
-            <span class="nav_tital">推荐的老师</span>
+            <span class="nav_tital">--------推荐的老师--------</span>
             <div class="atten_teach" style="text-align: left">
                 <ul>
-                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';"
+                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F3f3f3';"
                         onmouseout="JavaScript:this.style.background='';">
                         <a href="{:U('../Home/Teacher/info',array('id'=>$recommend[0]['id']))}"><img
                                 src="{$recommend[0]['headPic']}"></a>
@@ -100,7 +100,7 @@
                         </div>
 
                     </li>
-                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';"
+                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F3f3f3';"
                         onmouseout="JavaScript:this.style.background='';">
                         <a href="{:U('../Home/Teacher/info',array('id'=>$recommend[1]['id']))}"><img
                                 src="{$recommend[1]['headPic']}"></a>
@@ -114,7 +114,7 @@
                         </div>
 
                     </li>
-                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';"
+                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F3f3f3';"
                         onmouseout="JavaScript:this.style.background='';">
                         <a href="{:U('../Home/Teacher/info',array('id'=>$recommend[2]['id']))}"><img
                                 src="{$recommend[2]['headPic']}"></a>
@@ -128,7 +128,7 @@
                         </div>
 
                     </li>
-                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';"
+                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F3f3f3';"
                         onmouseout="JavaScript:this.style.background='';">
                         <a href="{:U('../Home/Teacher/info',array('id'=>$recommend[3]['id']))}"><img
                                 src="{$recommend[3]['headPic']}"></a>
@@ -142,7 +142,7 @@
                         </div>
 
                     </li>
-                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';"
+                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F3f3f3';"
                         onmouseout="JavaScript:this.style.background='';">
                         <a href="{:U('../Home/Teacher/info',array('id'=>$recommend[4]['id']))}"><img
                                 src="{$recommend[4]['headPic']}"></a>
@@ -156,7 +156,7 @@
                         </div>
 
                     </li>
-                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';"
+                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F3f3f3';"
                         onmouseout="JavaScript:this.style.background='';">
                         <a href="{:U('../Home/Teacher/info',array('id'=>$recommend[5]['id']))}"><img
                                 src="{$recommend[5]['headPic']}"></a>
@@ -179,10 +179,10 @@
     <div class="nav_width">
         <div class="main">
             <span class="nav_etital">Recommended courses</span><br>
-            <span class="nav_tital">推荐的课程</span>
-            <div class="atten_teach" style="text-align: left">
+            <span class="nav_tital">--------推荐的课程--------</span>
+            <div class="atten_curriculum" style="text-align: left">
                 <ul>
-                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';"
+                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#FAFAFA';"
                         onmouseout="JavaScript:this.style.background='#fff';">
                         <a href="{:U('../Home/Curr/info',array('id'=>$recommends[0]['id']))}"><img
                                 src="{$recommends[0]['headPic']}"></a>
@@ -199,7 +199,7 @@
                         </div>
 
                     </li>
-                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';"
+                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#FAFAFA';"
                         onmouseout="JavaScript:this.style.background='#fff';">
                         <a href="{:U('../Home/Curr/info',array('id'=>$recommends[1]['id']))}"><img
                                 src="{$recommends[1]['headPic']}"></a>
@@ -215,7 +215,7 @@
                         </div>
 
                     </li>
-                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';"
+                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#FAFAFA';"
                         onmouseout="JavaScript:this.style.background='#fff';">
                         <a href="{:U('../Home/Curr/info',array('id'=>$recommends[2]['id']))}"><img
                                 src="{$recommends[2]['headPic']}"></a>
@@ -231,7 +231,7 @@
                         </div>
 
                     </li>
-                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';"
+                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#FAFAFA';"
                         onmouseout="JavaScript:this.style.background='#fff';">
                         <a href="{:U('../Home/Curr/info',array('id'=>$recommends[3]['id']))}"><img
                                 src="{$recommends[3]['headPic']}"></a>
@@ -247,7 +247,7 @@
                         </div>
 
                     </li>
-                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';"
+                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#FAFAFA';"
                         onmouseout="JavaScript:this.style.background='#fff';">
                         <a href="{:U('../Home/Curr/info',array('id'=>$recommends[4]['id']))}"><img
                                 src="{$recommends[4]['headPic']}"></a>
@@ -263,7 +263,7 @@
                         </div>
 
                     </li>
-                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';"
+                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#FAFAFA';"
                         onmouseout="JavaScript:this.style.background='#fff';">
                         <a href="{:U('../Home/Curr/info',array('id'=>$recommends[5]['id']))}"><img
                                 src="{$recommends[5]['headPic']}"></a>
@@ -283,10 +283,13 @@
             </div>
         </div>
     </div>
-
-
-    <div class="main">
+    <!--推荐咨询-->
+    <div class="nav_grey" style="height: 1000px">
+        <div class="main">
+            <span class="nav_etital">Recommended Advisory</span><br>
+            <span class="nav_tital">--------推荐星咨询--------</span>
         <!--星咨询-->
+            <div style="width: 1210px;margin:auto;margin-top: 100px;">
         <div class="nav_bleft">
             <!--Start of the Tabmenu 1 -->
             <div class="inforRmenu">
@@ -301,7 +304,7 @@
                         }
                     </script>
 
-                    <li class="title">星资讯</li>
+                    <!--<li class="title">星资讯</li>-->
                     <li><a href="#" onmouseover="easytabs('1', '1');" onfocus="easytabs('1', '1');"
                            onclick="return false;" title="" id="tablink1" class="tab1 tabactive">小学</a></li>
                     <li><a href="#" onmouseover="easytabs('1', '2');" onfocus="easytabs('1', '2');"
@@ -317,7 +320,7 @@
 
                 <volist name="news1" id="vo">
                     <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';"
-                         onmouseout="JavaScript:this.style.background='#fff';" style="background: rgb(255, 255, 255);">
+                         onmouseout="JavaScript:this.style.background='#eee';" style="background: #eee;">
                         <ul>
                             <li class="img">
                                 <a href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">
@@ -340,7 +343,7 @@
             <div id="tabcontent2" style="display: none;">
                 <volist name="news2" id="vo">
                     <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';"
-                         onmouseout="JavaScript:this.style.background='#fff';" style="background: rgb(255, 255, 255);">
+                         onmouseout="JavaScript:this.style.background='#eee';" style="background: #eee;">
                         <ul>
                             <li class="img">
                                 <a href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">
@@ -363,7 +366,7 @@
             <div id="tabcontent3" style="display: none;">
                 <volist name="news3" id="vo">
                     <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';"
-                         onmouseout="JavaScript:this.style.background='#fff';" style="background: rgb(255, 255, 255);">
+                         onmouseout="JavaScript:this.style.background='#eee';" style="background: #eee;">
                         <ul>
                             <li class="img">
                                 <a href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">
@@ -382,6 +385,7 @@
             </div>
             <!--End Tabcontent 3-->
         </div>
+            </div>
         <div class="nav_bright">
             <!--右侧留言板-->
             <div class="brand-right">
@@ -395,6 +399,7 @@
             </div>
         </div>
         <div class="clear"></div>
+    </div>
     </div>
 
     <!--</div>-->

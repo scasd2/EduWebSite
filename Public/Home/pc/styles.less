@@ -52,13 +52,14 @@ ul,ol         { list-style:none; }
 
 /* Layout ================================================================================ */
 .wrapper {width:100%; margin:0px; padding:0px;}
-.main {width:1210px;margin:0px auto;}
+.main {width:1210px;margin:auto;}
 .page {width:100%; margin:0px; padding:0px;}
 .page_top{width:100%;background:#FFFFFF;border-bottom:1px #F5F5F5 solid; height:98px;}
 .page_bottom{width:100%;background:#FFFFFF;border-top:1px #F5F5F5 solid; height:78px; line-height:78px; color:#CCCCCC; text-align:center;}
 
-.m-logo { width:133px; height:67px; margin-top:12px; margin-right:15px;overflow:hidden; float:left; display:inline; background:url(./Content/Images/logo.png) no-repeat left top;}
-.m-logo a{ display:block; width:133px; height:67px; overflow:hidden; text-indent:-9999px;}
+.m-name{background:url(./Content/Images/name.png) no-repeat left top;width: 500px;height: 99px;overflow: hidden;float: left;display: inline-block;}
+.m-logo {background:url(./Content/Images/logo.png) no-repeat left top;width:90px; height:67px; margin-top:12px; margin-right:15px;overflow:hidden; float:left; display:inline; }
+.m-logo a{ display:block; width:90px; height:67px; overflow:hidden; text-indent:-9999px;}
 .top_left{width:329px; float:left;margin-top:30px; background:url(./Content/Images/tleft_bg.png) no-repeat left top;font-size:16px; color:#ADADAD;}
 .top_right{width:420px; float:right;margin-right:16px;margin-top:31px;font-size:14px; text-align:right;}
 .top_right .hotline{margin-right:29px;float:left;}
@@ -85,8 +86,8 @@ ul,ol         { list-style:none; }
 
 .nav_etital{display:inline-block;width:494px;height:52px;margin:auto;margin-top:50px;padding:0px;color:@main-color;font-size: 40px;}
 .nav_tital{display:inline-block;width:400px;height:10px;color: #333333;font-size:18px;margin: auto;margin-top: 10px}
-.nav_width{margin:0;width: 100%;height:600px;background-color: #FFffff ;text-align: center}
-.nav_grey{margin:0;width: 100%;height: 600px; text-align: center}
+.nav_width{margin:0 auto;width: 100%;height: 600px;background-color: #FFffff ;text-align: center}
+.nav_grey{margin:0 auto;width: 100%;height: 600px;text-align: center;background-color: #eee;}
 .nav_banner {display:inline-block;width:742px; padding:0px; margin:auto; margin-top:50px;overflow:hidden;}
 //.nav_right{width:298px; float:right; padding:0px; margin:0px;overflow:hidden;}
 
@@ -164,13 +165,13 @@ float: right;
 
 
 /*首页标签代码*/
-.inforRmenu {background-color:#FAFAFA;height:34px;width:100%;}
+.inforRmenu {background-color:#eee;height:34px;width:100%;}
 .inforRmenu .title{font-size:16px;float:left;font-weight:bold;color:@main-color; line-height:34px; padding-left:11px; padding-right:50px;}
 .inforRmenu ul {margin:0px;float:left;padding:0px; list-style:none; text-align:left;}
 .inforRmenu li {display:inline;float:left;line-height:34px;margin-top:0px;font-size:16px;font-weight:bold;}
 .inforRmenu li a {color:#989898; background:url(./Content/Images/rap_bg.jpg) no-repeat -94px top;text-decoration:none; display:block;padding:0px 31px;}
 .inforRmenu li a.tabactive {color:#989898;background:url(./Content/Images/rap_bg.jpg) no-repeat left top;position:relative;}
-#tabcontent1,#tabcontent2,#tabcontent3,#tabcontent4,#anothercontent1,#anothercontent2, #anothercontent3, #anothercontent4,#anothercontent5, #anothercontent6 {border-left:1px solid #EDEDED;border-right:1px solid #EDEDED;border-bottom:1px solid #EDEDED;width:900px; text-align:left;padding:10px 0px; font-size:12px; margin-bottom:43px;background:#fff;border-top:1px solid #6E529F;margin-top:-1px;}
+#tabcontent1,#tabcontent2,#tabcontent3,#tabcontent4,#anothercontent1,#anothercontent2, #anothercontent3, #anothercontent4,#anothercontent5, #anothercontent6 {border-left:1px solid #EEEEEE;border-right:1px solid #EEEEEE;border-bottom:1px solid #EEEEEE;width:900px; text-align:left;padding:10px 0px; font-size:12px; margin-bottom:43px;background:#eee;border-top:1px solid @main-color;margin-top:-1px;}
 
 
 /*右侧icon*/
@@ -596,8 +597,14 @@ color: #AAC135;
 .atten_teach {margin-bottom:45px;margin-top: 100px}
 .atten_teach h5{padding:8px 17px; font-size:16px; color:@main-color;font-weight:bold;}
 .atten_teach ul{padding:0px 8px;margin-bottom:7px;}
-.atten_teach li{width:32%; float:left;height:128px;margin:7px;background:#FAFAFA;display:inline;overflow:hidden;}
+.atten_teach li{width:32%; float:left;height:128px;margin:7px;background:#eee;display:inline;overflow:hidden;}
 .atten_teach img{width:114px; height:128px;float:left;overflow:hidden;}
+
+.atten_curriculum {margin-bottom:45px;margin-top: 100px}
+.atten_curriculum h5{padding:8px 17px; font-size:16px; color:@main-color;font-weight:bold;}
+.atten_curriculum ul{padding:0px 8px;margin-bottom:7px;}
+.atten_curriculum li{width:32%; float:left;height:128px;margin:7px;background:#FFffff;display:inline;overflow:hidden;}
+.atten_curriculum img{width:114px; height:128px;float:left;overflow:hidden;}
 
 .teach-link {display:block; height:128px;}
 .left-teach-detail {padding:10px 20px;float:left;}
