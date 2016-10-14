@@ -388,15 +388,30 @@
             </div>
         <div class="nav_bright">
             <!--右侧留言板-->
-            <div class="brand-right">
-                <h3>留言板</h3>
-
+            <div class="nav_bulletin">
+                <h3>在线留言</h3>
+                <a>
+                    <img src="__PUBLIC__/Home/pc/Content/Images/20131227123536_68660.jpg" style=" width: 100%; height: auto;" alt=""/>
+                </a>
             </div>
             <!--右侧资讯-->
-            <div class="brand-right">
-                <h3>咨询</h3>
+  <!--          <div class="brand-right">
+                <h3>公司资讯</h3>
 
+            </div>-->
+
+
+            <div class="nav_bulletin" style="margin-top: 15px;">
+                <h3>公司资讯</h3>
+                <ul class="inforR_text">
+                    <volist name="$information" id="vo">
+                        <li><a href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">
+                            {$vo['title']}</a></li>
+                    </volist>
+
+               </ul>
             </div>
+
         </div>
         <div class="clear"></div>
     </div>

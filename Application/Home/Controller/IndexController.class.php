@@ -17,20 +17,7 @@ use OT\DataDictionary;
 class IndexController extends HomeController {
 
 
-    private  function  getPic(&$arr){
-        foreach($arr as $key => $val){
-            $pic=M('picture')->where([
-                'id'=>$val['cover_id']
-            ])->select();
-            if(count($pic)>0){
-                $arr[$key]['headUrl']=$pic[0]['path'];
 
-            }else{
-                $arr[$key]['headUrl']='';
-            }
-
-        }
-    }
 
 	//系统首页
     public function index(){
@@ -139,28 +126,5 @@ class IndexController extends HomeController {
     }
 
 
-    /* 文档分类检测 */
-    private function category($id = 0){
-        /* 标识正确性检测 */
-        $id = $id ? $id : I('get.category', 0);
-        if(empty($id)){
-            $this->error('没有指定文档分类！');
-        }
-
-        /* 获取分类信息 */
-        $category = D('Category')->info($id);
-        if($category && 1 == $category['status']){
-            switch ($category['display']) {
-                case 0:
-                    $this->error('该分类禁止显示！');
-                    break;
-                //TODO: 更多分类显示状态判断
-                default:
-                    return $category;
-            }
-        } else {
-            $this->error('分类不存在或被禁用！');
-        }
-    }
 
 }
