@@ -78,6 +78,21 @@
             <script>
                 $("#sb").click(function(){
 
+                    if($("#name").val()==""){
+                        alert("请先输入姓名")
+                        return;
+                    }
+
+                    if($("#content").val()==""){
+                        alert("请先输入姓名")
+                        return;
+                    }
+
+                    if($("#phone").val().length<11){
+                        alert("手机号输入错误")
+                        return;
+                    }
+
 
 
                     $.post(

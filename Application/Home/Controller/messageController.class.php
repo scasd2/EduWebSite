@@ -4,6 +4,9 @@ use OT\DataDictionary;
 
 class MessageController extends HomeController {
     public function index(){
+
+        $this->currentUrl="Message/index";
+
         $this->display();
     }
 

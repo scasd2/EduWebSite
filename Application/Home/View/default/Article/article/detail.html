@@ -105,32 +105,21 @@
         </div>
         <!--右侧模块-->
         <div class="col-right">
-          <!--最新资讯-->
-            <div class="nav_library">
-                <h3>最新资讯</h3>
-                <ul class="inforR_text">
-                    <li><a href="/201609/4670.html" target="_blank">五大方法养成好的学习习惯，助力小学学习</a></li>
-                    <li><a href="/201609/4612.html" target="_blank">纵容孩子这三件事？小心毁了孩子</a></li>
-                    <li><a href="/201609/4578.html" target="_blank">经常给孩子检查作业，反倒害了孩子</a></li>
-                    <li><a href="/201609/4391.html" target="_blank">科学的学习方法才是关键 你真的懂吗？</a></li>
-                    <li><a href="/201609/4390.html" target="_blank">良好的学习习惯是学习的基础 星火君来教你</a></li>
-                    <li><a href="/201608/3924.html" target="_blank">小学生的成功秘密：如何对待错题最有用</a></li>
-                    <li><a href="/201608/3921.html" target="_blank">课后复习的四种学习技巧  星火君通通告诉你</a></li>
-                    <li><a href="/201608/3920.html" target="_blank">小学生的学习技巧 星火君让你快速学会</a></li>
-                </ul>
+            <div class="nav_bulletin">
+                <h3>在线留言</h3>
+                <a href="{:U('Message/index')}">
+                    <img src="__PUBLIC__/Home/pc/Content/Images/20131227123536_68660.jpg" style=" width: 100%; height: auto;" alt=""/>
+                </a>
             </div>
-           <!--热门资讯-->
-            <div class="nav_library">
-                <h3>热门资讯</h3>
-                <ul class="inforR_text">
-                    <li><a href="/201603/1959.html" target="_blank">如何选择私立校？星火君为你解答</a></li>
-                    <li><a href="/201603/1471.html" target="_blank">影响小学生学习成绩的六个习惯</a></li>
-                    <li><a href="/201604/2053.html" target="_blank">记忆生字不困难  星火教育帮你忙</a></li>
-                    <li><a href="/201601/1478.html" target="_blank">小升初面试环节全面解析及必备能力</a></li>
-                    <li><a href="/201603/1957.html" target="_blank">妈妈掌握这些辅导作业的技巧，孩子一定成绩好！</a></li>
-                    <li><a href="/201601/1470.html" target="_blank">3岁、7岁、10岁，孩子的重要转折点，非常实在</a></li>
-                    <li><a href="/201601/1472.html" target="_blank">星火君支招 | 小升初，孩子要做哪些准备</a></li>
-                    <li><a href="/201601/1480.html" target="_blank">小升初家长四大疑问：怎么帮孩子缓解压力？</a></li>
+
+            <div class="nav_bulletin" style="height: 300px; margin-top: 15px;   border: 1px #EDEDED solid;" >
+                <h3>公司资讯</h3>
+                <ul class="inforR_text" >
+                    <volist name="information" id="vo">
+                        <li><a href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">
+                            {$vo['title']}</a></li>
+                    </volist>
+
                 </ul>
             </div>
         </div>

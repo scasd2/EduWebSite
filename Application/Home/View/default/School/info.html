@@ -52,31 +52,27 @@
         </div>
         <!--右侧模块-->
         <div class="col-right">
-            <!--广告-->
-            <div class="right_ad"><a href="http://ikx.xinghuojiaoyu.net/" target="_blank"><img
-                    src="http://file.xinghuo100.com/upload/25/75/76/101/image/20160112/20160112173034_2305.jpg" alt=""></a>
+
+
+            <div class="nav_bulletin">
+                <h3>在线留言</h3>
+                <a href="{:U('Message/index')}">
+                    <img src="__PUBLIC__/Home/pc/Content/Images/20131227123536_68660.jpg" style=" width: 100%; height: auto;" alt=""/>
+                </a>
             </div>
-            <!--热门资讯-->
-            <div class="nav_library">
-                <h3>热门资讯</h3>
-                <ul class="inforR_text">
-                    <li><a href="/201601/1484.html">初中成绩差没关系，用这些方法逆袭</a></li>
-                    <li><a href="/201601/1491.html">中考志愿填报误区，家长需谨慎！</a></li>
-                    <li><a href="/201603/1490.html">初中期中考试复习计划</a></li>
-                    <li><a href="/201601/1492.html">初三生寒假规划：最佳备考策略三步走</a></li>
-                    <li><a href="/201601/1526.html">全新星火教育网试运营，带给你不一样的体验</a></li>
-                    <li><a href="/201601/1483.html">导致初中三年后天壤之别的差异三个小贴士</a></li>
-                    <li><a href="/201601/1482.html">假期将至，初三生如何度过一个充实的寒假？</a></li>
-                    <li><a href="/201604/2317.html">4月30日，福州星火教育仓山校区开业啦！</a></li>
+
+            <div class="nav_bulletin" style="height: 300px; margin-top: 15px;   border: 1px #EDEDED solid;" >
+                <h3>公司资讯</h3>
+                <ul class="inforR_text" >
+                    <volist name="information" id="vo">
+                        <li><a href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">
+                            {$vo['title']}</a></li>
+                    </volist>
+
                 </ul>
             </div>
-            <!--广告-->
-            <div class="right_ad">
-                <a href="http://www.xinghuo100.com/zhuanti/qiuji2016/fuzhou/qiuji2016.html#"
-                                     target="_blank"><img
-                    src="http://file.xinghuo100.com/upload/25/924/936/951/image/20160913/20160913095405_0753.jpg"
-                    alt=""></a>
-            </div>
+
+
             <!--名校推荐-->
 
             <div class="nav_library">

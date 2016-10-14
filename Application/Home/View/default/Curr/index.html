@@ -230,6 +230,25 @@
         <!--右侧模块-->
 
         <div class="col-right">
+
+            <div class="nav_bulletin">
+                <h3>在线留言</h3>
+                <a href="{:U('Message/index')}">
+                    <img src="__PUBLIC__/Home/pc/Content/Images/20131227123536_68660.jpg" style=" width: 100%; height: auto;" alt=""/>
+                </a>
+            </div>
+
+            <div class="nav_bulletin" style="height: 300px; margin-top: 15px;   border: 1px #EDEDED solid;" >
+                <h3>公司资讯</h3>
+                <ul class="inforR_text" >
+                    <volist name="information" id="vo">
+                        <li><a href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">
+                            {$vo['title']}</a></li>
+                    </volist>
+
+                </ul>
+            </div>
+
             <!--推荐课程-->
             <div class="right_teach">
                 <h5>推荐课程</h5>
@@ -294,9 +313,7 @@
                     <div class="clear"></div>
                 </div>
             </div>
-            <!--右侧广告-->
-            <div class="right_ad"><a href="http://ikx.xinghuojiaoyu.net/" target="_blank"><img src="http://file.xinghuo100.com/upload/25/75/76/100/image/20160118/20160118101846_2257.jpg" alt=""></a></div>
-        </div>
+       </div>
         <div class="clear"></div>
 
 
