@@ -9,142 +9,167 @@
 <!-- /头部 -->
 
 
-
 <div class="page">
     <!--<div class="main">-->
 
 
-        <include file="Public/menu"/>
+    <include file="Public/menu"/>
 
 
+    <!--左侧导航-->
+    <!--        <div class="left_menu">
+                <h3>课程导航</h3>
+                <ul>
+                    <li><a href="{:U('Curr/index',array('grade'=>0))}" target="_blank">小学辅导</a></li>
+                    <li><a href="{:U('Curr/index',array('grade'=>1))}" target="_blank">初中辅导</a></li>
+                    <li><a href="{:U('Curr/index',array('grade'=>2))}" target="_blank">高中辅导</a></li>
+                </ul>
+            </div>-->
 
-        <!--左侧导航-->
-<!--        <div class="left_menu">
-            <h3>课程导航</h3>
-            <ul>
-                <li><a href="{:U('Curr/index',array('grade'=>0))}" target="_blank">小学辅导</a></li>
-                <li><a href="{:U('Curr/index',array('grade'=>1))}" target="_blank">初中辅导</a></li>
-                <li><a href="{:U('Curr/index',array('grade'=>2))}" target="_blank">高中辅导</a></li>
-            </ul>
-        </div>-->
-
-        <!--轮播广告图-->
-        <div class="nav_width" style="height: 450px">
+    <!--轮播广告图-->
+    <div class="nav_width" style="height: 450px">
+        <div class="main">
             <div class="nav_banner">
-            <div id="fsD1" class="focus">
-                <div id="D1pic1" class="fPic">
-                    <div class="fcon" style="display: none;">
-                        <a href="{$carousel[0]['link']}" target="_blank"><img src="{$carousel[0]['headPic']}" alt="" style="opacity: 1;"></a>
+                <div id="fsD1" class="focus">
+                    <div id="D1pic1" class="fPic">
+                        <div class="fcon" style="display: none;">
+                            <a href="{$carousel[0]['link']}" target="_blank"><img src="{$carousel[0]['headPic']}" alt=""
+                                                                                  style="opacity: 1;"></a>
+                        </div>
+                        <div class="fcon" style="display: block;">
+                            <a href="{$carousel[1]['link']}" target="_blank"><img src="{$carousel[1]['headPic']}" alt=""
+                                                                                  style="opacity: 1;"></a>
+                        </div>
+                        <div class="fcon" style="display: none;">
+                            <a href="{$carousel[2]['link']}" target="_blank"><img src="{$carousel[2]['headPic']}" alt=""
+                                                                                  style="opacity: 1;"></a>
+                        </div>
                     </div>
-                    <div class="fcon" style="display: block;">
-                        <a href="{$carousel[1]['link']}" target="_blank"><img src="{$carousel[1]['headPic']}" alt="" style="opacity: 1;"></a>
+                    <div class="fbg">
+                        <div class="D1fBt" id="D1fBt">
+                            <a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i></i></a>
+                            <a href="javascript:void(0)" hidefocus="true" target="_self" class="current"><i></i></a>
+                            <a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i></i></a>
+                        </div>
                     </div>
-                    <div class="fcon" style="display: none;">
-                        <a href="{$carousel[2]['link']}" target="_blank"><img src="{$carousel[2]['headPic']}" alt="" style="opacity: 1;"></a>
-                    </div>
+                    <span class="prev"></span>
+                    <span class="next"></span>
                 </div>
-                <div class="fbg">
-                    <div class="D1fBt" id="D1fBt">
-                        <a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i></i></a>
-                        <a href="javascript:void(0)" hidefocus="true" target="_self" class="current"><i></i></a>
-                        <a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i></i></a>
-                    </div>
-                </div>
-                <span class="prev"></span>
-                <span class="next"></span>
-            </div>
-            <script type="text/javascript">
-                $(function () {
-                    Qfast.add('widgets', { path: "/Scripts/Thirdparty/terminator2.2.min.js", type: "js", requires: ['fx'] });
-                    Qfast(false, 'widgets', function () {
-                        K.tabs({
-                            id: 'fsD1',   //焦点图包裹id
-                            conId: "D1pic1",  //** 大图域包裹id
-                            tabId: "D1fBt",
-                            tabTn: "a",
-                            conCn: '.fcon', //** 大图域配置class
-                            auto: 1,   //自动播放 1或0
-                            effect: 'fade',   //效果配置
-                            eType: 'click', //** 鼠标事件
-                            pageBt: true,//是否有按钮切换页码
-                            bns: ['.prev', '.next'],//** 前后按钮配置class
-                            interval: 3000  //** 停顿时间
+                <script type="text/javascript">
+                    $(function () {
+                        Qfast.add('widgets', {
+                            path: "/Scripts/Thirdparty/terminator2.2.min.js",
+                            type: "js",
+                            requires: ['fx']
+                        });
+                        Qfast(false, 'widgets', function () {
+                            K.tabs({
+                                id: 'fsD1',   //焦点图包裹id
+                                conId: "D1pic1",  //** 大图域包裹id
+                                tabId: "D1fBt",
+                                tabTn: "a",
+                                conCn: '.fcon', //** 大图域配置class
+                                auto: 1,   //自动播放 1或0
+                                effect: 'fade',   //效果配置
+                                eType: 'click', //** 鼠标事件
+                                pageBt: true,//是否有按钮切换页码
+                                bns: ['.prev', '.next'],//** 前后按钮配置class
+                                interval: 3000  //** 停顿时间
+                            })
                         })
-                    })
-                });
-            </script>
+                    });
+                </script>
+            </div>
         </div>
-        </div>
+    </div>
 
 
-        <div class="clear"></div>
+    <div class="clear"></div>
     <!--推荐的老师-->
     <div class="nav_grey">
         <div class="main">
-        <span class="nav_etital">Recommend teacher</span><br>
-        <span  class="nav_tital">推荐的老师</span>
+            <span class="nav_etital">Recommend teacher</span><br>
+            <span class="nav_tital">推荐的老师</span>
             <div class="atten_teach" style="text-align: left">
                 <ul>
-                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';" onmouseout="JavaScript:this.style.background='';" >
-                        <a href="{:U('../Home/Teacher/info',array('id'=>$recommend[0]['id']))}"><img src="{$recommend[0]['headPic']}"></a>
+                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';"
+                        onmouseout="JavaScript:this.style.background='';">
+                        <a href="{:U('../Home/Teacher/info',array('id'=>$recommend[0]['id']))}"><img
+                                src="{$recommend[0]['headPic']}"></a>
                         <div class="left-teach-detail">
 
-                            <p class="title"> <a href="{:U('../Home/Teacher/info',array('id'=>$recommend[0]['id']))}">{$recommend[0]['name']}</a></p>
+                            <p class="title"><a href="{:U('../Home/Teacher/info',array('id'=>$recommend[0]['id']))}">{$recommend[0]['name']}</a>
+                            </p>
                             <p><em>辅导年级：</em>{$gradeMap[$recommend[0]['grade']]}</p>
                             <p><em>辅导科目：</em>{$subjectMap[$recommend[0]['subject']]}</p>
 
                         </div>
 
                     </li>
-                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';" onmouseout="JavaScript:this.style.background='';" >
-                        <a href="{:U('../Home/Teacher/info',array('id'=>$recommend[1]['id']))}"><img src="{$recommend[1]['headPic']}"></a>
+                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';"
+                        onmouseout="JavaScript:this.style.background='';">
+                        <a href="{:U('../Home/Teacher/info',array('id'=>$recommend[1]['id']))}"><img
+                                src="{$recommend[1]['headPic']}"></a>
                         <div class="left-teach-detail">
 
-                            <p class="title"> <a href="{:U('../Home/Teacher/info',array('id'=>$recommend[1]['id']))}">{$recommend[1]['name']}</a></p>
+                            <p class="title"><a href="{:U('../Home/Teacher/info',array('id'=>$recommend[1]['id']))}">{$recommend[1]['name']}</a>
+                            </p>
                             <p><em>辅导年级：</em>{$gradeMap[$recommend[1]['grade']]}</p>
                             <p><em>辅导科目：</em>{$subjectMap[$recommend[1]['subject']]}</p>
 
                         </div>
 
                     </li>
-                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';" onmouseout="JavaScript:this.style.background='';" >
-                        <a href="{:U('../Home/Teacher/info',array('id'=>$recommend[2]['id']))}"><img src="{$recommend[2]['headPic']}"></a>
+                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';"
+                        onmouseout="JavaScript:this.style.background='';">
+                        <a href="{:U('../Home/Teacher/info',array('id'=>$recommend[2]['id']))}"><img
+                                src="{$recommend[2]['headPic']}"></a>
                         <div class="left-teach-detail">
 
-                            <p class="title"> <a href="{:U('../Home/Teacher/info',array('id'=>$recommend[2]['id']))}">{$recommend[2]['name']}</a></p>
+                            <p class="title"><a href="{:U('../Home/Teacher/info',array('id'=>$recommend[2]['id']))}">{$recommend[2]['name']}</a>
+                            </p>
                             <p><em>辅导年级：</em>{$gradeMap[$recommend[2]['grade']]}</p>
                             <p><em>辅导科目：</em>{$subjectMap[$recommend[2]['subject']]}</p>
 
                         </div>
 
                     </li>
-                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';" onmouseout="JavaScript:this.style.background='';">
-                        <a href="{:U('../Home/Teacher/info',array('id'=>$recommend[3]['id']))}"><img src="{$recommend[3]['headPic']}"></a>
+                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';"
+                        onmouseout="JavaScript:this.style.background='';">
+                        <a href="{:U('../Home/Teacher/info',array('id'=>$recommend[3]['id']))}"><img
+                                src="{$recommend[3]['headPic']}"></a>
                         <div class="left-teach-detail">
 
-                            <p class="title"> <a href="{:U('../Home/Teacher/info',array('id'=>$recommend[3]['id']))}">{$recommend[3]['name']}</a></p>
+                            <p class="title"><a href="{:U('../Home/Teacher/info',array('id'=>$recommend[3]['id']))}">{$recommend[3]['name']}</a>
+                            </p>
                             <p><em>辅导年级：</em>{$gradeMap[$recommend[3]['grade']]}</p>
                             <p><em>辅导科目：</em>{$subjectMap[$recommend[3]['subject']]}</p>
 
                         </div>
 
                     </li>
-                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';" onmouseout="JavaScript:this.style.background='';" >
-                        <a href="{:U('../Home/Teacher/info',array('id'=>$recommend[4]['id']))}"><img src="{$recommend[4]['headPic']}"></a>
+                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';"
+                        onmouseout="JavaScript:this.style.background='';">
+                        <a href="{:U('../Home/Teacher/info',array('id'=>$recommend[4]['id']))}"><img
+                                src="{$recommend[4]['headPic']}"></a>
                         <div class="left-teach-detail">
 
-                            <p class="title"> <a href="{:U('../Home/Teacher/info',array('id'=>$recommend[4]['id']))}">{$recommend[4]['name']}</a></p>
+                            <p class="title"><a href="{:U('../Home/Teacher/info',array('id'=>$recommend[4]['id']))}">{$recommend[4]['name']}</a>
+                            </p>
                             <p><em>辅导年级：</em>{$gradeMap[$recommend[4]['grade']]}</p>
                             <p><em>辅导科目：</em>{$subjectMap[$recommend[4]['subject']]}</p>
 
                         </div>
 
                     </li>
-                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';" onmouseout="JavaScript:this.style.background='';">
-                        <a href="{:U('../Home/Teacher/info',array('id'=>$recommend[5]['id']))}"><img src="{$recommend[5]['headPic']}"></a>
+                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';"
+                        onmouseout="JavaScript:this.style.background='';">
+                        <a href="{:U('../Home/Teacher/info',array('id'=>$recommend[5]['id']))}"><img
+                                src="{$recommend[5]['headPic']}"></a>
                         <div class="left-teach-detail">
 
-                            <p class="title"> <a href="{:U('../Home/Teacher/info',array('id'=>$recommend[5]['id']))}">{$recommend[5]['name']}</a></p>
+                            <p class="title"><a href="{:U('../Home/Teacher/info',array('id'=>$recommend[5]['id']))}">{$recommend[5]['name']}</a>
+                            </p>
                             <p><em>辅导年级：</em>{$gradeMap[$recommend[5]['grade']]}</p>
                             <p><em>辅导科目：</em>{$subjectMap[$recommend[5]['subject']]}</p>
 
@@ -160,11 +185,13 @@
     <div class="nav_width">
         <div class="main">
             <span class="nav_etital">Recommended courses</span><br>
-            <span  class="nav_tital">推荐的课程</span>
+            <span class="nav_tital">推荐的课程</span>
             <div class="atten_teach" style="text-align: left">
                 <ul>
-                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';" onmouseout="JavaScript:this.style.background='#fff';" >
-                        <a href="{:U('../Home/Curr/info',array('id'=>$recommends[0]['id']))}"><img src="{$recommends[0]['headPic']}"></a>
+                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';"
+                        onmouseout="JavaScript:this.style.background='#fff';">
+                        <a href="{:U('../Home/Curr/info',array('id'=>$recommends[0]['id']))}"><img
+                                src="{$recommends[0]['headPic']}"></a>
                         <div class="left-teach-detail">
 
                             <!--<p class="title"> <a href="{:U('info',array('id'=>$recommend[0]['id']))}">{$recommend[0]['curriculumName']}</a></p>-->
@@ -178,8 +205,10 @@
                         </div>
 
                     </li>
-                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';" onmouseout="JavaScript:this.style.background='#fff';" >
-                        <a href="{:U('../Home/Curr/info',array('id'=>$recommends[1]['id']))}"><img src="{$recommends[1]['headPic']}"></a>
+                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';"
+                        onmouseout="JavaScript:this.style.background='#fff';">
+                        <a href="{:U('../Home/Curr/info',array('id'=>$recommends[1]['id']))}"><img
+                                src="{$recommends[1]['headPic']}"></a>
                         <div class="left-teach-detail">
 
                             <a href="{:U('../Home/Curr/info',array('id'=>$recommends[1]['id']))}">
@@ -192,8 +221,10 @@
                         </div>
 
                     </li>
-                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';" onmouseout="JavaScript:this.style.background='#fff';" >
-                        <a href="{:U('../Home/Curr/info',array('id'=>$recommends[2]['id']))}"><img src="{$recommends[2]['headPic']}"></a>
+                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';"
+                        onmouseout="JavaScript:this.style.background='#fff';">
+                        <a href="{:U('../Home/Curr/info',array('id'=>$recommends[2]['id']))}"><img
+                                src="{$recommends[2]['headPic']}"></a>
                         <div class="left-teach-detail">
 
                             <a href="{:U('../Home/Curr/info',array('id'=>$recommends[2]['id']))}">
@@ -206,8 +237,10 @@
                         </div>
 
                     </li>
-                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';" onmouseout="JavaScript:this.style.background='#fff';">
-                        <a href="{:U('../Home/Curr/info',array('id'=>$recommends[3]['id']))}"><img src="{$recommends[3]['headPic']}"></a>
+                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';"
+                        onmouseout="JavaScript:this.style.background='#fff';">
+                        <a href="{:U('../Home/Curr/info',array('id'=>$recommends[3]['id']))}"><img
+                                src="{$recommends[3]['headPic']}"></a>
                         <div class="left-teach-detail">
 
                             <a href="{:U('../Home/Curr/info',array('id'=>$recommends[3]['id']))}">
@@ -220,8 +253,10 @@
                         </div>
 
                     </li>
-                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';" onmouseout="JavaScript:this.style.background='#fff';" >
-                        <a href="{:U('../Home/Curr/info',array('id'=>$recommends[4]['id']))}"><img src="{$recommends[4]['headPic']}"></a>
+                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';"
+                        onmouseout="JavaScript:this.style.background='#fff';">
+                        <a href="{:U('../Home/Curr/info',array('id'=>$recommends[4]['id']))}"><img
+                                src="{$recommends[4]['headPic']}"></a>
                         <div class="left-teach-detail">
 
                             <a href="{:U('../Home/Curr/info',array('id'=>$recommends[4]['id']))}">
@@ -234,14 +269,16 @@
                         </div>
 
                     </li>
-                    <li class="teach-link"  onmouseover="JavaScript:this.style.background='#F1F1F1';" onmouseout="JavaScript:this.style.background='#fff';">
-                        <a href="{:U('../Home/Curr/info',array('id'=>$recommends[5]['id']))}"><img src="{$recommends[5]['headPic']}"></a>
+                    <li class="teach-link" onmouseover="JavaScript:this.style.background='#F1F1F1';"
+                        onmouseout="JavaScript:this.style.background='#fff';">
+                        <a href="{:U('../Home/Curr/info',array('id'=>$recommends[5]['id']))}"><img
+                                src="{$recommends[5]['headPic']}"></a>
                         <div class="left-teach-detail">
 
                             <a href="{:U('../Home/Curr/info',array('id'=>$recommends[5]['id']))}">
                                 <p style="color: #3992d0;font-weight: bold">{$recommends[5]['curriculumName']}</p><br>
                             </a>
-                            <p><em >试用人群：</em><br>
+                            <p><em>试用人群：</em><br>
                                 {$recommends[5]['ApplicablePeople']}</p>
 
                         </div>
@@ -254,110 +291,117 @@
     </div>
 
 
+    <div class="main">
+        <!--星咨询-->
+        <div class="nav_bleft">
+            <!--Start of the Tabmenu 1 -->
+            <div class="inforRmenu">
+                <ul>
 
+                    <script>
+                        function easytabs(a, b) {
+                            $("#tabcontent1,#tabcontent2,#tabcontent3").hide()
+                            $("#tabcontent" + b).show()
+                            $("#tablink1,#tablink2,#tablink3").removeClass('tabactive')
+                            $("#tablink" + b).addClass('tabactive')
+                        }
+                    </script>
 
-        <div class="main">
-            <!--星咨询-->
-            <div class="nav_bleft">
-                <!--Start of the Tabmenu 1 -->
-                <div class="inforRmenu">
-                    <ul>
-
-                        <script>
-                            function easytabs(a,b){
-                                $("#tabcontent1,#tabcontent2,#tabcontent3").hide()
-                                $("#tabcontent"+b).show()
-                                $("#tablink1,#tablink2,#tablink3").removeClass('tabactive')
-                                $("#tablink"+b).addClass('tabactive')
-                            }
-                        </script>
-
-                        <li class="title">星资讯</li>
-                        <li><a href="#" onmouseover="easytabs('1', '1');" onfocus="easytabs('1', '1');" onclick="return false;" title="" id="tablink1" class="tab1 tabactive">小学</a></li>
-                        <li><a href="#" onmouseover="easytabs('1', '2');" onfocus="easytabs('1', '2');" onclick="return false;" title="" id="tablink2" class="tab2">初中</a></li>
-                        <li><a href="#" onmouseover="easytabs('1', '3');" onfocus="easytabs('1', '3');" onclick="return false;" title="" id="tablink3" class="tab3">高中</a></li>
-                        <div class="clear"></div>
-                    </ul>
-                </div>
-                <!--End of the Tabmenu 1 -->
-                <!--Start Tabcontent 1 -->
-                <div id="tabcontent1" style="display: block;">
-
-                    <volist name="news1" id="vo">
-                        <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';" style="background: rgb(255, 255, 255);">
-                            <ul>
-                                <li class="img">
-                                    <a href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">
-                                        <img src="{$vo['headUrl']}"></a>
-                                </li>
-                                <li class="contents">
-                                    <h3><a href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">{$vo['title']}</a></h3>
-                                    {$vo['description']}
-                                    <a class="smore" href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">[详细]</a>
-                                </li>
-                                <div class="clear"></div>
-                            </ul>
-                        </div>
-                    </volist>
-
-              </div>
-                <!--End Tabcontent 1-->
-                <!--Start Tabcontent 2-->
-                <div id="tabcontent2" style="display: none;">
-                    <volist name="news2" id="vo">
-                        <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';" style="background: rgb(255, 255, 255);">
-                            <ul>
-                                <li class="img">
-                                    <a href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">
-                                        <img src="{$vo['headUrl']}"></a>
-                                </li>
-                                <li class="contents">
-                                    <h3><a href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">{$vo['title']}</a></h3>
-                                    {$vo['description']}
-                                    <a class="smore" href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">[详细]</a>
-                                </li>
-                                <div class="clear"></div>
-                            </ul>
-                        </div>
-                    </volist>
-
-                </div>
-                <!--End Tabcontent 2 -->
-                <!--Start Tabcontent 3-->
-                <div id="tabcontent3" style="display: none;">
-                    <volist name="news3" id="vo">
-                        <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';" onmouseout="JavaScript:this.style.background='#fff';" style="background: rgb(255, 255, 255);">
-                            <ul>
-                                <li class="img">
-                                    <a href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">
-                                        <img src="{$vo['headUrl']}"></a>
-                                </li>
-                                <li class="contents">
-                                    <h3><a href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">{$vo['title']}</a></h3>
-                                    {$vo['description']}
-                                    <a class="smore" href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">[详细]</a>
-                                </li>
-                                <div class="clear"></div>
-                            </ul>
-                        </div>
-                    </volist>
-               </div>
-                <!--End Tabcontent 3-->
+                    <li class="title">星资讯</li>
+                    <li><a href="#" onmouseover="easytabs('1', '1');" onfocus="easytabs('1', '1');"
+                           onclick="return false;" title="" id="tablink1" class="tab1 tabactive">小学</a></li>
+                    <li><a href="#" onmouseover="easytabs('1', '2');" onfocus="easytabs('1', '2');"
+                           onclick="return false;" title="" id="tablink2" class="tab2">初中</a></li>
+                    <li><a href="#" onmouseover="easytabs('1', '3');" onfocus="easytabs('1', '3');"
+                           onclick="return false;" title="" id="tablink3" class="tab3">高中</a></li>
+                    <div class="clear"></div>
+                </ul>
             </div>
-            <div class="nav_bright">
-                <!--右侧留言板-->
-                <div class="brand-right">
-                    <h3>留言板</h3>
+            <!--End of the Tabmenu 1 -->
+            <!--Start Tabcontent 1 -->
+            <div id="tabcontent1" style="display: block;">
 
-                </div>
-                <!--右侧资讯-->
-                <div class="brand-right">
-                    <h3>咨询</h3>
+                <volist name="news1" id="vo">
+                    <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';"
+                         onmouseout="JavaScript:this.style.background='#fff';" style="background: rgb(255, 255, 255);">
+                        <ul>
+                            <li class="img">
+                                <a href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">
+                                    <img src="{$vo['headUrl']}"></a>
+                            </li>
+                            <li class="contents">
+                                <h3><a href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">{$vo['title']}</a>
+                                </h3>
+                                {$vo['description']}
+                                <a class="smore" href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">[详细]</a>
+                            </li>
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                </volist>
 
-                </div>
             </div>
-            <div class="clear"></div>
+            <!--End Tabcontent 1-->
+            <!--Start Tabcontent 2-->
+            <div id="tabcontent2" style="display: none;">
+                <volist name="news2" id="vo">
+                    <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';"
+                         onmouseout="JavaScript:this.style.background='#fff';" style="background: rgb(255, 255, 255);">
+                        <ul>
+                            <li class="img">
+                                <a href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">
+                                    <img src="{$vo['headUrl']}"></a>
+                            </li>
+                            <li class="contents">
+                                <h3><a href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">{$vo['title']}</a>
+                                </h3>
+                                {$vo['description']}
+                                <a class="smore" href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">[详细]</a>
+                            </li>
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                </volist>
+
+            </div>
+            <!--End Tabcontent 2 -->
+            <!--Start Tabcontent 3-->
+            <div id="tabcontent3" style="display: none;">
+                <volist name="news3" id="vo">
+                    <div class="study_news" onmouseover="JavaScript:this.style.background='#FAFAFA';"
+                         onmouseout="JavaScript:this.style.background='#fff';" style="background: rgb(255, 255, 255);">
+                        <ul>
+                            <li class="img">
+                                <a href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">
+                                    <img src="{$vo['headUrl']}"></a>
+                            </li>
+                            <li class="contents">
+                                <h3><a href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">{$vo['title']}</a>
+                                </h3>
+                                {$vo['description']}
+                                <a class="smore" href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">[详细]</a>
+                            </li>
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                </volist>
+            </div>
+            <!--End Tabcontent 3-->
         </div>
+        <div class="nav_bright">
+            <!--右侧留言板-->
+            <div class="brand-right">
+                <h3>留言板</h3>
+
+            </div>
+            <!--右侧资讯-->
+            <div class="brand-right">
+                <h3>咨询</h3>
+
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
 
     <!--</div>-->
 </div>
