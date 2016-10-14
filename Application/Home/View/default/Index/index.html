@@ -401,10 +401,10 @@
             </div>-->
 
 
-            <div class="nav_bulletin" style="margin-top: 15px;">
+            <div class="nav_bulletin" style="margin-top: 15px;height: 300px;" >
                 <h3>公司资讯</h3>
-                <ul class="inforR_text">
-                    <volist name="$information" id="vo">
+                <ul class="inforR_text" >
+                    <volist name="information" id="vo">
                         <li><a href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">
                             {$vo['title']}</a></li>
                     </volist>

@@ -18,7 +18,7 @@ class ArticleController extends HomeController {
     /* 文档模型频道页 */
 	public function index(){
 		/* 分类信息 */
-		$category = $this->category();
+		$category = $this->category1();
 
 		//频道页只显示模板，默认不读取任何内容
 		//内容可以通过模板标签自行定制
@@ -31,7 +31,7 @@ class ArticleController extends HomeController {
 	/* 文档模型列表页 */
 	public function lists($p = 1){
 		/* 分类信息 */
-		$category = $this->category();
+		$category = $this->category1();
 
 		/* 获取当前分类列表 */
 		$Document = D('Document');
@@ -65,7 +65,7 @@ class ArticleController extends HomeController {
 		}
 
 		/* 分类信息 */
-		$category = $this->category($info['category_id']);
+		$category = $this->category1($info['category_id']);
 
 		/* 获取模板 */
 		if(!empty($info['template'])){//已定制模板
@@ -88,7 +88,7 @@ class ArticleController extends HomeController {
 	}
 
 	/* 文档分类检测 */
-	private function category($id = 0){
+	private function category1($id = 0){
 		/* 标识正确性检测 */
 		$id = $id ? $id : I('get.category', 0);
 		if(empty($id)){
