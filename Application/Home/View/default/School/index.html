@@ -203,8 +203,27 @@
         </div>
         <!--右侧模块-->
         <div class="col-right">
-            <div class="right_ad"><a href="http://ikx.xinghuojiaoyu.net/" target="_blank"><img src="http://file.xinghuo100.com/upload/25/75/76/99/image/20160118/20160118102535_9855.jpg" alt=""></a></div>
-            <div class="right_ad"><a href="http://www.xinghuo100.com/zhuanti/qiuji2016/fuzhou/qiuji2016.html#" target="_blank"><img src="http://file.xinghuo100.com/upload/25/924/936/943/image/20160913/20160913095244_8550.jpg" alt=""></a></div>
+
+            <div class="nav_bulletin">
+                <h3>在线留言</h3>
+                <a href="{:U('Message/index')}">
+                    <img src="__PUBLIC__/Home/pc/Content/Images/20131227123536_68660.jpg" style=" width: 100%; height: auto;" alt=""/>
+                </a>
+            </div>
+
+            <div class="nav_bulletin" style="height: 300px; margin-top: 15px;   border: 1px #EDEDED solid;" >
+                <h3>公司资讯</h3>
+                <ul class="inforR_text" >
+                    <volist name="information" id="vo">
+                        <li><a href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">
+                            {$vo['title']}</a></li>
+                    </volist>
+
+                </ul>
+            </div>
+
+
+
         </div>
         <div class="clear"></div>
 

@@ -27,7 +27,7 @@ class TeacherController extends HomeController {
         $this->subject=$subject;
 
 
-        $teachers=M('teachers')->select();
+        $teachers=M('teachers')->cache(3600) ->select();
 
         foreach($teachers as $key=>$val){
 
@@ -45,7 +45,7 @@ class TeacherController extends HomeController {
                 }
             }
 
-            $pic=M('picture')->where([
+            $pic=M('picture')->cache(3600)->where([
                 'id'=>$val['head']
             ])->select();
             if(count($pic)>0){
@@ -79,13 +79,13 @@ class TeacherController extends HomeController {
         ];
         $this->subjectMap=$subjectMap;
         //教师推荐模块
-        $recommend=M('teachers')->where([
+        $recommend=M('teachers')->cache(3600)->where([
             'recommend'=>1
         ])->select();
 
         $length=count($recommend);
         for ($i=0;$i<$length;$i++) {
-            $pics = M('picture')->where([
+            $pics = M('picture')->cache(3600)->where([
                 'id' => $recommend[$i]['head']
             ])->select();
             $recommend[$i]['headPic'] = $pics[0]['path'];

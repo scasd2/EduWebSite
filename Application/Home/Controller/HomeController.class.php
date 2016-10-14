@@ -53,7 +53,7 @@ class HomeController extends Controller {
 
     protected function _link(){
         //友情链接数据获取
-        $friendship=M('friendshiplink')->select();
+        $friendship=M('friendshiplink')->cache(3600)->select();
         $this->friendship=$friendship;
     }
 
@@ -66,10 +66,10 @@ class HomeController extends Controller {
         /* 公司资讯 */
         $category2 = $this->category("GSZX");
         /* 获取当前分类列表 */
-        $information= $Document->page(1,$category2['list_row'])->limit(6)->lists($category2['id']); /*初中资讯*/
+        $information= $Document->cache(3600)-> page(1,$category2['list_row'])->limit(6)->lists($category2['id']); /*初中资讯*/
 
 
-        $this->getPic($information);
+      //  $this->getPic($information);
         $this->information=$information;
 
 

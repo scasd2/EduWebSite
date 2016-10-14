@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <include file="Public/head"/>
+</head>
+<body>
+<!-- 头部 -->
+<include file="Public/header"/>
+<!-- /头部 -->
+
+<link rel="stylesheet" href="__PUBLIC__/Home/css/bootstrap.min.css"/>
+
+<div class="page">
+    <div class="main">
+
+
+        <!--菜单-->
+        <include file="Public/menu"/>
+        <!--菜单-->
+
+
+        <!--左侧模块-->
+        <div class="col-left">
+
+            <div class="page_btn">您现在的位置：<a href="{:U('Index/Index')}">首页</a> &gt;
+                <a href="{:U('index')}">在线留言</a>
+            </div>
+
+            <form class="ctrl-form" url="{:U('ajaxSubmit')}">
+                <div class="contents">
+                    <table style="width: 400px; margin: 30px auto; font-size: 16px; color: #002D57" >
+                        <tr>
+                            <td style="text-align: right; padding-right: 10px; vertical-align:middle">
+                                <label>称呼:</label>
+                            </td>
+                            <td><input id="name" class="form-control" placeholder="输入您的称呼" type="text"/> </td>
+                        </tr>
+                        <tr style="height: 20px;"></tr>
+                        <tr>
+                            <td style="text-align: right;padding-right: 10px;vertical-align:middle">
+                                <label>手机号:</label>
+                            </td>
+                            <td><input id="phone" class="form-control" placeholder="输入您的手机号" type="text"/> </td>
+                        </tr>
+                        <tr style="height: 20px;"></tr>
+
+                        <tr>
+                            <td style="text-align: right;padding-right: 10px;vertical-align:middle">
+                                <label>留言内容:</label>
+                            </td>
+                            <td>
+                                <textarea id="content" placeholder="提交您的留言" class="form-control" style="height: 100px; resize: none"></textarea>
+                            </td>
+                        </tr>
+                        <tr style="height: 20px;"></tr>
+
+                        <tr>
+                            <td colspan="2">
+                                <table style="width: 400px;">
+                                    <tr>
+                                        <td style="text-align: center ;width: 50%;  ">
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="sb" style="padding: 10px; border: none; border-radius: 5px;cursor: pointer;  background: #5bc0de; color: #fff" type="button" value="提交"/>
+                                        </td>
+                                        <td style="text-align: center;width: 50%; ">
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            <input style="cursor: pointer;padding: 10px; border: none; border-radius: 5px;  background: #aaaaaa; color: #fff" class="btn btn-default" type="reset" value="重置 "/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                    </table>
+                </div>
+
+            </form>
+
+            <script>
+                $("#sb").click(function(){
+
+
+
+                    $.post(
+                            $(".ctrl-form").attr('url'),
+                            {
+                                name:$("#name").val(),
+                                phone:$("#phone").val(),
+                                content:$("content").val()
+                            },
+                            function(ret){
+                                alert(ret.msg)
+                            },
+                            'json'
+                    )
+                })
+            </script>
+
+        </div>
+        <!--右侧模块-->
+        <div class="col-right">
+            <div class="nav_bulletin" style="height: 300px;" >
+                <h3>公司资讯</h3>
+                <ul class="inforR_text" >
+                    <volist name="information" id="vo">
+                        <li><a href="{:U('Article/detail',array('id'=>$vo['id']))}" target="_blank">
+                            {$vo['title']}</a></li>
+                    </volist>
+
+                </ul>
+            </div>
+       </div>
+        <div class="clear"></div>
+
+
+
+    </div>
+</div>
+
+
+<include file="Public/friendship"/>
+<include file="Public/navigation"/>
+<!-- 底部 -->
+<include file="Public/footer"/>
+<!-- /底部 -->
+</body>
+</html>
+
+
