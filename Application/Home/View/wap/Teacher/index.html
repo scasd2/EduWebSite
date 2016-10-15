@@ -8,6 +8,7 @@
 </head>
 <body>
 
+
 <section class="layout pt88">
 
     <header class="header header-block header-fixed">
@@ -24,6 +25,7 @@
             </a>
         </div>
     </header>
+   <!-- 选项栏-->
     <section class="top-nav top-nav-col2 js-nav">
         <ul>
             <li>
@@ -55,27 +57,22 @@
             </li>
         </ul>
     </section>
+    <!--教师列表-->
     <hr class="line">
     <article class="tech-list">
         <ul>
             <volist name="teachers" id="vo">
             <li>
                 <div class="img">
-                    <a href="/teacher/594.html">
-                    </a><a href="/teacher/594.html" target="_blank"><img src="{$vo.headUrl}"></a>
+                    <a href="{:U('info',array('id'=>$vo['id']))}">
+                    </a><a href="{:U('info',array('id'=>$vo['id']))}" target="_blank"><img src="{$vo.headUrl}"></a>
 
                 </div>
                 <div class="text">
-                    <a href="/teacher/594.html">
+                    <a href="{:U('info',array('id'=>$vo['id']))}">
                         <dl>
                             <dt>
-                            <h3>{$vo.name}</h3> <div class="gb-stars stars">
-                            <span class="icon-str"></span>
-                            <span class="icon-str"></span>
-                            <span class="icon-str"></span>
-                            <span class="icon-str"></span>
-                            <span class="icon-str"></span>
-                        </div>
+                            <h3>{$vo.name}</h3>
                             </dt><dd><span>辅导年级：</span>{$gradeMap[$vo['grade']]}</dd>
                             <dd><span>辅导科目：</span>{$subjectMap[$vo['subject']]}</dd>
                             <dd><span>教学风格：</span>{$vo.style}</dd>

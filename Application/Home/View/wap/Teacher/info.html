@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <include file="wap/Public/header"/>
+
+</head>
+<body>
+
+<section class="layout pt88">
+
+    <header class="header header-block header-fixed">
+        <div id="top" class="left">
+
+
+            <a href="#" onclick="javascript: window.history.go(-1); return false;"><span class="arrow"></span>返回</a>
+        </div>
+        <h2>尚学教育</h2>
+        <div class="right">
+            <a href="/weixin.html">
+                <span class="wx-icon"></span>
+                官方微信
+            </a>
+        </div>
+    </header>
+    <section class="tech-detail">
+        <div class="tech-head">
+            <div class="img">
+                <a href="/teacher/56.html"><img src="{$teacher['headPic']}"></a>
+            </div>
+            <div class="gb-stars">
+                <span class="icon-str"></span>
+            </div>
+            <div class="txt">
+                <span class="name">{$teacher['name']}</span><span class="txt2">{$gradeMap[$teacher['grade']]} {$subjectMap[$teacher['subject']]}</span>
+            </div>
+        </div>
+        <div class="tech-intro">
+            <p>{$teacher['desc']}</p>
+        </div>
+        <hr class="line">
+        <div class="tech-body">
+            <dl>
+                <dt><i class="icon1"></i><span>辅导班级：</span></dt>
+                <dd>{$gradeMap[$teacher['grade']]}</dd>
+            </dl>
+            <dl>
+                <dt><i class="icon2"></i><span>辅导科目：</span></dt>
+                <dd>{$subjectMap[$teacher['subject']]}</dd>
+            </dl>
+            <dl>
+                <dt><i class="icon3"></i><span>教学风格：</span></dt>
+                <dd>{$teacher['style']}</dd>
+            </dl>
+            <dl>
+                <dt><i class="icon4"></i><span>教学成果：</span></dt>
+                <dd>{$teacher['achievement']}</dd>
+            </dl>
+        </div>
+
+    </section>
+
+
+    <footer class="footer">
+        <ul>
+            <li class="on">
+                <a href="/">
+                    <i class="menu_1"></i>
+                    <h3>首页</h3>
+                </a>
+            </li>
+            <li>
+                <a href="tel:400-877-0068">
+                    <i class="menu_2"></i>
+                    <h3>电话咨询</h3>
+                </a>
+            </li>
+            <li>
+
+                <a href="http://chat16.live800.com/live800/chatClient/chatbox.jsp?companyID=509441&amp;configID=63570&amp;jid=4167274036" target="_blank">
+                    <i class="menu_3"></i>
+                    <h3>在线咨询</h3>
+                </a>
+            </li>
+            <li>
+                <a href="#top">
+                    <i class="menu_4"></i>
+                    <h3>回到顶部</h3>
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+</section>
+
+
+</body>
+</html>

@@ -150,8 +150,11 @@ class TeacherController extends HomeController {
         }
 
         $this->recommend=$recommend;
+        if(!is_mobile())
+            $this->display();
+        else
+            $this->display("../wap/Teacher/info");
 
-        $this->display();
     }
 
 }
