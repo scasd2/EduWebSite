@@ -92,7 +92,10 @@ class TeacherController extends HomeController {
         }
         $this->recommend=$recommend;
         $this->currentUrl="Teacher/index";
-        $this->display();
+        if(!is_mobile())
+            $this->display();
+        else
+            $this->display("../wap/Teacher/index");
     }
 
     /*教师列表页*/
