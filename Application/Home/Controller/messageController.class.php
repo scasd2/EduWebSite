@@ -4,10 +4,12 @@ use OT\DataDictionary;
 
 class MessageController extends HomeController {
     public function index(){
-
         $this->currentUrl="Message/index";
-
-        $this->display();
+        if(!is_mobile()){
+            $this->display();
+        }else{
+            $this->display("../wap/Message/index");
+        }
     }
 
     /*异步提交留言*/
