@@ -30,7 +30,7 @@ body {
 }
 .header {
   height: 2.15rem;
-  background: #6e529f;
+  background: #3992d0;
   font-size: 0.65rem;
   line-height: 2.15rem;
   position: relative;
@@ -101,7 +101,7 @@ body {
 .home-banner .swiper-pagination-bullet {
   width: 0.4rem;
   height: 0.4rem;
-  background: #6e529f;
+  background: #3992d0;
 }
 .home-icons ul {
   height: auto;
@@ -174,11 +174,11 @@ body {
   left: 0.6rem;
   top: 0;
   font-size: 0.7rem;
-  color: #6e529f;
+  color: #3992d0;
 }
 .home-icons .news span {
   font-size: 0.7rem;
-  color: #6e529f;
+  color: #3992d0;
 }
 .home-icons .news a {
   color: #646464;
@@ -256,7 +256,7 @@ body {
   line-height: 1.5rem;
 }
 .information .head li.on {
-  background: #826aad;
+  background: #3992d0;
   color: #ffffff;
 }
 .information .body {
@@ -305,7 +305,7 @@ body {
   margin-top: 0.125rem;
 }
 .copyright {
-  background: #6e529f;
+  background: #3992d0;
   height: 3rem;
   font-size: 0.5rem;
   color: #ffffff;
@@ -375,7 +375,7 @@ body {
   background-position: -5.625rem -10rem;
 }
 .footer li.on h3 {
-  color: #6e529f;
+  color: #3992d0;
 }
 .footer li.on i.menu_1 {
   background-position: -7.35rem -6.675rem;
@@ -452,7 +452,7 @@ body {
   z-index: 9999;
 }
 .city-list .city-nav a {
-  color: #6f539e;
+  color: #3992d0;
   font-size: 0.55rem;
 }
 .city-list .city-nav li {
@@ -508,7 +508,7 @@ body {
   background: #ffffff;
 }
 .slider .slider-nav a {
-  color: #6f539e;
+  color: #3992d0;
   font-size: 0.55rem;
 }
 .slider .slider-nav li {
@@ -517,7 +517,7 @@ body {
 }
 .slider .slider-nav li a {
   font-size: 0.55rem;
-  color: #6f539e;
+  color: #3992d0;
   text-align: center;
   display: block;
   text-transform: uppercase;
@@ -535,7 +535,7 @@ body {
   width: 100%;
   text-align: center;
   line-height: 2.2rem;
-  color: #6e529f;
+  color:#3992d0;
   cursor: pointer;
 }
 .top-nav h3 {
@@ -588,7 +588,7 @@ body {
   transition: 0.5s all;
 }
 .top-nav li.on h3 {
-  color: #6e529f;
+  color: #3992d0;
 }
 .top-nav li.on .arrow {
   background-position: -6.8rem -13.425rem;
@@ -717,7 +717,7 @@ body {
 .tech-list li h3 {
   float: left;
   font-size: 0.75rem;
-  color: #6e529f;
+  color: #3992d0;
 }
 .tech-list li .stars {
   float: right;
@@ -738,7 +738,7 @@ body {
   opacity: 1;
 }
 .sholl-banner .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background: #6e529f;
+  background: #3992d0;
 }
 .school-list-txt li {
   padding: 0.6rem;
@@ -749,7 +749,7 @@ body {
 }
 .school-list-txt dt {
   font-size: 0.8rem;
-  color: #6e529f;
+  color: #3992d0;
 }
 .school-list-txt dt .right {
   float: right;
@@ -841,7 +841,7 @@ body {
 }
 .tech-detail .tech-head .name {
   font-size: 0.85rem;
-  color: #6e529f;
+  color: #3992d0;
 }
 .tech-detail .tech-head .txt {
   text-align: center;
@@ -1035,7 +1035,7 @@ body {
   width: 3.8rem;
 }
 .item-one .img-tab li.on {
-  border-bottom: 3px solid #6E529F;
+  border-bottom: 3px solid #3992d0;
 }
 .item-one .img14 {
   height: 0.75rem;
@@ -1106,7 +1106,7 @@ body {
   margin-top: -1.95rem;
   width: 3.9rem;
   height: 3.9rem;
-  background: #6e529f;
+  background: #3992d0;
   border-radius: 50%;
   color: #ffffff;
   text-align: center;
@@ -1174,7 +1174,7 @@ body {
 }
 .item-one .text h3 {
   font-size: 0.8rem;
-  color: #6e529f;
+  color: #3992d0;
   text-align: center;
   margin-bottom: 0.65rem;
 }
@@ -1516,7 +1516,7 @@ body {
   line-height: 1.75rem;
 }
 .date-view .month li.on {
-  background: #7b61a7;
+  background: #3992d0;
   color: #ffffff;
 }
 .date-view .date-view-body {
@@ -1563,7 +1563,7 @@ body {
 }
 .mxtj .mxtj-head {
   font-size: 0.8rem;
-  color: #6e529f;
+  color: #3992d0;
   font-weight: bold;
   margin-bottom: 0.625rem;
 }
@@ -1694,7 +1694,7 @@ body {
 .shcoll-intor dt {
   font-size: 0.8rem;
   margin-bottom: 0.425rem;
-  color: #6e529f;
+  color: #3992d0;
 }
 .shcoll-intor dd {
   font-size: 0.7rem;
