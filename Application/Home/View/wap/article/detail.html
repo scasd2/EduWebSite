@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <include file="wap/Public/header"/>
+
+</head>
+<body>
+
+
+<section class="layout">
+
+    <header class="header">
+        <div id="top" class="left">
+
+        </div>
+        <h1 class="logo">
+            <a href="#" id="top"> <p style="color: #fff;font-weight: bold;font-size: 20px">尚学教育</p></a>
+        </h1>
+        <div class="right">
+            <a href="/weixin.html">
+                <span class="wx-icon"></span>
+                官方微信
+            </a>
+        </div>
+    </header>
+
+
+
+    <section class="layout pt88 pb88">
+        <article class="article">
+            <div class="article-head">
+                <h1>{$info.title}</h1>
+                <span class="date">{:date('Y-m-d H:i:s',$info['update_time'])}</span><span class="authouer">来源：福州尚学教育</span><span class="view">阅读数：{$info.view}</span>
+            </div>
+
+            <style>
+                .article-body{
+                    line-height:1.6em!important;
+                }
+                .article-body img{
+                    max-width:100% !important; height:auto !important;
+
+                }
+            </style>
+
+            <div class="article-body">
+                {$info.content}
+
+            </div>
+        </article>
+
+
+        <footer class="footer">
+            <ul>
+                <li class="on">
+                    <a href="/">
+                        <i class="menu_1"></i>
+                        <h3>首页</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="tel:400-877-0068">
+                        <i class="menu_2"></i>
+                        <h3>电话咨询</h3>
+                    </a>
+                </li>
+                <li>
+
+                    <a href="http://chat16.live800.com/live800/chatClient/chatbox.jsp?companyID=509441&amp;configID=63570&amp;jid=4167274036" target="_blank">
+                        <i class="menu_3"></i>
+                        <h3>在线咨询</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="#top">
+                        <i class="menu_4"></i>
+                        <h3>回到顶部</h3>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+
+    </section>
+
+
+
+
+    <include file="wap/Public/copyright"/>
+    <include file="wap/Public/footer"/>
+
+</section>
+
+<script>
+
+
+    $(document).ready(function () {
+        var swiper = new Swiper('.home-banner', {
+            pagination: '.swiper-pagination',
+            spaceBetween: 0,
+            paginationClickable: true,
+            autoplay: 3000,
+            autoplayDisableOnInteraction: false
+        });
+    })
+
+</script>
+
+</body>
+</html>
