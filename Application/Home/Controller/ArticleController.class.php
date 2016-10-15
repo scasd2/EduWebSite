@@ -84,7 +84,13 @@ class ArticleController extends HomeController {
 		$this->assign('category', $category);
 		$this->assign('info', $info);
 		$this->assign('page', $p); //页码
-		$this->display($tmpl);
+
+        if(!is_mobile()){
+            $this->display($tmpl);
+
+        }else{
+            $this->display($tmpl);
+        }
 	}
 
 	/* 文档分类检测 */
