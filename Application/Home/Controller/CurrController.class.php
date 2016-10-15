@@ -101,7 +101,10 @@ class CurrController extends HomeController {
 
 
         $this->currentUrl="Curr/index"."?grade=".$grade;
-        $this->display();
+        if(!is_mobile())
+            $this->display();
+        else
+            $this->display("../wap/Curr/index");
     }
 
     public function info(){
@@ -128,6 +131,9 @@ class CurrController extends HomeController {
         }
 
         $this->recommend=$recommend;
-        $this->display();
+        if(!is_mobile())
+            $this->display();
+        else
+            $this->display("../wap/Curr/info");
     }
 }
