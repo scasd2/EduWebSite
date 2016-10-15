@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <include file="wap/Public/header"/>
+
+</head>
+<body>
+
+
+<section class="layout pt88">
+
+    <header class="header header-block header-fixed">
+        <div id="top" class="left">
+
+
+            <a href="#" onclick="javascript: window.history.go(-1); return false;"><span class="arrow"></span>返回</a>
+        </div>
+        <h2>尚学教育</h2>
+        <div class="right">
+            <a href="/weixin.html">
+                <span class="wx-icon"></span>
+                官方微信
+            </a>
+        </div>
+    </header>
+    <section class="top-nav js-nav">
+        <ul>
+            <li class="">
+                <h3><span>区域</span><i class="arrow"></i></h3>
+                <dl style="overflow: hidden; display: none;">
+                    <dd class="on"><a class="search_link" href="{:U('index',array('id'=>1))}">不限</a></dd>
+                </dl>
+            </li>
+        </ul>
+    </section>
+    <hr class="line">
+    <article class="school-list">
+        <ul>
+            <volist name="school" id="vo">
+                <li>
+                    <div class="img">
+                        <a href="{:U('info',array('id'=>$vo['id']))}"><img src="{$vo.headUrl}"></a>
+                    </div>
+                    <div class="text">
+                        <a href="{:U('info',array('id'=>$vo['id']))}" target="_blank">
+                            <dl>
+                                <dt>{$vo.SchoolName}</dt>
+                                <dd><i class="icon-addr"></i><span>{$vo.address}</span></dd>
+                                <dd><i class="icon-tal"></i>{$vo.phone}</dd>
+                            </dl>
+                            <i class="icon-tag">福州市</i>
+                        </a>
+                    </div>
+                </li>
+            </volist>
+        </ul>
+    </article>
+
+
+    <footer class="footer">
+        <ul>
+            <li class="on">
+                <a href="/">
+                    <i class="menu_1"></i>
+                    <h3>首页</h3>
+                </a>
+            </li>
+            <li>
+                <a href="tel:400-877-0068">
+                    <i class="menu_2"></i>
+                    <h3>电话咨询</h3>
+                </a>
+            </li>
+            <li>
+
+                <a href="http://chat16.live800.com/live800/chatClient/chatbox.jsp?companyID=509441&amp;configID=63570&amp;jid=4167274036" target="_blank">
+                    <i class="menu_3"></i>
+                    <h3>在线咨询</h3>
+                </a>
+            </li>
+            <li>
+                <a href="#top">
+                    <i class="menu_4"></i>
+                    <h3>回到顶部</h3>
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+</section>
+
+
+</body>
+</html>

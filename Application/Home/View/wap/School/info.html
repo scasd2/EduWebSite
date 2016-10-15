@@ -7,9 +7,7 @@
 
 </head>
 <body>
-
-
-<section class="layout pt88">
+<section class="layout pt88 " style="padding-bottom: 1rem;">
 
     <header class="header header-block header-fixed">
         <div id="top" class="left">
@@ -25,62 +23,34 @@
             </a>
         </div>
     </header>
-        <!-- Swiper -->
-
-            <div class="swiper-slide swiper-slide-prev" style="width:100%;height: 8.15rem; ">
-                <img src="{$school['headPic']}">
-            </div>
-        <!-- Add Pagination -->
-
-    <section class="school-list-txt">
-        <ul>
-            <li class="item1">
-                <dl>
-                    <dt>{$school.SchoolName} <div class="right">
-
-                    <dd>
-                        <i class="icon-addr"></i>
-                        <span class="tit">地址:</span>
-                        <span class="txt">{$school.address}</span>
-                    </dd>
-                    <dd>
-                        <i class="icon-tal"></i>
-                        <span class="tit">联系方式:</span>
-                        <span class="txt">{$school.phone}</span>
-                    </dd>
-                    <dd id="jianjie" style="height: 3rem;overflow: hidden" >
-                        <i class="icon-clock"></i>
-                        <span class="tit">学校简介:</span>
-                        <span class="txt">{$school.introduce}</span>
-                    </dd>
-                    <dd style="height: 3rem;margin-top: 10px">
-                        <span id="btn" style="color: yellow;margin-top: 30px">详情</span>
-                    </dd>
-                </dl>
-            </li>
-
-            <!--<li class="item2">-->
-            <!--<dl>-->
-                <!--<dt>交通指南</dt>-->
-                <!--<dd>-->
-                    <!--<i class="icon-jt"></i>-->
-                    <!--<span class="tit">地标建筑:</span>-->
-                    <!--<span class="txt">雍华庭</span>-->
-                <!--</dd>-->
-                <!--<dd>-->
-                    <!--<i class="icon-dt"></i>-->
-                    <!--<span class="tit">地铁路线:</span>-->
-                    <!--<span class="txt">　</span>-->
-                <!--</dd>-->
-                <!--<dd>-->
-                    <!--<i class="icon-xl"></i>-->
-                    <!--<span class="tit">交通路线:</span>-->
-                    <!--<span class="txt">可乘坐16路、21路、37路、3路、47路、4路、C1路、L5A路、LG1路、X22路公交车到雍华庭站下</span>-->
-                <!--</dd>-->
-            <!--</dl>-->
-            <!--</li>-->
-        </ul>
+    <section class="banner-img">
+        <img src="{$school['headPic']}" alt="">
     </section>
+    <section class="shcoll-intor">
+        <dt>{$school.SchoolName}</dt>
+        <dd><span>城市区域：</span>{$school.UrbanDistrict}</dd>
+        <dd><span>学校类别：</span>{$SchoolTypeMap[$school['SchoolType']]}</dd>
+        <dd><span>学校性质：</span>{$SchoolNatureMap[$school['SchoolNature']]}</dd>
+        <dd><span>创办时间：</span>{$school.time}</dd>
+        <dd><span>学校网址：</span><a href="{$school.website}" target="_blank">{$school.website}</a></dd>
+        <dd><span>联系方式：</span>{$school.phone}</dd>
+        <dd><span>校区地址：</span>{$school.address}</dd>
+    </section>
+    <hr class="line">
+    <section class="shcoll-text">
+        <h3>学校介绍</h3>
+        <div id="jianjie" style="display: inline-block;height: 2.85rem;overflow: hidden">
+        {$school.introduce}
+        </div>
+        <span id="btn" style="display:inline-block;margin-top:10px;color: yellow;margin-bottom: 10px">详情</span>
+    </section>
+
+    <include file="wap/Public/copyright"/>
+    <include file="wap/Public/footer"/>
+
+
+</section>
+
     <script>
         var h=1
         $('#btn').click(function () {
@@ -89,14 +59,13 @@
             $(this).text('收起')
                 h=0
             }else{
-                $('#jianjie').css({'height':'3rem'})
+                $('#jianjie').css({'height':'2.88rem'})
                 $(this).text('详情')
                 h=1
             }
         })
 
     </script>
-</section>
 
 </body>
 </html>

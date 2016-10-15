@@ -7,8 +7,6 @@
 
 </head>
 <body>
-
-
 <section class="layout pt88">
 
     <header class="header header-block header-fixed">
@@ -25,32 +23,60 @@
             </a>
         </div>
     </header>
-    <section class="top-nav js-nav">
+    <!--查询-->
+    <section class="top-nav top-nav-col3 js-nav">
         <ul>
-            <li class="">
-                <h3><span>区域</span><i class="arrow"></i></h3>
-                <dl style="overflow: hidden; display: none;">
-                    <dd class="on"><a class="search_link" href="{:U('index',array('id'=>1))}">不限</a></dd>
+            <li>
+                <h3>级别 <i class="arrow"></i></h3>
+                <dl>
+                    <dd class="on"><a class="search_link" href="{:U('School/index',array('level'=>-1,'SchoolNature'=>$SchoolNature,'SchoolType'=>$SchoolType))}">不限</a></dd>
+                    <dd><a class="search_link" href="{:U('School/index',array('level'=>0,'SchoolNature'=>$SchoolNature,'SchoolType'=>$SchoolType))}">省一级</a></dd>
+                    <dd><a class="search_link" href="{:U('School/index',array('level'=>1,'SchoolNature'=>$SchoolNature,'SchoolType'=>$SchoolType))}">市一级</a></dd>
+                    <dd><a class="search_link" href="{:U('School/index',array('level'=>3,'SchoolNature'=>$SchoolNature,'SchoolType'=>$SchoolType))}">普通级别</a></dd>
+
+                </dl>
+            </li>
+            <li>
+                <h3>性质 <i class="arrow"></i></h3>
+                <dl>
+                    <dd class="on"><a class="search_link" href="{:U('School/index',array('level'=>$level,'SchoolNature'=>-1,'SchoolType'=>$SchoolType))}">不限</a></dd>
+                    <dd><a class="search_link" href="{:U('School/index',array('level'=>$level,'SchoolNature'=>0,'SchoolType'=>$SchoolType))}">民办</a></dd>
+                    <dd><a class="search_link" href="{:U('School/index',array('level'=>$level,'SchoolNature'=>1,'SchoolType'=>$SchoolType))}">公办</a></dd>
+
+                </dl>
+            </li>
+            <li>
+                <h3>类型 <i class="arrow"></i></h3>
+                <dl>
+                    <dd class="on"><a class="search_link" href="{:U('School/index',array('level'=>$level,'SchoolNature'=>$SchoolNature,'SchoolType'=>-1))}">不限</a></dd>
+                    <dd><a class="search_link" href="{:U('School/index',array('level'=>$level,'SchoolNature'=>$SchoolNature,'SchoolType'=>0))}">仅初中</a></dd>
+                    <dd><a class="search_link" href="{:U('School/index',array('level'=>$level,'SchoolNature'=>$SchoolNature,'SchoolType'=>1))}">仅高中</a></dd>
+                    <dd><a class="search_link" href="{:U('School/index',array('level'=>$level,'SchoolNature'=>$SchoolNature,'SchoolType'=>2))}">初中+高中</a></dd>
+
                 </dl>
             </li>
         </ul>
     </section>
     <hr class="line">
-    <article class="school-list">
+    <!--列表-->
+    <article class="tech-list good-sh-list">
         <ul>
             <volist name="school" id="vo">
-                <li>
+            <li>
                 <div class="img">
-                    <a href="{:U('info',array('id'=>$vo['id']))}"><img src="{$vo.headUrl}"></a>
+                    <a href="{:U('info',array('id'=>$vo['id']))}">
+                    </a><a href="{:U('info',array('id'=>$vo['id']))}"><img src="{$vo['headUrl']}"></a>
+
                 </div>
                 <div class="text">
-                    <a href="{:U('info',array('id'=>$vo['id']))}" target="_blank">
+                    <a href="{:U('info',array('id'=>$vo['id']))}">
                         <dl>
                             <dt>{$vo.SchoolName}</dt>
-                            <dd><i class="icon-addr"></i><span>{$vo.address}</span></dd>
-                            <dd><i class="icon-tal"></i>{$vo.phone}</dd>
+                            <dd><span>区域：</span>{$levelMap[$vo['level']]}</dd>
+                            <dd><span>级别：</span>{$vo['UrbanDistrict']}</dd>
+                            <dd><span>性质：</span>{$SchoolNatureMap[$vo['SchoolNature']]}</dd>
+                            <dd><span>类型：</span>{$SchoolTypeMap[$vo['SchoolType']]}</dd>
                         </dl>
-                        <i class="icon-tag">福州市</i>
                     </a>
                 </div>
             </li>
@@ -59,35 +85,8 @@
     </article>
 
 
-    <footer class="footer">
-        <ul>
-            <li class="on">
-                <a href="/">
-                    <i class="menu_1"></i>
-                    <h3>首页</h3>
-                </a>
-            </li>
-            <li>
-                <a href="tel:400-877-0068">
-                    <i class="menu_2"></i>
-                    <h3>电话咨询</h3>
-                </a>
-            </li>
-            <li>
-
-                <a href="http://chat16.live800.com/live800/chatClient/chatbox.jsp?companyID=509441&amp;configID=63570&amp;jid=4167274036" target="_blank">
-                    <i class="menu_3"></i>
-                    <h3>在线咨询</h3>
-                </a>
-            </li>
-            <li>
-                <a href="#top">
-                    <i class="menu_4"></i>
-                    <h3>回到顶部</h3>
-                </a>
-            </li>
-        </ul>
-    </footer>
+    <include file="wap/Public/copyright"/>
+    <include file="wap/Public/footer"/>
 
 </section>
 
