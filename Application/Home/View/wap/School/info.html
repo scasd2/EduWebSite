@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <include file="wap/Public/header"/>
+
+</head>
+<body>
+
+
+<section class="layout pt88">
+
+    <header class="header header-block header-fixed">
+        <div id="top" class="left">
+
+
+            <a href="#" onclick="javascript: window.history.go(-1); return false;"><span class="arrow"></span>返回</a>
+        </div>
+        <h2>尚学教育</h2>
+        <div class="right">
+            <a href="/weixin.html">
+                <span class="wx-icon"></span>
+                官方微信
+            </a>
+        </div>
+    </header>
+        <!-- Swiper -->
+
+            <div class="swiper-slide swiper-slide-prev" style="width:100%;height: 8.15rem; ">
+                <img src="{$school['headPic']}">
+            </div>
+        <!-- Add Pagination -->
+
+    <section class="school-list-txt">
+        <ul>
+            <li class="item1">
+                <dl>
+                    <dt>{$school.SchoolName} <div class="right">
+
+                    <dd>
+                        <i class="icon-addr"></i>
+                        <span class="tit">地址:</span>
+                        <span class="txt">{$school.address}</span>
+                    </dd>
+                    <dd>
+                        <i class="icon-tal"></i>
+                        <span class="tit">联系方式:</span>
+                        <span class="txt">{$school.phone}</span>
+                    </dd>
+                    <dd id="jianjie" style="height: 3rem;overflow: hidden" >
+                        <i class="icon-clock"></i>
+                        <span class="tit">学校简介:</span>
+                        <span class="txt">{$school.introduce}</span>
+                    </dd>
+                    <dd style="height: 3rem;margin-top: 10px">
+                        <span id="btn" style="color: yellow;margin-top: 30px">详情</span>
+                    </dd>
+                </dl>
+            </li>
+
+            <!--<li class="item2">-->
+            <!--<dl>-->
+                <!--<dt>交通指南</dt>-->
+                <!--<dd>-->
+                    <!--<i class="icon-jt"></i>-->
+                    <!--<span class="tit">地标建筑:</span>-->
+                    <!--<span class="txt">雍华庭</span>-->
+                <!--</dd>-->
+                <!--<dd>-->
+                    <!--<i class="icon-dt"></i>-->
+                    <!--<span class="tit">地铁路线:</span>-->
+                    <!--<span class="txt">　</span>-->
+                <!--</dd>-->
+                <!--<dd>-->
+                    <!--<i class="icon-xl"></i>-->
+                    <!--<span class="tit">交通路线:</span>-->
+                    <!--<span class="txt">可乘坐16路、21路、37路、3路、47路、4路、C1路、L5A路、LG1路、X22路公交车到雍华庭站下</span>-->
+                <!--</dd>-->
+            <!--</dl>-->
+            <!--</li>-->
+        </ul>
+    </section>
+    <script>
+        var h=1
+        $('#btn').click(function () {
+            if (h==1){
+            $('#jianjie').css({'height':''})
+            $(this).text('收起')
+                h=0
+            }else{
+                $('#jianjie').css({'height':'3rem'})
+                $(this).text('详情')
+                h=1
+            }
+        })
+
+    </script>
+</section>
+
+</body>
+</html>

@@ -93,7 +93,10 @@ class SchoolController extends HomeController {
 
 
         $this->currentUrl="School/index";
-        $this->display();
+        if(!is_mobile())
+            $this->display();
+        else
+            $this->display("../wap/School/index");
     }
 
     public function info(){
@@ -140,6 +143,9 @@ class SchoolController extends HomeController {
 
         $this->recommend=$recommend;
         $this->school=$school[0];
-        $this->display();
+        if(!is_mobile())
+            $this->display();
+        else
+            $this->display("../wap/School/info");
     }
 }
