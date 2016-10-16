@@ -27,35 +27,33 @@
     <section class="tech-detail">
         <div class="tech-head">
             <div class="img">
-                <a href="/teacher/56.html"><img src="{$teacher['headPic']}"></a>
+                <a href="/teacher/56.html"><img src="{$book['headPic']}"></a>
             </div>
-            <!--<div class="gb-stars">-->
-                <!--<span class="icon-str"></span>-->
-            <!--</div>-->
             <div class="txt">
-                <span class="name">{$teacher['name']}</span><span class="txt2">{$gradeMap[$teacher['grade']]} {$subjectMap[$teacher['subject']]}</span>
+                <span class="name">{$book['curriculumName']}</span><br>
+                <span class="txt2">{$gradeMap[$book['CurriculumLevel']]} {$subjectMap[$book['CourseType']]}</span>
             </div>
         </div>
-        <div class="tech-intro">
-            <p>{$teacher['desc']}</p>
-        </div>
+<!--        <div class="tech-intro">
+            <p>{$gradeMap[$book['CurriculumLevel']]} {$subjectMap[$book['CourseType']]}</p>
+        </div>-->
         <hr class="line">
         <div class="tech-body">
             <dl>
-                <dt><i class="icon1"></i><span>辅导年级：</span></dt>
-                <dd>{$gradeMap[$teacher['grade']]}</dd>
+                <dt><i class="icon1"></i><span>适合年级：</span></dt>
+                <dd>{$gradeMap[$book['CurriculumLevel']]}</dd>
             </dl>
             <dl>
                 <dt><i class="icon2"></i><span>辅导科目：</span></dt>
-                <dd>{$subjectMap[$teacher['subject']]}</dd>
+                <dd>{$subjectMap[$book['CourseType']]}</dd>
             </dl>
             <dl>
-                <dt><i class="icon3"></i><span>教学风格：</span></dt>
-                <dd>{$teacher['style']}</dd>
+                <dt><i class="icon3"></i><span>适合学生：</span></dt>
+                <dd>{$book['ApplicablePeople']}</dd>
             </dl>
             <dl>
-                <dt><i class="icon4"></i><span>教学成果：</span></dt>
-                <dd>{$teacher['achievement']}</dd>
+                <dt><i class="icon4"></i><span>书籍简介：</span></dt>
+                <dd>{$book['summary']}</dd>
             </dl>
         </div>
 

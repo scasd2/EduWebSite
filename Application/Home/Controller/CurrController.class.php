@@ -108,6 +108,26 @@ class CurrController extends HomeController {
     }
 
     public function info(){
+        $gradeMap=[
+            0=>"小学",
+            1=>"初中",
+            2=>"高中",
+        ];
+        $this->gradeMap=$gradeMap;
+
+
+        $subjectMap=[
+            0=>'语文',
+            1=>'数学',
+            2=>'英语',
+            3=>'历史',
+            4=>'地理',
+            5=>'生物',
+            6=>'政治',
+            7=>'化学',
+            8=>'物理',
+        ];
+        $this->subjectMap=$subjectMap;
         $id=I('id');
         $book=M('curriculum')->where([
             'id'=>$id

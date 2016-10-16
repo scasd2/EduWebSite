@@ -9,7 +9,7 @@
 <body>
 
 
-<section class="layout pt88 pb88">
+<section class="layout pt88">
 
     <header class="header header-block header-fixed">
         <div id="top" class="left">
@@ -25,534 +25,71 @@
             </a>
         </div>
     </header>
-    <section class="home-banner swiper-container-horizontal swiper-container-android">
-        <!-- Swiper -->
-
-        <section class="home-banner swiper-container-horizontal swiper-container-android">
-            <!-- Swiper -->
-            <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">
-                <div class="swiper-slide swiper-slide-active" style="width: 360px;">
-                    <a href="http://www.xinghuo100.com/zhuanti/shujia2016/m/dongguan/shujia2016.html" target="_blank">
-                        <img src="http://file.xinghuo100.com/upload/25/126/137/139/image/20160913/20160913100338_9163.jpg" alt="">
-                    </a>
-                </div>
-                <div class="swiper-slide swiper-slide-next" style="width: 360px;">
-                    <a href="" target="_blank">
-                        <img src="http://file.xinghuo100.com/upload/25/126/137/139/image/20160902/20160902164546_4139.jpg" alt="">
-                    </a>
-                </div>
-
-            </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span></div>
-        </section>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span></div>
-    </section>
-
-
-    <!--时间轴-->
-    <section class="date-view">
-        <div class="date-view-head">
-            <div class="prev"></div>
-            <div class="month">
-                <ul>
-                    <li class="on">1月份</li>
-                    <li>2月份</li>
-                    <li>3月份</li>
-                    <li>4月份</li>
-                    <li>5月份</li>
-                    <li>6月份</li>
-                    <li>7月份</li>
-                    <li>8月份</li>
-                    <li>9月份</li>
-                    <li>10月份</li>
-                    <li>11月份</li>
-                    <li>12月份</li>
-                </ul>
-            </div>
-            <div class="next"></div>
-        </div>
-        <div class="date-view-body">
-            <ul style="display: block;">
-                <li><a href="http://dg.xinghuo100.com/201601/120.html">期末考试</a></li>
-            </ul>
-            <ul>
-                <li><a href="http://dg.xinghuo100.com/201601/121.html">寒假规划</a></li>
-            </ul>
-            <ul>
-            </ul>
-            <ul>
-                <li><a href="http://dg.xinghuo100.com/201601/96.html">小升初简历</a></li>
-            </ul>
-            <ul>
-                <li><a href="http://dg.xinghuo100.com/201609/4237.html">考场技巧</a></li>
-            </ul>
-            <ul>
-                <li><a href="http://dg.xinghuo100.com/201607/2891.html">迎战小升初</a></li>
-            </ul>
-            <ul>
-                <li><a href="http://dg.xinghuo100.com/201608/4038.html">暑假规划</a></li>
-            </ul>
-            <ul>
-                <li><a href="http://dg.xinghuo100.com/201608/3442.html">兴趣培养</a></li>
-            </ul>
-            <ul>
-                <li><a href="http://dg.xinghuo100.com/201601/122.html">小升初备考</a></li>
-            </ul>
-            <ul>
-                <li><a href="http://www.xinghuo100.com/zhuanti/qiuji2016/dongguan/xx.html">开启学霸模式</a></li>
-            </ul>
-            <ul>
-                <li><a href="http://dg.xinghuo100.com/school/0-0-0-1.html">名校动态</a></li>
-            </ul>
-            <ul>
-                <li><a href="http://dg.xinghuo100.com/201601/127.html">星火指导</a></li>
-            </ul>
-        </div>
-    </section>
-
-    <hr class="line">
-
-    <section class="learn">
-        <h3>在星火，选择最适合您孩子的学习方式：</h3>
+    <!-- 选项栏-->
+    <section class="top-nav top-nav-col2 js-nav">
         <ul>
             <li>
-                <a href="http://vip.xinghuo100.com">
-                    <i class="icon1"></i>
-                    <h3>一对一</h3>
-                </a>
+                <h3>年级 <i class="arrow"></i></h3>
+                <dl>
+                    <dd><a href="{:U('Curr/index',array('grade'=>-1,'subject'=>$subject))}">不限</a></dd>
+                    <dd><a href="{:U('Curr/index',array('grade'=>0,'subject'=>$subject))}">小学</a></dd>
+                    <dd><a href="{:U('Curr/index',array('grade'=>1,'subject'=>$subject))}">中学</a></dd>
+                    <dd><a href="{:U('CurrTeacher/index',array('grade'=>2,'subject'=>$subject))}">高中</a></dd>
+
+
+
+                </dl>
             </li>
             <li>
-                <a href="http://fudao.xinghuo100.com/">
-                    <i class="icon2"></i>
-                    <h3>辅导班</h3>
-                </a>
-            </li>
-            <li>
-                <a href="http://jingying.xinghuo100.com/">
-                    <i class="icon3"></i>
-                    <h3>精英班</h3>
-                </a>
+                <h3>科目 <i class="arrow"></i></h3>
+                <dl>
+                    <dd><a href="{:U('Curr/index',array('grade'=>$grade,'subject'=>-1))}">不限</a></dd>
+                    <dd><a href="{:U('Curr/index',array('grade'=>$grade,'subject'=>0))}">语文</a></dd>
+                    <dd><a href="{:U('Curr/index',array('grade'=>$grade,'subject'=>1))}">数学</a></dd>
+                    <dd><a href="{:U('Curr/index',array('grade'=>$grade,'subject'=>2))}">英语</a></dd>
+                    <dd><a href="{:U('Curr/index',array('grade'=>$grade,'subject'=>3))}">历史</a></dd>
+                    <dd><a href="{:U('Curr/index',array('grade'=>$grade,'subject'=>4))}">地理</a></dd>
+                    <dd><a href="{:U('Curr/index',array('grade'=>$grade,'subject'=>5))}">生物</a></dd>
+                    <dd><a href="{:U('Curr/index',array('grade'=>$grade,'subject'=>6))}">物理</a></dd>
+
+
+                </dl>
             </li>
         </ul>
     </section>
-
+    <!--课程列表-->
     <hr class="line">
-    <section class="information information2">
-        <div class="head js-tab">
-            <ul>
-                <li class="on">小学动态</li>
-                <li>小升初资讯</li>
-            </ul>
-        </div>
-        <div class="body js-con" style="display: block;">
-            <ul>
+    <article class="tech-list">
+        <ul>
+            <volist name="teachers" id="vo">
                 <li>
                     <div class="img">
-                        <a href="/201610/4694.html"><img src="http://file.xinghuo100.com/upload/25/126/129/158/image/20160928/20160928113123_4570.png"></a>
+                        <a href="{:U('info',array('id'=>$vo['id']))}">
+                        </a><a href="{:U('info',array('id'=>$vo['id']))}" target="_blank"><img src="{$vo['headUrl']}"></a>
+
                     </div>
                     <div class="text">
-                        <a href="/201610/4694.html">
-
-                            <h2>经验分享：这六件事为人父母要知道</h2>
-                            <p>有六件事是父母必须知道的，它们可以让父母在教育孩子的路上少走一些弯路，有...</p>
+                        <a href="{:U('info',array('id'=>$vo['id']))}">
+                            <dl>
+                                <dt>
+                                <h3>{$vo['curriculumName']}</h3>
+                                </dt><dd><span>适用学院：</span>{$vo['curriculumName']}</dd>
+                                <dd><span>适合年级：</span>{$gradeMap[$vo['CurriculumLevel']]}</dd>
+                                <dd><span>适用学院：</span>{$subjectMap[$vo['CourseType']]}</dd>
+                                <dd><span>适用学员：</span>{$vo['summary']}</dd>
+                                <dd style="display: inline-block;width: 2rem;float: right"><a style="color: yellow;" href="{:U('info',array('id'=>$vo['id']))}">详情</a></dd>
+                            </dl>
                         </a>
                     </div>
                 </li>
-                <li>
-                    <div class="img">
-                        <a href="/201610/4893.html"><img src="http://file.xinghuo100.com/upload/25/126/129/158/image/20161012/20161012232529_1481.png"></a>
-                    </div>
-                    <div class="text">
-                        <a href="/201610/4893.html">
-
-                            <h2>帮助孩子养成良好学习习惯的四点建议</h2>
-                            <p>      还在苦恼该如何帮助孩子养成良好的学习习惯？良好的学习习惯不可...</p>
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div class="img">
-                        <a href="/201609/4618.html"><img src="http://file.xinghuo100.com/upload/25/126/129/158/image/20160926/20160926233546_3387.jpg"></a>
-                    </div>
-                    <div class="text">
-                        <a href="/201609/4618.html">
-
-                            <h2>毁掉孩子只需要五句你认为无心伤害的话</h2>
-                            <p>     有些话你觉得没什么问题，但孩子听在耳里就会特别难受。而父母和孩...</p>
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div class="img">
-                        <a href="/201610/4917.html"><img src="http://file.xinghuo100.com/upload/25/126/129/158/image/20161013/20161013174537_7665.png"></a>
-                    </div>
-                    <div class="text">
-                        <a href="/201610/4917.html">
-
-                            <h2>星火课堂：父母和孩子沟通时的三大禁忌</h2>
-                            <p>    沟通是父母了解孩子最直接的方式，但这是构建在父母和孩子沟通方式正...</p>
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div class="img">
-                        <a href="/201610/4255.html"><img src="http://file.xinghuo100.com/upload/25/126/129/158/image/20160906/20160906184929_7909.jpg"></a>
-                    </div>
-                    <div class="text">
-                        <a href="/201610/4255.html">
-
-                            <h2>错题不等于粗心，要做对题目就先做对这几步</h2>
-                            <p>  每次孩子考完试回家，总有这样一段对白。 父母：“这道题你哪里不会做？...</p>
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div class="img">
-                        <a href="/201609/4237.html"><img src="http://file.xinghuo100.com/upload/25/126/129/158/image/20160905/20160905185526_9414.jpg"></a>
-                    </div>
-                    <div class="text">
-                        <a href="/201609/4237.html">
-
-                            <h2>考场新兵，你不得不知道的考场技巧</h2>
-                            <p> 小学的同学们都没有多少考试的经验，作为考场上的新兵，也要往口袋里装一点...</p>
-                        </a>
-                    </div>
-                </li>
-            </ul>
-            <a class="more" href="/xiaoxue/xxdt/0-1.html">查看更多小学动态</a>
-        </div>
-        <div class="body js-con">
-            <ul>
-                <li>
-                    <div class="img">
-                        <a href="/201610/4920.html"><img src="http://file.xinghuo100.com/upload/25/126/129/159/image/20161013/20161013181530_4441.png"></a>
-                    </div>
-                    <div class="text">
-                        <a href="/201610/4920.html">
-
-                            <h2>经验分享：父母不能对孩子做的六件事</h2>
-                            <p>     教育孩子是一个漫长的过程，父母想要教好孩子要懂得方法。星火教育...</p>
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div class="img">
-                        <a href="/201608/4039.html"><img src="http://file.xinghuo100.com/upload/25/126/129/159/image/20160826/20160826234911_2588.jpg"></a>
-                    </div>
-                    <div class="text">
-                        <a href="/201608/4039.html">
-
-                            <h2>星火教育心理专家：和孩子吵架后 先和自己和好</h2>
-                            <p>教育孩子的过程中，孩子难免会有做得不如人意的地方，如果此时父母心情不好，...</p>
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div class="img">
-                        <a href="/201607/2891.html"><img src="http://file.xinghuo100.com/upload/25/126/129/159/image/20160721/20160721172204_8122.jpg"></a>
-                    </div>
-                    <div class="text">
-                        <a href="/201607/2891.html">
-
-                            <h2>应试小升初  三招让你风雨无阻</h2>
-                            <p>      在小编与星火教育老师及部分小升初考生交流的过程中发现，考生们...</p>
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div class="img">
-                        <a href="/201604/2173.html"><img src="/Content/Images/img01.jpg"></a>
-                    </div>
-                    <div class="text">
-                        <a href="/201604/2173.html">
-
-                            <h2>小学作文写景的优美句子</h2>
-                            <p>  一、写河的句子    宽广清澈的河流、像是镶嵌在草原中的玉带，蜿蜒徘...</p>
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div class="img">
-                        <a href="/201601/147.html"><img src="http://file.xinghuo100.com/upload/25/126/129/159/image/20160120/20160120113912_8755.jpg"></a>
-                    </div>
-                    <div class="text">
-                        <a href="/201601/147.html">
-
-                            <h2>小升初寒假规划：各学科复习有技巧</h2>
-                            <p>随着现在家长对孩子入名校期望值的不断升高，小升初渐渐开始备受各位家长和学...</p>
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div class="img">
-                        <a href="/201601/97.html"><img src="http://file.xinghuo100.com/upload/25/126/129/159/image/20160119/20160119112113_6468.jpg"></a>
-                    </div>
-                    <div class="text">
-                        <a href="/201601/97.html">
-
-                            <h2>小升初家长四大疑问：怎么帮孩子缓解压力？</h2>
-                            <p>    从小学进入初中可以说是孩子们人生的一大转折，面临学科任务增多、课...</p>
-                        </a>
-                    </div>
-                </li>
-            </ul>
-            <a class="more" href="/xiaoxue/xsc/0-1.html">查看更多小升初资讯</a>
-        </div>
-    </section>
-    <hr class="line">
-
-
-    <section class="mxtj mxtj1">
-        <div class="mxtj-head">
-            名校推荐
-        </div>
-        <div class="mxtj-body">
-            <ul style="width: 1360px;">
-                <li>
-                    <a href="/school/17.html">
-                        <div class="img">
-                            <img src="http://file.xinghuo100.com/upload/25/126/138/image/20160119/20160119175608_6872.jpg" alt="">
-                        </div>
-                        <h2>东莞市第一中学</h2>
-                    </a>
-                </li>
-                <li>
-                    <a href="/school/25.html">
-                        <div class="img">
-                            <img src="http://file.xinghuo100.com/upload/25/126/138/image/20160120/20160120110533_5805.jpg" alt="">
-                        </div>
-                        <h2>南城区阳光第一小学</h2>
-                    </a>
-                </li>
-                <li>
-                    <a href="/school/22.html">
-                        <div class="img">
-                            <img src="http://file.xinghuo100.com/upload/25/126/138/image/20160120/20160120105748_6796.jpg" alt="">
-                        </div>
-                        <h2>东莞市光正实验中学</h2>
-                    </a>
-                </li>
-                <li>
-                    <a href="/school/21.html">
-                        <div class="img">
-                            <img src="http://file.xinghuo100.com/upload/25/126/138/image/20160119/20160119180803_6404.jpg" alt="">
-                        </div>
-                        <h2>虎门中学</h2>
-                    </a>
-                </li>
-                <li>
-                    <a href="/school/18.html">
-                        <div class="img">
-                            <img src="http://file.xinghuo100.com/upload/25/126/138/image/20160119/20160119180125_7716.jpg" alt="">
-                        </div>
-                        <h2>东华高级中学</h2>
-                    </a>
-                </li>
-                <li>
-                    <a href="/school/16.html">
-                        <div class="img">
-                            <img src="http://file.xinghuo100.com/upload/25/126/138/image/20160119/20160119174519_5960.png" alt="">
-                        </div>
-                        <h2>东莞实验中学</h2>
-                    </a>
-                </li>
-                <li>
-                    <a href="/school/23.html">
-                        <div class="img">
-                            <img src="http://file.xinghuo100.com/upload/25/126/138/image/20160120/20160120110102_9346.jpg" alt="">
-                        </div>
-                        <h2>东莞中学松山湖学校</h2>
-                    </a>
-                </li>
-                <li>
-                    <a href="/school/19.html">
-                        <div class="img">
-                            <img src="http://file.xinghuo100.com/upload/25/126/138/image/20160119/20160119180258_5709.jpg" alt="">
-                        </div>
-                        <h2>东莞市厚街中学</h2>
-                    </a>
-                </li>
-                <li>
-                    <a href="/school/20.html">
-                        <div class="img">
-                            <img src="http://file.xinghuo100.com/upload/25/126/138/image/20160119/20160119180639_1388.jpg" alt="">
-                        </div>
-                        <h2>广东省东莞中学</h2>
-                    </a>
-                </li>
-                <li>
-                    <a href="/school/24.html">
-                        <div class="img">
-                            <img src="http://file.xinghuo100.com/upload/25/126/138/image/20160120/20160120110328_8437.jpg" alt="">
-                        </div>
-                        <h2>莞城英文实验学校</h2>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </section>
-
-
-    <section class="mxtj mxtj2">
-        <div class="mxtj-head">
-            校区一览
-        </div>
-        <div class="mxtj-body">
-            <ul style="width: 3960px;">
-                <li>
-                    <a href="/campus/31.html">
-                        <div class="img">
-                            <img src="http://file.xinghuo100.com/upload/25/126/127/image/20160120/20160120142137_5506.jpg" alt="">
-                        </div>
-                        <h2>中考精英班校区</h2>
-                    </a>
-                </li>
-                <li>
-                    <a href="/campus/32.html">
-                        <div class="img">
-                            <img src="http://file.xinghuo100.com/upload/25/126/127/image/20160120/20160120144821_6498.jpg" alt="">
-                        </div>
-                        <h2>雍华庭校区</h2>
-                    </a>
-                </li>
-                <li>
-                    <a href="/campus/33.html">
-                        <div class="img">
-                            <img src="http://file.xinghuo100.com/upload/25/126/127/image/20160120/20160120145226_9988.jpg" alt="">
-                        </div>
-                        <h2>莞城校区</h2>
-                    </a>
-                </li>
-                <li>
-                    <a href="/campus/35.html">
-                        <div class="img">
-                            <img src="http://file.xinghuo100.com/upload/25/126/127/image/20160120/20160120145539_5975.jpg" alt="">
-                        </div>
-                        <h2>莞中校区</h2>
-                    </a>
-                </li>
-                <li>
-                    <a href="/campus/40.html">
-                        <div class="img">
-                            <img src="http://file.xinghuo100.com/upload/25/126/127/image/20160120/20160120150703_2067.jpg" alt="">
-                        </div>
-                        <h2>常平校区</h2>
-                    </a>
-                </li>
-                <li>
-                    <a href="/campus/44.html">
-                        <div class="img">
-                            <img src="http://file.xinghuo100.com/upload/25/126/127/image/20160120/20160120151248_9796.jpg" alt="">
-                        </div>
-                        <h2>虎门校区</h2>
-                    </a>
-                </li>
-                <li>
-                    <a href="/campus/47.html">
-                        <div class="img">
-                            <img src="http://file.xinghuo100.com/upload/25/126/127/image/20160120/20160120151806_5808.jpg" alt="">
-                        </div>
-                        <h2>长安校区</h2>
-                    </a>
-                </li>
-                <li>
-                    <a href="/campus/50.html">
-                        <div class="img">
-                            <img src="http://file.xinghuo100.com/upload/25/126/127/image/20160120/20160120151946_7234.jpg" alt="">
-                        </div>
-                        <h2>石龙校区</h2>
-                    </a>
-                </li>
-                <li>
-                    <a href="/campus/51.html">
-                        <div class="img">
-                            <img src="http://file.xinghuo100.com/upload/25/126/127/image/20160120/20160120152131_2724.jpg" alt="">
-                        </div>
-                        <h2>东泰怡丰校区</h2>
-                    </a>
-                </li>
-                <li>
-                    <a href="/campus/52.html">
-                        <div class="img">
-                            <img src="http://file.xinghuo100.com/upload/25/126/127/image/20160120/20160120152316_5095.jpg" alt="">
-                        </div>
-                        <h2>东城御景校区</h2>
-                    </a>
-                </li>
-                <li>
-                    <a href="/campus/54.html">
-                        <div class="img">
-                            <img src="http://file.xinghuo100.com/upload/25/126/127/image/20160120/20160120152447_7775.jpg" alt="">
-                        </div>
-                        <h2>虎门黄河校区</h2>
-                    </a>
-                </li>
-                <li>
-                    <a href="/campus/72.html">
-                        <div class="img">
-                            <img src="http://file.xinghuo100.com/upload/25/126/127/image/20160120/20160120155828_1069.jpg" alt="">
-                        </div>
-                        <h2>大朗校区</h2>
-                    </a>
-                </li>
-                <li>
-                    <a href="/campus/74.html">
-                        <div class="img">
-                            <img src="http://file.xinghuo100.com/upload/25/126/127/image/20160120/20160120160230_8374.jpg" alt="">
-                        </div>
-                        <h2>厚街校区</h2>
-                    </a>
-                </li>
-                <li>
-                    <a href="/campus/76.html">
-                        <div class="img">
-                            <img src="http://file.xinghuo100.com/upload/25/126/127/image/20160120/20160120160421_1833.jpg" alt="">
-                        </div>
-                        <h2>塘厦校区</h2>
-                    </a>
-                </li>
-                <li>
-                    <a href="/campus/78.html">
-                        <div class="img">
-                            <img src="http://file.xinghuo100.com/upload/25/126/127/image/20160120/20160120160657_3895.jpg" alt="">
-                        </div>
-                        <h2>大岭山校区</h2>
-                    </a>
-                </li>
-                <li>
-                    <a href="/campus/79.html">
-                        <div class="img">
-                            <img src="http://file.xinghuo100.com/upload/25/126/127/image/20160120/20160120160841_9228.jpg" alt="">
-                        </div>
-                        <h2>南城西平校区</h2>
-                    </a>
-                </li>
-                <li>
-                    <a href="/campus/80.html">
-                        <div class="img">
-                            <img src="http://file.xinghuo100.com/upload/25/126/127/image/20160120/20160120161026_5654.jpg" alt="">
-                        </div>
-                        <h2>樟木头校区</h2>
-                    </a>
-                </li>
-                <li>
-                    <a href="/campus/82.html">
-                        <div class="img">
-                            <img src="http://file.xinghuo100.com/upload/25/126/127/image/20160120/20160120161210_5676.jpg" alt="">
-                        </div>
-                        <h2>中堂校区</h2>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </section>
-
+            </volist>
+        </ul>
+    </article>
 
 
     <include file="wap/Public/copyright"/>
     <include file="wap/Public/footer"/>
+
 </section>
 
 
