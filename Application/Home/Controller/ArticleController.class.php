@@ -89,7 +89,7 @@ class ArticleController extends HomeController {
             $this->display($tmpl);
 
         }else{
-            $this->display("../wap/article/detail");
+            $this->display("../wap/Article/detail");
         }
 	}
 
