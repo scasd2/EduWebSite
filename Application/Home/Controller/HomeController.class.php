@@ -48,6 +48,7 @@ class HomeController extends Controller {
             $this->error('站点已经关闭，请稍后访问~');
         }
         $this->_link();
+        $this->_data();
         $this->information();
     }
 
@@ -55,6 +56,21 @@ class HomeController extends Controller {
         //友情链接数据获取
         $friendship=M('friendshiplink')->cache(3600)->select();
         $this->friendship=$friendship;
+    }
+    protected function _data(){
+        //友情链接数据获取
+        $phone=M('configure')->cache(3600)->where([
+            'eItem'=>'phone'
+        ])->select();
+        $code=M('configure')->cache(3600)->where([
+            'eItem'=>'QRcode'
+        ])->select();
+          $pic = M('picture')->where([
+                $code[0]['picture']
+            ])->select();
+            $code[0]['headPic']=$pic[0]['path'];
+        $this->phone=$phone[0];
+        $this->code=$code[0];
     }
 
     /*公司资讯*/
